@@ -1,0 +1,93 @@
+---
+import MainGallery from "@/components/gallery-main/gallery";
+import PageLayout from "@/layouts/PageLayout.astro";
+import { MultiImageCarousel } from "@/components/carousel/carousel";
+import {ImpactCarousel} from  "@/components/carousel/impact"
+---
+
+<PageLayout>
+  <section class="flex items-center justify-center mt-10">
+    <MainGallery client:visible />
+  </section>
+  <!-- introduction to TBI -->
+  <section class="flex items-center justify-center gap-24 px-[25vh] mb-10">
+    <div class="w-[50%]">
+      <div class="mb-6">
+        <h1 class="text-nord10 text-4xl mb-2">
+          The Technology and Business Incubator
+        </h1>
+        <h1 class="text-nord10 text-3xl">BITS Pilani, Hyderabad Campus</h1>
+      </div>
+
+      <p>
+        TBI@BITS Hyderabad aims to provide a low cost and resource intensive
+        sandbox where entrepreneurs can develop their product, services or
+        process ideas towards commercialization. We provide office and lab space
+        equipment, seed funding and vitally, mentorship from an international
+        network of successful business leaders. Prospective entrepreneurs, BITS
+        students, faculty, staff and alumni are invited to engage with TBI in a
+        friendly and hassle free environment. Professional staff will quickly
+        gauge your requirements and provide custom-made services and solutions
+        in a timely manner.
+      </p>
+    </div>
+
+    <div class="mt-12">
+      <img
+        src="https://img-cdn.thepublive.com/fit-in/1280x960/filters:format(webp)/tice-news-prod/media/media_files/6XzHnuJ78bupu85NlbBv.png"
+        alt="bits"
+        class="rounded-3xl w-[60vh] object-fill"
+      />
+    </div>
+  </section>
+  <hr class="h-1 my-8 border-0 bg-nord10" />
+  <!-- Vision and Goals -->
+  <section class="flex flex-col items-center justify-center px-[25vh] -mb-8">
+    <h1 class="flex items-center justify-center text-4xl text-nord10 mb-5">
+      VISION AND GOALS
+    </h1>
+    <div class="flex gap-10">
+      <img src="/tech.gif" alt="tech-gif" class="w-[400px] h-[400px]" />
+      <p class="mt-10">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+  </section>
+  <hr class="h-1 my-8 border-0 bg-nord10" />
+  <!-- Incubatees -->
+  <section>
+    <div class="flex flex-col items-center justify-center px-[25vh]">
+      <h1 class="flex items-center justify-center text-4xl text-nord10 mb-5">
+        INCUBATEES
+      </h1>
+      <div class="my-8">
+        <MultiImageCarousel client:visible />
+      </div>
+    </div>
+  </section>
+  <hr class="h-1 my-8 border-0 bg-nord10" />
+  <!-- Impact -->
+  <section>
+    <div class="flex flex-col items-center justify-center px-[25vh]">
+      <h1 class="flex items-center justify-center text-4xl text-nord10 mb-5">
+        IMPACT
+      </h1>
+      <div class="my-8 mt-8">
+        <ImpactCarousel client:visible/>
+      </div>
+    </div>
+  </section>
+  <hr class="h-1 mt-8 border-0 bg-nord10" />
+</PageLayout>
