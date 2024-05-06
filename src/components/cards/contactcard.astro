@@ -1,0 +1,26 @@
+---
+interface Card {
+  name: string;
+  number: string;
+  email: string;
+  link?: string;
+}
+
+const { name, email, number, link } = Astro.props as Card;
+---
+
+<div class="border-1 w-[80vh] m-4 border-2 border-black rounded-sm p-2 bg-nord6">
+  <h1 class="my-2 text-nord10">{name}</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eum veritatis
+    eius ipsam sint veniam deserunt officiis?
+  </p>
+  <div class=" flex mt-4 justify-between">
+    <p>
+        {number}
+    </p>
+    <p>
+        {email}
+    </p>
+  </div>
+</div>

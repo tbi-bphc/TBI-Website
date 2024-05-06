@@ -25,11 +25,11 @@ function Navbar() {
           </div>
           {/* Navigation Links - Desktop */}
           <div className="hidden md:flex justify-center items-center space-x-4">
-            <NavLink title="Home" />
-            <NavLink title="About Us" />
-            <NavLink title="Incubatees" />
-            <NavLink title="Events" />
-            <NavLink title="Gallery" />
+            <NavLink title="Home" link="/home"/>
+            <NavLink title="About Us" link='/about' />
+            <NavLink title="Incubatees" link="/incubatees"/>
+            <NavLink title="Events" link='/events'/>
+            <NavLink title="Gallery" link='/gallery'/>
             {/* Programmes Dropdown - Desktop */}
             <div className="relative inline-block text-left">
               <button
@@ -53,28 +53,28 @@ function Navbar() {
                       className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
                       role="menuitem"
                     >
-                      Programme 1
+                      Incubation
                     </a>
                     <a
                       href="#"
                       className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
                       role="menuitem"
                     >
-                      Programme 2
+                      SEEP
                     </a>
                     <a
                       href="#"
                       className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
                       role="menuitem"
                     >
-                      Programme 3
+                      SOLVE
                     </a>
                   </div>
                 </div>
               )}
             </div>
             {/* <NavLink title="Partners" /> */}
-            <NavLink title="Contact Us" />
+            <NavLink title="Contact Us" link="/contact"/>
           </div>
         </div>
       </div>
@@ -82,11 +82,11 @@ function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-gray-800 py-2">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <NavLink title="Home" />
-            <NavLink title="About Us" />
-            <NavLink title="Incubatees" />
-            <NavLink title="Events" />
-            <NavLink title="Gallery" />
+            <NavLink title="Home" link="/home"/>
+            <NavLink title="About Us" link="/about"/>
+            <NavLink title="Incubatees" link="/incubatees"/>
+            <NavLink title="Events" link="/events"/>
+            <NavLink title="Gallery" link="/gallery"/>
             {/* Programmes Dropdown - Mobile */}
             <div className="relative inline-block text-left">
               <button
@@ -110,28 +110,28 @@ function Navbar() {
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                       role="menuitem"
                     >
-                      Programme 1
+                      Incubation
                     </a>
                     <a
                       href="#"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                       role="menuitem"
                     >
-                      Programme 2
+                      SEEP
                     </a>
                     <a
                       href="#"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                       role="menuitem"
                     >
-                      Programme 3
+                      SOLVE
                     </a>
                   </div>
                 </div>
               )}
             </div>
             {/* <NavLink title="Partners" /> */}
-            <NavLink title="Contact Us" />
+            <NavLink title="Contact Us" link="/contact"/>
           </div>
         </div>
       )}
@@ -141,12 +141,13 @@ function Navbar() {
 
 interface NavLinkProps {
   title: string;
+  link:string;
 }
 
-function NavLink({ title }: NavLinkProps) {
+function NavLink({ title, link }: NavLinkProps) {
   return (
     <a
-      href="#"
+      href={link}
       className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-sm font-medium"
     >
       {title}

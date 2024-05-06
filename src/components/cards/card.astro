@@ -1,6 +1,23 @@
 ---
+
+interface Card {
+    name: string,
+    img: string,
+    link:string,
+}
+
+const {name, img, link} = Astro.props as Card
 ---
 
-<div class=" border-1">
-    
+<div class="border-1 w-[25vh] m-4 border-2 border-black rounded-sm">
+  <img
+    src={img}
+    alt="card"
+    class=" object-contain rounded-t-sm"
+  />
+  <p class="text-sm p-2 text-center">
+    <a href={link}>
+        {name}
+    </a>
+  </p>
 </div>
