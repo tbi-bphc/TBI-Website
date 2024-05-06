@@ -1,0 +1,101 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import AboutGallery from "./aboutgallery";
+import Contentstable from "@/components/contents-table/contentstable.astro";
+import { MultiImageCarousel } from "@/components/carousel/carousel";
+
+const contents = [
+  {
+    title: "Introduction",
+    link: "#introduction",
+  },
+  {
+    title: "Thrust areas",
+    link: "#thrust-areas",
+  },
+  {
+    title: "Facilties",
+    link: "#facilties",
+  },
+  {
+    title: "Offerings",
+    link: "#offerings",
+  },
+  {
+    title: "Team",
+    link: "#team",
+  },
+  {
+    title: "Sponsors and Mentors",
+    link: "#sponsors-and-mentors",
+  },
+];
+---
+
+<PageLayout>
+  <section class="mt-8">
+    <AboutGallery client:visible />
+  </section>
+  <!--  -->
+  <main class=" md:flex md:flex-row gap-20 lg:px-[25vh] md:px-[10vh] px-2">
+    <!-- Contents table -->
+    <section>
+      <h1 class="ml-3">ABOUT US</h1>
+      <Contentstable contents={contents} />
+    </section>
+    <section class="mt-6 md:mt-0">
+      <div id="introduction" class="mb-6 scroll-mt-16">
+        <h1 class=" text-nord3 mb-2">Introduction</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a nemo
+          ipsa reiciendis quas. Provident laborum nobis optio eveniet, rerum
+          sint voluptas corporis temporibus hic quaerat alias ad vel velit!
+        </p>
+      </div>
+      <div id="thrust-areas" class="my-6 scroll-mt-16">
+        <h1 class=" text-nord3 mb-2">Thrust Areas</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a nemo
+          ipsa reiciendis quas. Provident laborum nobis optio eveniet, rerum
+          sint voluptas corporis temporibus hic quaerat alias ad vel velit!
+        </p>
+      </div>
+      <div id="facilties" class="my-6 scroll-mt-16">
+        <h1 class=" text-nord3 mb-2">Facilties</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a nemo
+          ipsa reiciendis quas. Provident laborum nobis optio eveniet, rerum
+          sint voluptas corporis temporibus hic quaerat alias ad vel velit!
+        </p>
+      </div>
+      <div id="offerings" class="my-6 scroll-mt-16">
+        <h1 class=" text-nord3 mb-2">Offerings</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a nemo
+          ipsa reiciendis quas. Provident laborum nobis optio eveniet, rerum
+          sint voluptas corporis temporibus hic quaerat alias ad vel velit!
+        </p>
+      </div>
+      <div id="team" class="my-6 scroll-mt-16">
+        <h1 class=" text-nord3 mb-2">Team</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a nemo
+          ipsa reiciendis quas. Provident laborum nobis optio eveniet, rerum
+          sint voluptas corporis temporibus hic quaerat alias ad vel velit!
+        </p>
+      </div>
+      <div id="sponsors-and-mentors" class="my-6 scroll-mt-16">
+        <h1 class=" text-nord3 mb-2">Sponsors and Mentors</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a nemo
+          ipsa reiciendis quas. Provident laborum nobis optio eveniet, rerum
+          sint voluptas corporis temporibus hic quaerat alias ad vel velit!
+        </p>
+        <div class="mt-6">
+          <MultiImageCarousel client:visible/>
+        </div>
+      </div>
+    </section>
+  </main>
+  <hr class="h-1 mt-8 border-0 bg-nord10" />
+</PageLayout>

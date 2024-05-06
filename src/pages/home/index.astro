@@ -1,5 +1,5 @@
 ---
-import MainGallery from "@/components/gallery-main/gallery";
+import HomeGallery from "./homegallery"
 import PageLayout from "@/layouts/PageLayout.astro";
 import { MultiImageCarousel } from "@/components/carousel/carousel";
 import {ImpactCarousel} from  "@/components/carousel/impact"
@@ -7,7 +7,7 @@ import {ImpactCarousel} from  "@/components/carousel/impact"
 
 <PageLayout>
   <section class="flex items-center justify-center mt-10">
-    <MainGallery client:visible />
+    <HomeGallery client:visible/>
   </section>
   <!-- introduction to TBI -->
   <section class="flex items-center justify-center gap-24 px-[25vh] mb-10">
