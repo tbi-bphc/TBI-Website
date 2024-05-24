@@ -9,18 +9,23 @@ interface Card {
 const { name, email, number, link } = Astro.props as Card;
 ---
 
-<div class="border-1 w-[80vh] m-4 border-2 border-black rounded-sm p-2 bg-nord6">
+<div
+  class="border-1 w-[80vh] m-4 border-2 border-black rounded-sm p-2 bg-nord6"
+>
   <h1 class="my-2 text-nord10">{name}</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eum veritatis
-    eius ipsam sint veniam deserunt officiis?
-  </p>
-  <div class=" flex mt-4 justify-between">
+  <div class="flex">
+    <p class="mr-2 md:mr-6">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eum
+      veritatis eius ipsam sint veniam deserunt officiis?
+    </p>
+    <img class=" rounded-full w-24" src="https://i.seadn.io/gae/jCQAQBNKmnS_AZ_2jTqBgBLIVYaRFxLX6COWo-HCHrYJ1cg04oBgDfHvOmpqsWbmUaSfBDHIdrwKtGnte3Ph_VwQPJYJ6VFtAf5B?auto=format&dpr=1&w=1000" />
+  </div>
+  <div class="flex mt-4 justify-between">
     <p>
-        {number}
+      {number}
     </p>
     <p>
-        {email}
+      {email}
     </p>
   </div>
 </div>

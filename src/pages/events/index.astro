@@ -1,7 +1,8 @@
 ---
 import PageLayout from "@/layouts/PageLayout.astro";
 import Card from "@/components/cards/card.astro";
-import EventsGallery from "./eventsgallery"
+import EventsGallery from "./eventsgallery";
+import Eventcard from "@/components/cards/eventcard.astro";
 ---
 
 <PageLayout>
@@ -20,72 +21,63 @@ import EventsGallery from "./eventsgallery"
       <div>
         <h2 class="text-nord0 my-4 text-2xl">SEEP</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
-          autem in pariatur commodi incidunt, ex doloribus unde, quam, obcaecati
-          sunt adipisci nam enim numquam officiis delectus. Dolorum velit
-          corrupti distinctio!
+          In case you have an incredible idea, a team in place and desire to
+          turn your dreams into reality, we encourage you to grab this
+          opportunity of participating in SEEP-2023. TBIS brings you an awesome
+          opportunity to showcase your inner entrepreneur and pitch your idea to
+          a panel of judges with substantial experience; the best, but also the
+          most unyielding juries you could have asked for!
         </p>
-        <div class="grid grid-cols-4">
-          <Card
-            name={"SEEP"}
+        <div class="flex items-center justify-center">
+          <Eventcard
+            name="Sandeep Raut"
+            number={9999999999}
+            email="tbi@bits-hyderabad.ac.in"
+            description="lorem"
+            date="11th August 2023"
             link="google.com"
-            img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9JsD5Sh7u3zhmvaj458xlM8qbk29cfmu41wlID7tebTagR0YuEDBFSmxP_tKN-jTozM&usqp=CAU"}
-          />
-          <Card
-            name={"SEEP"}
-            link="google.com"
-            img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9JsD5Sh7u3zhmvaj458xlM8qbk29cfmu41wlID7tebTagR0YuEDBFSmxP_tKN-jTozM&usqp=CAU"}
-          />
-          <Card
-            name={"SEEP"}
-            link="google.com"
-            img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9JsD5Sh7u3zhmvaj458xlM8qbk29cfmu41wlID7tebTagR0YuEDBFSmxP_tKN-jTozM&usqp=CAU"}
-          />
-          <Card
-            name={"SEEP"}
-            link="google.com"
-            img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9JsD5Sh7u3zhmvaj458xlM8qbk29cfmu41wlID7tebTagR0YuEDBFSmxP_tKN-jTozM&usqp=CAU"}
+            imageLink={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9JsD5Sh7u3zhmvaj458xlM8qbk29cfmu41wlID7tebTagR0YuEDBFSmxP_tKN-jTozM&usqp=CAU"}
           />
         </div>
         <div>
-            <h2 class="text-nord0 my-4 text-2xl">SOLVE</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
-              autem in pariatur commodi incidunt, ex doloribus unde, quam, obcaecati
-              sunt adipisci nam enim numquam officiis delectus. Dolorum velit
-              corrupti distinctio!
-            </p>
-            <div class="grid grid-cols-4">
-              <Card
-                name={"SOLVE"}
-                link="google.com"
-                img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9JsD5Sh7u3zhmvaj458xlM8qbk29cfmu41wlID7tebTagR0YuEDBFSmxP_tKN-jTozM&usqp=CAU"}
-              />
-              <Card
-                name={"SOLVE"}
-                link="google.com"
-                img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9JsD5Sh7u3zhmvaj458xlM8qbk29cfmu41wlID7tebTagR0YuEDBFSmxP_tKN-jTozM&usqp=CAU"}
-              />
-              <Card
-                name={"SOLVE"}
-                link="google.com"
-                img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9JsD5Sh7u3zhmvaj458xlM8qbk29cfmu41wlID7tebTagR0YuEDBFSmxP_tKN-jTozM&usqp=CAU"}
-              />
-              <Card
-                name={"SOLVE"}
-                link="google.com"
-                img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9JsD5Sh7u3zhmvaj458xlM8qbk29cfmu41wlID7tebTagR0YuEDBFSmxP_tKN-jTozM&usqp=CAU"}
-              />
-            </div>
+          <h2 class="text-nord0 my-4 text-2xl">SOLVE</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
+            autem in pariatur commodi incidunt, ex doloribus unde, quam,
+            obcaecati sunt adipisci nam enim numquam officiis delectus. Dolorum
+            velit corrupti distinctio!
+          </p>
+          <div class="grid grid-cols-4">
+            <Card
+              name={"SOLVE"}
+              link="google.com"
+              img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9JsD5Sh7u3zhmvaj458xlM8qbk29cfmu41wlID7tebTagR0YuEDBFSmxP_tKN-jTozM&usqp=CAU"}
+            />
+            <Card
+              name={"SOLVE"}
+              link="google.com"
+              img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9JsD5Sh7u3zhmvaj458xlM8qbk29cfmu41wlID7tebTagR0YuEDBFSmxP_tKN-jTozM&usqp=CAU"}
+            />
+            <Card
+              name={"SOLVE"}
+              link="google.com"
+              img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9JsD5Sh7u3zhmvaj458xlM8qbk29cfmu41wlID7tebTagR0YuEDBFSmxP_tKN-jTozM&usqp=CAU"}
+            />
+            <Card
+              name={"SOLVE"}
+              link="google.com"
+              img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9JsD5Sh7u3zhmvaj458xlM8qbk29cfmu41wlID7tebTagR0YuEDBFSmxP_tKN-jTozM&usqp=CAU"}
+            />
+          </div>
+        </div>
       </div>
-    </section>
 
-    <section class="my-8">
+      <section class="my-8">
         <h1 class="text-3xl text-nord10">PHOTO GALLERY</h1>
         <div class="relative">
-            <EventsGallery client:visible/>
+          <EventsGallery client:visible />
         </div>
+      </section>
     </section>
-
   </main>
 </PageLayout>

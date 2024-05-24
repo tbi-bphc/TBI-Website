@@ -1,0 +1,45 @@
+---
+interface Card {
+  name: string;
+  number: string;
+  email: string;
+  imageLink: string;
+  description: string;
+  link?: string;
+  date?: string;
+}
+
+const { name, email, number, link } = Astro.props as Card;
+---
+
+<div class="border-1 w-full m-4 border-2 border-black rounded-sm p-2">
+  <div class="lg:flex">
+    <img
+      src="https://qph.cf2.quoracdn.net/main-qimg-0052d1208cffaee2dce84b0ec33ae1a8"
+      alt="image"
+      class="rounded-md"
+    />
+    <div class="ml-4">
+      <p class="my-4">
+        SEEP
+      </p>
+      <p>
+        More details about SEEP
+      </p>
+      <a href="google.com" class=" text-blue-800">
+        Click here to learn more.
+      </a>
+      <ul class="my-4">
+        <li>
+          Our Winners
+        </li>
+        <li>
+          Testimonies
+        </li>
+      </ul>
+      <p class="absolute -bottom-8">
+        Date: 23rd August 2023
+      </p>
+    </div>
+  </div>
+</div>
