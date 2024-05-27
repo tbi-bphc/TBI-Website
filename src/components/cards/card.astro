@@ -1,23 +1,33 @@
 ---
-
 interface Card {
-    name: string,
-    img: string,
-    link:string,
+  name: string;
+  img: string;
+  description: string;
+  link: string;
 }
 
-const {name, img, link} = Astro.props as Card
+const { name, img, link, description } = Astro.props as Card;
 ---
 
-<div class="border-1 w-[25vh] m-4 border-2 border-black rounded-sm">
-  <img
-    src={img}
-    alt="card"
-    class=" object-contain rounded-t-sm"
-  />
-  <p class="text-sm p-2 text-center">
-    <a href={link}>
-        {name}
+<div class="border-1 w-[26vh] m-4 border-2 border-black rounded-md">
+  <div class="group relative hover:bg-nord2">
+    <img
+      src={img}
+      alt="card"
+      class="h-48 w-full object-fill rounded-t-sm duration-300 group-hover:opacity-20 group-hover:scale-120"
+    />
+    <div
+      class="absolute opacity-0 group-hover:cursor-pointer group-hover:opacity-100 duration-700 h-full w-full top-3 text-white text-center px-2"
+    >
+      {description}
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus facere,
+      reiciendis aliquid, odit sunt fugit cupiditate consequuntur
+    </div>
+  </div>
+
+  <p class="text-sm p-4 text-center">
+    <a href={link} class=" hover:text-nord15">
+      {name}
     </a>
   </p>
 </div>
