@@ -37,106 +37,112 @@ const contents = [
     <AboutGallery client:visible />
   </section>
   <!--  -->
-  <main class=" md:flex md:flex-row gap-20 lg:px-[25vh] md:px-[10vh] px-2">
+  <main class="md:flex md:flex-row gap-20 lg:px-[25vh] md:px-[10vh] px-2">
     <!-- Contents table -->
     <section>
-      <h1 class="ml-3">ABOUT US</h1>
-      <Contentstable contents={contents} />
+      <div class="ml-3">
+        <h1>ABOUT US</h1>
+        <div>
+          <Contentstable contents={contents} />
+        </div>
+      </div>
     </section>
     <section class="mt-6 ml-4 md:mt-0">
       <div id="introduction" class="mb-6 scroll-mt-16">
-        <h1 class=" text-nord3 mb-2">Introduction</h1>
+        <h1 class="text-nord3 mb-2">Introduction</h1>
         <p>
-          BITS Pilani Hyderabad campus houses a technology business incubator (TBI) 
-          called BITS Pilani Hyderabad Campus TBI Society (henceforth referred to as “TBIS”) 
-          since 2012 to encourage innovative entrepreneurship, and to facilitate translation 
-          of knowledge or technology-driven innovations from within and outside the institute. 
-          TBIS was initially established with the support of National Science and Technology 
-          Entrepreneurship Development Board (NSTEDB), DST, Govt. of India and is currently 
-          being supported by the intramural budget.
+          BITS Pilani Hyderabad campus houses a technology business incubator
+          (TBI) called BITS Pilani Hyderabad Campus TBI Society (henceforth
+          referred to as “TBIS”) since 2012 to encourage innovative
+          entrepreneurship, and to facilitate translation of knowledge or
+          technology-driven innovations from within and outside the institute.
+          TBIS was initially established with the support of National Science
+          and Technology Entrepreneurship Development Board (NSTEDB), DST, Govt.
+          of India and is currently being supported by the intramural budget.
         </p>
       </div>
       <div id="thrust-areas" class="my-6 scroll-mt-16">
-        <h1 class=" text-nord3 mb-2">Thrust Areas</h1>
+        <h1 class="text-nord3 mb-2">Thrust Areas</h1>
         <p>
-          Right from its inception, TBIS has had major focus on fostering technology/knowledge-based 
-          start-ups in the areas of Pharma & Biopharma, ICT in Healthcare, Medical Devices, 
-          Biotechnology, MicroElectroMechanical Systems (MEMS) for Diagnostic devices and 
-          PoC healthcare. Being an incubator housed at academic institute with 12 different 
-          departments, TBIS is welcoming for sector agnostic innovations. However, start-ups 
-          and innovators from Healthcare sector including Invitro Diagnostics (IVD), MEMS, 
-          Pharma and Bio-Pharmaceuticals has always been predominant incubatees at TBIS.
+          Right from its inception, TBIS has had major focus on fostering
+          technology/knowledge-based start-ups in the areas of Pharma &
+          Biopharma, ICT in Healthcare, Medical Devices, Biotechnology,
+          MicroElectroMechanical Systems (MEMS) for Diagnostic devices and PoC
+          healthcare. Being an incubator housed at academic institute with 12
+          different departments, TBIS is welcoming for sector agnostic
+          innovations. However, start-ups and innovators from Healthcare sector
+          including Invitro Diagnostics (IVD), MEMS, Pharma and
+          Bio-Pharmaceuticals has always been predominant incubatees at TBIS.
         </p>
       </div>
       <div id="facilties" class="my-6 scroll-mt-16">
-        <h1 class=" text-nord3 mb-2">Facilties</h1>
+        <h1 class="text-nord3 mb-2">Facilties</h1>
         <p>
-          Current infrastructure at TBIS is well suited to cattering 
-          the early to mid-stage innovative start-ups by providing them with 
-          lab infrastructure, instrumentation facilities, office cubicles, 
-          co-working area, prototyping facility and access to the state-of-the art 
-          instrumentation facility of the institute. The existing TBIS is 
-          spanned over 8,000 SFT and the details of the existing facility are as follows:
-          </br>
-          </br>
-          TBIS has a dedicated Biotech / Pharma lab of over 2,000 SFT with common instrumentation 
-          facility, chemical hoods, cell culture facility, bacteriological lab, refrigeration room, 
-          media room, wash & autoclave area and dedicated lab premises to host biotech and 
-          pharma/biopharma start-ups.The BioLab at TBIS is currently occupied with existing startups, 
-          and several more applications are in the pipeline for incubation. Recognizing the need for 
-          expansion, TBIS aims to expanding the lab infrastructure from BIRAC BioNEST to accommodate 
-          future growth and serve a larger number of bio-innovators.
-          </br>
-          </br>
-          TBIS has office premises comprising of 12 individual offices and co-working space with 
-          34 hot-desks & chairs. TBIS currently houses 15 incubatee start-ups and 10 student pre-incubatee 
-          teams. TBIS office is equipped with a dedicated conference room, discussion room, brainstorming 
-          area, reception, pantry and utility area.
-          </br>
-          </br>
-          TBIS shares design and prototyping facility with Sandbox & Tinkerer's lab spanning over 
-          3,000 SFT. The premises include prototyping devices and tools co-created with TBIS support, 
-          readily accessible for incubatee start-ups and student innovators. Some of the prototyping 
-          tools at prototyping facility includes SLA Printer, 3D Printers, 33W Laser Engraving machine, 
-          DiniLite Digital microscope, 2D scanner, etc. In addition, the incubatee and student 
-          innovators can also access the institute’s highly equipped prototyping facility on need basis.
-          </br>
-          </br>
-          In addition to TBIS lab instruments, the incubatees are provided access to institute 
-          facilities; such as, Central Analytical Lab facility, Animal House facility, Clean Room 
-          facility, High-end computational and internet support, Institute Prototyping facility, 
-          conference rooms & seminar halls, state-of-the art Library and other amenities including 
-          cafeteria & mess. The institutional facilities accessible for the incubator and incubate 
-          start-ups are detailed in the section B.4 of this proposal.
+          Current infrastructure at TBIS is well suited to cattering the early
+          to mid-stage innovative start-ups by providing them with lab
+          infrastructure, instrumentation facilities, office cubicles,
+          co-working area, prototyping facility and access to the state-of-the
+          art instrumentation facility of the institute. The existing TBIS is
+          spanned over 8,000 SFT and the details of the existing facility are as
+          follows:
         </p>
       </div>
-      <div id="offerings" class="my-6 scroll-mt-16">
-        <h1 class=" text-nord3 mb-2">Offerings</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a nemo
-          ipsa reiciendis quas. Provident laborum nobis optio eveniet, rerum
-          sint voluptas corporis temporibus hic quaerat alias ad vel velit!
-        </p>
-      </div>
-      <div id="team" class="my-6 scroll-mt-16">
-        <h1 class=" text-nord3 mb-2">Team</h1>
-        <p>
-          TBI is currently managed by Dr. Sandeep Raut, The General Manager, and Mr. Mir Ali, The
-          Assistant Manager.
-        </p>
-      </div>
-      <div id="sponsors-and-mentors" class="my-6 scroll-mt-16">
-        <h1 class=" text-nord3 mb-2">Sponsors and Mentors</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a nemo
-          ipsa reiciendis quas. Provident laborum nobis optio eveniet, rerum
-          sint voluptas corporis temporibus hic quaerat alias ad vel velit!
-        </p>
-        <!-- <div class="mt-6">
-          <MultiImageCarousel client:visible/>
-        </div> -->
-      </div>
+      TBIS has a dedicated Biotech / Pharma lab of over 2,000 SFT with common instrumentation
+      facility, chemical hoods, cell culture facility, bacteriological lab, refrigeration
+      room, media room, wash & autoclave area and dedicated lab premises to host
+      biotech and pharma/biopharma start-ups.The BioLab at TBIS is currently occupied
+      with existing startups, and several more applications are in the pipeline for
+      incubation. Recognizing the need for expansion, TBIS aims to expanding the
+      lab infrastructure from BIRAC BioNEST to accommodate future growth and serve
+      a larger number of bio-innovators.
     </section>
   </main>
-  <hr class="h-1 mt-8 border-0 bg-nord10" />
+  TBIS has office premises comprising of 12 individual offices and co-working space
+  with 34 hot-desks & chairs. TBIS currently houses 15 incubatee start-ups and 10
+  student pre-incubatee teams. TBIS office is equipped with a dedicated conference
+  room, discussion room, brainstorming area, reception, pantry and utility area.
 </PageLayout>
+
+TBIS shares design and prototyping facility with Sandbox & Tinkerer's lab
+spanning over 3,000 SFT. The premises include prototyping devices and tools
+co-created with TBIS support, readily accessible for incubatee start-ups and
+student innovators. Some of the prototyping tools at prototyping facility
+includes SLA Printer, 3D Printers, 33W Laser Engraving machine, DiniLite Digital
+microscope, 2D scanner, etc. In addition, the incubatee and student innovators
+can also access the institute’s highly equipped prototyping facility on need
+basis. In addition to TBIS lab instruments, the incubatees are provided access
+to institute facilities; such as, Central Analytical Lab facility, Animal House
+facility, Clean Room facility, High-end computational and internet support,
+Institute Prototyping facility, conference rooms & seminar halls, state-of-the
+art Library and other amenities including cafeteria & mess. The institutional
+facilities accessible for the incubator and incubate start-ups are detailed in
+the section B.4 of this proposal.
+
+<div id="offerings" class="my-6 scroll-mt-16">
+  <h1 class="text-nord3 mb-2">Offerings</h1>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a nemo ipsa
+    reiciendis quas. Provident laborum nobis optio eveniet, rerum sint voluptas
+    corporis temporibus hic quaerat alias ad vel velit!
+  </p>
+</div>
+<div id="team" class="my-6 scroll-mt-16">
+  <h1 class="text-nord3 mb-2">Team</h1>
+  <p>
+    TBI is currently managed by Dr. Sandeep Raut, The General Manager, and Mr.
+    Mir Ali, The Assistant Manager.
+  </p>
+</div>
+<div id="sponsors-and-mentors" class="my-6 scroll-mt-16">
+  <h1 class="text-nord3 mb-2">Sponsors and Mentors</h1>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a nemo ipsa
+    reiciendis quas. Provident laborum nobis optio eveniet, rerum sint voluptas
+    corporis temporibus hic quaerat alias ad vel velit!
+  </p>
+  <!-- <div class="mt-6">
+          <MultiImageCarousel client:visible/>
+        </div> -->
+</div>
+
+<hr class="h-1 mt-8 border-0 bg-nord10" />

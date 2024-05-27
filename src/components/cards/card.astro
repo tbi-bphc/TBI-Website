@@ -10,14 +10,14 @@ const { name, img, link, description } = Astro.props as Card;
 ---
 
 <div class="border-1 w-[26vh] m-4 border-2 border-black rounded-md">
-  <div class="group relative hover:bg-nord2">
+  <div class="group relative">
     <img
       src={img}
       alt="card"
       class="h-48 w-full object-fill rounded-t-sm duration-300 group-hover:opacity-20 group-hover:scale-120"
     />
     <div
-      class="absolute opacity-0 group-hover:cursor-pointer group-hover:opacity-100 duration-700 h-full w-full top-3 text-white text-center px-2"
+      class="absolute opacity-0 group-hover:cursor-pointer group-hover:opacity-100 duration-700 h-full w-full top-3 text-black text-center px-2"
     >
       {description}
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus facere,

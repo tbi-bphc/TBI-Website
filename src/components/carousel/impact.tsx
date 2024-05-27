@@ -19,7 +19,7 @@ function ImpactItem( {title, number}:ImpactItem){
 
 export function ImpactCarousel(){
     return(
-        <div className="flex gap-32">
+        <div className="grid md:grid-cols-4 grid-cols-2 gap-10 md:gap-20">
             <ImpactItem title="Users" number={60}/>
             <ImpactItem title="Users" number={60}/>
             <ImpactItem title="Users" number={60}/>

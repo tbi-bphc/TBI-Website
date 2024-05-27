@@ -1,41 +1,96 @@
 ---
-import PageLayout from "@/layouts/PageLayout.astro"
-import Card from "@/components/cards/card.astro"
+import PageLayout from "@/layouts/PageLayout.astro";
+import Card from "@/components/cards/card.astro";
 ---
 
 <PageLayout>
-    <main class="px-[25vh]">
-        <h1 class=" text-nord10 text-4xl text-center p-4">
-            INCUBATEES
-        </h1>
+  <main class="px-6 md:px-[25vh]">
+    <h1 class="text-nord10 text-4xl text-center my-4">INCUBATEES</h1>
 
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ea, ratione, aspernatur officia, hic sed praesentium rerum nesciunt animi aliquid unde a consequuntur dolore expedita error corrupti vitae. Ipsum, officia ducimus!
-        </p>
+    <p class="text-justify">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ea,
+      ratione, aspernatur officia, hic sed praesentium rerum nesciunt animi
+      aliquid unde a consequuntur dolore expedita error corrupti vitae. Ipsum,
+      officia ducimus!
+    </p>
+    <div class="flex items-center justify-center">
+      <div
+        class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-2 md:-ml-4"
+      >
+        <Card
+          name={"Abyom Spacetech And Defence Private Limited"}
+          link="google.com"
+          img={"/startups/abyom.png"}
+        />
+        <Card
+          name={"Anjamma Healthcare Private Limited"}
+          link="google.com"
+          img={"/startups/anjamma.png"}
+        />
+        <Card
+          name={"Cleome Innovations Private Limited"}
+          link="google.com"
+          img={"/startups/cleome.png"}
+        />
+        <Card
+          name={"Pyrome Innovations Private Limited"}
+          link="google.com"
+          img={"/startups/pyrome.png"}
+        />
+        <Card
+          name={"Sensome Innovations Private Limited"}
+          link="google.com"
+          img={"/startups/sensome.png"}
+        />
+        <Card
+          name={"Applied Aero Labs Private Limited"}
+          link="google.com"
+          img={"/startups/Applied_Aero_Labs.png"}
+        />
+        <Card
+          name={"Pharmajen Laboratories Private Limited"}
+          link="google.com"
+          img={"/startups/pharmajen.png"}
+        />
+        <Card
+          name={"Loka Laboratories Private Limited"}
+          link="google.com"
+          img={"/startups/loka.png"}
+        />
+        <Card
+          name={"Masuu Organic Private Limited"}
+          link="google.com"
+          img={"/startups/masuu.png"}
+        />
+        <Card
+          name={"Cinnova Bio Therapeutics Private Limited"}
+          link="google.com"
+          img={"/startups/cinnova.png"}
+        />
+        <Card
+          name={"Tangerne Esperer Private Limited"}
+          link="google.com"
+          img={"/startups/tangerne.png"}
+        />
+        <Card
+          name={"Atreves Healthcare Private Limited"}
+          link="google.com"
+          img={"/startups/atreves.png"}
+        />
+        <Card
+          name={"Alfaleus Technology Private Limited"}
+          link="google.com"
+          img={"/startups/alfaleus.png"}
+        />
+      </div>
+    </div>
 
-        <div class="grid grid-cols-5 mt-2 -ml-4">
-            <Card name={"Abyom Spacetech And Defence Private Limited"} link="google.com" img={"/startups/abyom.png"}/>
-            <Card name={"Anjamma Healthcare Private Limited"} link="google.com" img={"/startups/anjamma.png"}/>
-            <Card name={"Cleome Innovations Private Limited"} link="google.com" img={"/startups/cleome.png"}/>
-            <Card name={"Pyrome Innovations Private Limited"} link="google.com" img={"/startups/pyrome.png"}/>
-            <Card name={"Sensome Innovations Private Limited"} link="google.com" img={"/startups/sensome.png"}/>
-            <Card name={"Applied Aero Labs Private Limited"} link="google.com" img={"/startups/Applied_Aero_Labs.png"}/>
-            <Card name={"Pharmajen Laboratories Private Limited"} link="google.com" img={"/startups/pharmajen.png"}/>
-            <Card name={"Loka Laboratories Private Limited"} link="google.com" img={"/startups/loka.png"}/>
-            <Card name={"Masuu Organic Private Limited"} link="google.com" img={"/startups/masuu.png"}/>
-            <Card name={"Cinnova Bio Therapeutics Private Limited"} link="google.com" img={"/startups/cinnova.png"}/>
-            <Card name={"Tangerne Esperer Private Limited"} link="google.com" img={"/startups/tangerne.png"}/>
-            <Card name={"Atreves Healthcare Private Limited"} link="google.com" img={"/startups/atreves.png"}/>
-            <Card name={"Alfaleus Technology Private Limited"} link="google.com" img={"/startups/alfaleus.png"}/>
-
-        </div>
-
-        <h1 class="text-nord10 text-bold text-3xl my-4">
-            FOCUS AREAS
-        </h1>
-        <p class="mb-8">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus esse expedita obcaecati quaerat voluptas, culpa quas amet commodi optio, delectus sint veritatis fugiat, in hic cupiditate doloremque? Hic, dolore deserunt!
-
-        </p>
-    </main>
+    <h1 class="text-nord10 text-bold text-3xl my-4">FOCUS AREAS</h1>
+    <p class="mb-8">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus esse
+      expedita obcaecati quaerat voluptas, culpa quas amet commodi optio,
+      delectus sint veritatis fugiat, in hic cupiditate doloremque? Hic, dolore
+      deserunt!
+    </p>
+  </main>
 </PageLayout>
