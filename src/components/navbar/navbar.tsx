@@ -7,7 +7,7 @@ function Navbar() {
   const [isProgrammesOpen, setIsProgrammesOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-800 shadow-md sticky top-0 z-10">
+    <nav className="bg-gray-800 w-full shadow-md sticky top-0 z-10">
       <div className="mx-auto flex md:items-center md:justify-center px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Hamburger Menu - Only on Mobile */}
