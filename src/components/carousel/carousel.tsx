@@ -36,11 +36,11 @@ export function MultiImageCarousel() {
     >
       <CarouselContent className="-ml-1">
         {pictures.map((link, index) => (
-          <CarouselItem key={index} className="pl-1 md:basis-1/3 lg:basis-1/4">
+          <CarouselItem key={index} className=" md:basis-1/3 lg:basis-1/4">
             <div className="p-1">
               <Card>
                 <CardContent className="p-0 m-0 w-full">
-                  <img src={link} alt="index" className="h-56 -z-10" />
+                  <img src={link} alt="index" className="h-56 object-contain p-4 flex m-auto" />
                 </CardContent>
               </Card>
             </div>
