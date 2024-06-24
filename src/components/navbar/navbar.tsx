@@ -29,6 +29,8 @@ function Navbar() {
             <NavLink title="About Us" link='/about' />
             <NavLink title="Incubatees" link="/incubatees"/>
             <NavLink title="Events Gallery" link='/events'/>
+            <NavLink title="Team" link='/team'/>
+            <NavLink title="Facilities" link='/facilities'/>
             {/* Programmes Dropdown - Desktop */}
             <div className="relative inline-block text-left">
               <button
