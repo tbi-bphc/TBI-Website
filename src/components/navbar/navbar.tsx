@@ -28,7 +28,7 @@ function Navbar() {
             <NavLink title="Home" link="/home"/>
             <NavLink title="About Us" link='/about' />
             <NavLink title="Incubatees" link="/incubatees"/>
-            <NavLink title="Events Gallery" link='/events'/>
+            <NavLink title="Events" link='/events'/>
             <NavLink title="Team" link='/team'/>
             <NavLink title="Facilities" link='/facilities'/>
             {/* Programmes Dropdown - Desktop */}
