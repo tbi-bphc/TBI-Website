@@ -4,51 +4,59 @@ import Contactcard from "@/components/cards/contactcard.astro";
 ---
 
 <PageLayout>
-  <main class="px-6 md:px-[25vh]">
-    <h1 class="text-center text-4xl my-8 text-nord10">CONTACT US</h1>
-    <!-- <section class="my-4">
-      <h2 class="text-2xl my-2 text-nord0">EMAIL US AT</h2>
-      <div class="mb-2">
-        <p class=" text-nord9">Sandeep Raut, General Manager, TBIS BITS Pilani Hyderabad Campus</p>
-        <p class="hover:underline">sandeep.raut@hyderabad.bits-pilani.ac.in</p>
-      </div>
-      <div>
-        <p class=" text-nord9">Mir Ali, Assistant Manager, TBIS BITS Pilani Hyderabad Campus</p>
-        <p class="hover:underline">mirm.ali@hyderbad.bits-pilani.ac.in</p>
-      </div>
-    </section> -->
-    <section>
-      <div class="flex items-center justify-center">
-        <div class="">
-          <!-- <Contactcard
-            name="Sandeep Raut, General Manager TBI"
-            number={99999999999}
-            email={"sandeep.raut@hyderabad.bits-pilani.ac.in"}
-          />
-
-          <Contactcard
-            name="Mir Ali, Asst. Manager TBI"
-            number={99999999999}
-            email={"mirm.ali@hyderabad.bits-pilani.ac.in"}
-          /> -->
-          <div>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScbxbVIxjZp38kgKABkeW2D9JXuNLvWT0xrPjlh3kF2BTOw8g/viewform?embedded=true" width="640" height="510" class="w-60 h-40 md:w-[640px] md:h-[510px]">Loading…</iframe>
-          </div>
+    <main class="px-6 md:px-[25vh]">
+        <div class="flex flex-col md:flex-row my-8 w-full">
+            <div class="my-auto">
+                <div class="lg:mb-60">
+                    <h1 class="w-full text-center text-4xl my-8 text-nord10">
+                        CONTACT US
+                    </h1>
+                    <p class="text-lg text-center">
+                        Need to get in touch with us? Either fill out the form
+                        with your inquiry or find the department email you'd
+                        like to contact below.
+                    </p>
+                </div>
+            </div>
+            <section class="w-full h-full mt-4">
+                <div class="md:float-right flex items-center justify-center">
+                    <div class="">
+                        <div>
+                            <!-- <iframe
+                                src="https://docs.google.com/forms/d/e/1FAIpQLScbxbVIxjZp38kgKABkeW2D9JXuNLvWT0xrPjlh3kF2BTOw8g/viewform?embedded=true"
+                                width="640"
+                                height="510"
+                                ct
+                                b
+                                class="w-60 h-40 md:w-[640px] md:h-[510px]"
+                                >Loading…</iframe
+                            > -->
+                            <iframe
+                                src="https://docs.google.com/forms/d/e/1FAIpQLScbxbVIxjZp38kgKABkeW2D9JXuNLvWT0xrPjlh3kF2BTOw8g/viewform?embedded=true"
+                                width="640"
+                                height="510"
+                                ct
+                                b
+                                class="w-80 h-40 md:w-[640px] md:h-[510px]"
+                                >Loading…</iframe
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-      </div>
-    </section>
-    <section>
-      <h1 class="text-center text-4xl my-8 text-nord10">REACH HERE</h1>
-      <div class="flex justify-center items-center m-4">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.216233168949!2d78.56926307516852!3d17.544888783369426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb83594a86132d%3A0xc3e06e9e76cebf3d!2sBirla%20Institute%20of%20Technology%20%26%20Science%20Pilani%2C%20Hyderabad%20Campus!5e0!3m2!1sen!2sin!4v1715007871408!5m2!1sen!2sin"
-          width="800"
-          height="450"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-  </main>
+        <section>
+            <h1 class="text-center text-4xl my-8 text-nord10">REACH HERE</h1>
+            <div class="flex justify-center items-center m-4">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.216233168949!2d78.56926307516852!3d17.544888783369426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb83594a86132d%3A0xc3e06e9e76cebf3d!2sBirla%20Institute%20of%20Technology%20%26%20Science%20Pilani%2C%20Hyderabad%20Campus!5e0!3m2!1sen!2sin!4v1715007871408!5m2!1sen!2sin"
+                    width="800"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
 </PageLayout>
