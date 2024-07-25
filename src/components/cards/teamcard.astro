@@ -1,11 +1,10 @@
 ---
-const { name, description, linkedin, twitter, instagram, facebook } =
-    Astro.props;
-import { Linkedin, Facebook, Instagram, Twitter } from "lucide-react";
+const { name, description, linkedin, mail } = Astro.props;
+import { Linkedin, Mail } from "lucide-react";
 ---
 
 <div
-    class="w-full my-4 md:max-w-72 items-center bg-white shadow-lg rounded-lg flex flex-col justify-center"
+    class="w-full my-4 md:max-w-72 items-center bg-white shadow-lg rounded-lg flex flex-col justify-center place-self-center"
 >
     <img
         src="https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp"
@@ -14,7 +13,7 @@ import { Linkedin, Facebook, Instagram, Twitter } from "lucide-react";
         class="w-full h-auto object-cover rounded-t-lg"
         id="whoobe-ixxe5"
     />
-    <div id="whoobe-1okdg" class="w-full p-4 justify-start flex flex-col">
+    <div class="w-full p-4 justify-start flex flex-col">
         <h4 class="border-b-2 text-3xl text-center pb-1">
             {name}
         </h4>
@@ -22,25 +21,15 @@ import { Linkedin, Facebook, Instagram, Twitter } from "lucide-react";
             {description}
         </p>
         <section class="flex items-center justify-center mt-2">
-            <div class="flex space-x-4">
+            <div class="flex gap-4">
                 <a href={linkedin} target="_blank">
                     <div class="hover:bg-nord6 p-1 rounded-3xl">
                         <Linkedin />
                     </div>
                 </a>
-                <a href={instagram} target="_blank">
+                <a href={mail} target="_blank">
                     <div class="hover:bg-nord6 p-1 rounded-3xl">
-                        <Instagram />
-                    </div>
-                </a>
-                <a href={twitter} target="_blank">
-                    <div class="hover:bg-nord6 p-1 rounded-3xl">
-                        <Twitter />
-                    </div>
-                </a>
-                <a href={facebook} target="_blank">
-                    <div class="hover:bg-nord6 p-1 rounded-3xl">
-                        <Facebook />
+                        <Mail />
                     </div>
                 </a>
             </div>
