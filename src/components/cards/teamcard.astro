@@ -1,5 +1,5 @@
 ---
-const { name, description, linkedin, mail } = Astro.props;
+const { name, description, linkedin, mail, image } = Astro.props;
 import { Linkedin, Mail } from "lucide-react";
 ---
 
@@ -7,7 +7,7 @@ import { Linkedin, Mail } from "lucide-react";
     class="w-full my-4 md:max-w-72 items-center bg-white shadow-lg rounded-lg flex flex-col justify-center place-self-center"
 >
     <img
-        src="https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp"
+        src={image??"https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp"}
         alt="img"
         title="img"
         class="w-full h-auto object-cover rounded-t-lg"
