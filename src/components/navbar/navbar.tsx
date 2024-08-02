@@ -26,6 +26,7 @@ function Navbar() {
             <NavLink title="Incubatees" link="/incubatees" />
             <NavLink title="Events" link="/events" />
             <NavLink title="Team" link="/team" />
+            <NavLink title="Mentors" link="/mentors" />
             <NavLink title="Facilities" link="/facilities" />
             {/* Programmes Dropdown - Desktop */}
             <div className="relative inline-block text-left">
@@ -82,10 +83,13 @@ function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-gray-800 py-2">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <NavLink title="Home" link="/home" />
+          <NavLink title="Home" link="/home" />
             <NavLink title="About Us" link="/about" />
             <NavLink title="Incubatees" link="/incubatees" />
-            <NavLink title="Events Gallery" link="/events" />
+            <NavLink title="Events" link="/events" />
+            <NavLink title="Team" link="/team" />
+            <NavLink title="Mentors" link="/mentors" />
+            <NavLink title="Facilities" link="/facilities" />
             {/* Programmes Dropdown - Mobile */}
             <div className="relative inline-block text-left">
               <button
