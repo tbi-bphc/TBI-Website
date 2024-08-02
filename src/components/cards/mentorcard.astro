@@ -1,0 +1,21 @@
+---
+const { name, image } = Astro.props;
+---
+
+<main
+    class="w-full my-4 md:max-w-72 items-center bg-white shadow-lg rounded-lg flex justify-center place-self-center"
+>
+    <div>
+        <img
+            src={image ??
+                "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp"}
+            alt="image"
+            class="min-h-40"
+        />
+    </div>
+    <div class="my-auto mx-6">
+        <p class="text-left">
+            {name}
+        </p>
+    </div>
+</main>
