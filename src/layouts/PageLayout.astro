@@ -1,13 +1,12 @@
 ---
 import '@/styles/globals.css'
 import Navbar from "@/components/navbar/navbar";
-import Header from "@/components/header/header";
 import Footer from '@/components/footer/footer.astro';
 ---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/BITS_Pilani-Logo 4.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>TBI</title>
@@ -18,7 +17,7 @@ import Footer from '@/components/footer/footer.astro';
 			<img src="/blob-scene-haikei.svg" class="w-full">
 		</div> -->
 		
-		<Header client:visible/>
+		<!-- <Header client:visible/> -->
 		<Navbar client:visible/>
 		<slot/>
 		<Footer/>

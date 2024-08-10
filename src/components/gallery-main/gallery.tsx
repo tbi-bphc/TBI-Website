@@ -17,7 +17,7 @@ interface Props {
 export default function MainGallery({pictures} : Props) {
     return (
         <Carousel
-            className="relative lg:px-[25vh] mx-2 md:px-[20vh] h-[80vh] -z-10 mb-10"
+            className="relative w-full -z-10 mb-10"
             plugins={[
                 Autoplay({
                     delay: 2000,
@@ -30,7 +30,7 @@ export default function MainGallery({pictures} : Props) {
                         <div className="">
                             <Card className="rounded-2xl">
                                 <CardContent className="p-0 m-0">
-                                    <img src={link} alt="index" className="w-full object-fit h-[80vh] rounded-md " />
+                                    <img src={link} alt="" className="w-full object-cover h-[60vh] rounded-md " />
                                 </CardContent>
                             </Card>
                         </div>

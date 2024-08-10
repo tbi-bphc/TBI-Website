@@ -7,7 +7,7 @@ function Navbar() {
   const [isProgrammesOpen, setIsProgrammesOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-800 w-full shadow-md sticky top-0 z-10">
+    <nav className=" bg-nord4 w-full shadow-md sticky top-0 z-10 h-20 ">
       <div className="mx-auto flex md:items-center md:justify-center px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Hamburger Menu - Only on Mobile */}
@@ -20,12 +20,13 @@ function Navbar() {
             </button>
           </div>
           {/* Navigation Links - Desktop */}
-          <div className="hidden md:flex justify-center items-center space-x-4">
-            <NavLink title="Home" link="/home" />
-            <NavLink title="About Us" link="/about" />
+          <div className="hidden md:flex justify-center items-center space-x-4 my-auto">
+            <div className="float-left">
+            <NavImageLink image="/tbislogoblue 3.png" link="/home" size={{ height: 24, width: 16}}/>
+            </div>
+          <NavLink title="About Us" link="/about" />
             <NavLink title="Incubatees" link="/incubatees" />
             <NavLink title="Events" link="/events" />
-            <NavLink title="Team" link="/team" />
             <NavLink title="Mentors" link="/mentors" />
             <NavLink title="Facilities" link="/facilities" />
             {/* Programmes Dropdown - Desktop */}
@@ -33,7 +34,7 @@ function Navbar() {
               <button
                 onClick={() => setIsProgrammesOpen(!isProgrammesOpen)}
                 type="button"
-                className="inline-flex justify-center w-full rounded-md text-white  px-4 py-2 text-sm font-medium hover:bg-gray-700 focus:outline-none  focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+                className="inline-flex justify-center w-full rounded-md text-nord0 px-4 py-2 text-sm font-medium hover:text-nord10 focus:outline-none  focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
               >
                 Programmes
                 <ChevronDown
@@ -43,7 +44,7 @@ function Navbar() {
               </button>
               {isProgrammesOpen && (
                 <div
-                  className="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-gray-800 text-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  className="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-nord6 text-nord0 ring-1 ring-black ring-opacity-5 focus:outline-none"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"
@@ -76,6 +77,9 @@ function Navbar() {
             </div>
             {/* <NavLink title="Partners" /> */}
             <NavLink title="Contact Us" link="/contact" />
+            <div className="float-left">
+                <NavImageLink image="/BITS_Pilani-Logo 4.png" link="/home" size={{height:12, width:10}}/>
+            </div>
           </div>
         </div>
       </div>
@@ -83,7 +87,8 @@ function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-gray-800 py-2">
           <div className="px-2 pt-2 pb-3 space-y-1">
-          <NavLink title="Home" link="/home" />
+          {/* <NavLink title="Home" link="/home" /> */}
+            <NavImageLink image="/tbislogoblue 3.png" link="/home" size={{ height: 24, width: 16}}/>
             <NavLink title="About Us" link="/about" />
             <NavLink title="Incubatees" link="/incubatees" />
             <NavLink title="Events" link="/events" />
@@ -150,13 +155,35 @@ interface NavLinkProps {
   link: string;
 }
 
-function NavLink({ title, link }: NavLinkProps) {
+function NavLink({ title, link, }: NavLinkProps) {
   return (
     <a
       href={link}
-      className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-sm font-medium"
+      className=" text-nord0 hover:text-nord10 block px-3 py-2 rounded-md text-sm font-medium"
     >
       {title}
+    </a>
+  );
+}
+
+interface Size {
+  height: number;
+  width: number;
+}
+
+interface NavImageLinkProps {
+  image: string;
+  link: string;
+  size: Size;
+}
+
+function NavImageLink({ image, link, size }: NavImageLinkProps) {
+  return (
+    <a
+      href={link}
+      className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm font-medium"
+    >
+      <img src={image} alt="" className={`w-${size.height} h-${size.width}`} />
     </a>
   );
 }

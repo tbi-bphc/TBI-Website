@@ -1,9 +1,13 @@
 import MainGallery from "@/components/gallery-main/gallery";
+// const pictures = [
+//     "/gallery/audi.png",
+//     "/gallery/lawns.png",
+//     "/gallery/nabgate.png",
+//     "/gallery/classroom-1.jpg",
+//     "/HomeBackground.png"
+// ]
 const pictures = [
-    "/gallery/audi.png",
-    "/gallery/lawns.png",
-    "/gallery/nabgate.png",
-    "/gallery/classroom-1.jpg"
+     "/HomeBackground.png"
 ]
 
 export default function HomeGallery() {
