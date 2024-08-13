@@ -1,3 +1,4 @@
+import CountUpAnimation from "@/helpers/countUp"
 import { Users } from "lucide-react"
 import { Building2 } from "lucide-react"
 import { HandCoins } from "lucide-react"
@@ -18,7 +19,10 @@ function ImpactItem( {title, number, icon, text}:ImpactItem){
             {icon ==="Building2"?<Building2 size={60} />:<></>}
             {icon ==="HandCoins"?<HandCoins size={60} />:<></>}
             {icon ==="CircleDollarSign"?<CircleDollarSign size={60} />:<></>}
-            <p className="text-2xl my-auto ml-6">{number} {text}</p>
+            <p className="text-2xl my-auto ml-6 flex space-x-1">
+                <CountUpAnimation targetValue={number}/> 
+                <span>{text}</span>
+            </p>
           </div>
           <div style={{ fontSize: "24px" }}>{title}</div>
         </div>
