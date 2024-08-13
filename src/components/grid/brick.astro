@@ -1,0 +1,73 @@
+---
+interface Columns {
+  col1?: string[],
+  col2?: string[],
+  col3?: string[],
+  col4?: string[],
+}
+
+const { col1, col2, col3, col4 } = Astro.props as Columns;
+---
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  <div class="grid gap-4">
+    { col1? 
+      col1!.map((image: string, index: number) => (
+        <>
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src={image}
+            alt={index.toString()}
+          />
+        </>
+      )):
+      <></>
+    }
+  </div>
+  <div class="grid gap-4">
+    {
+      col2?
+      col2!.map((image: string, index: number) => (
+        <>
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src={image}
+            alt={index.toString()}
+          />
+        </>
+      )):
+      <></>
+    }
+  </div>
+  <div class="grid gap-4">
+    {
+      col3?
+      col3!.map((image: string, index: number) => (
+        <>
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src={image}
+            alt={index.toString()}
+          />
+        </>
+      )):
+      <></>
+    }
+  </div>
+
+  <div class="grid gap-4">
+    {
+      col4?
+      col4!.map((image: string, index: number) => (
+        <>
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src={image}
+            alt={index.toString()}
+          />
+        </>
+      )):
+      <></> 
+    }
+  </div>
+</div>

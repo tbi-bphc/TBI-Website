@@ -4,7 +4,8 @@ import { ChevronDown } from "lucide-react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isProgrammesOpen, setIsProgrammesOpen] = useState(false);
+  const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
 
   return (
     <nav className=" bg-nord4 w-full shadow-md sticky top-0 z-10 h-20 ">
@@ -25,24 +26,24 @@ function Navbar() {
             <NavImageLink image="/tbislogoblue 3.png" link="/home" size={{ height: 24, width: 16}}/>
             </div>
           <NavLink title="About Us" link="/about" />
-            <NavLink title="Incubatees" link="/incubatees" />
-            <NavLink title="Events" link="/events" />
-            <NavLink title="Mentors" link="/mentors" />
-            <NavLink title="Facilities" link="/facilities" />
+            <NavLink title="Programs" link="/programmes" />
+            {/* <NavLink title="Events" link="/events" />
+            <NavLink title="Mentors" link="/mentors" /> */}
+            <NavLink title="Infrastructure" link="/infrastructure" />
             {/* Programmes Dropdown - Desktop */}
             <div className="relative inline-block text-left">
               <button
-                onClick={() => setIsProgrammesOpen(!isProgrammesOpen)}
+                onClick={() => setIsPortfolioOpen(!isPortfolioOpen)}
                 type="button"
                 className="inline-flex justify-center w-full rounded-md text-nord0 px-4 py-2 text-sm font-medium hover:text-nord10 focus:outline-none  focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
               >
-                Programmes
+                Portfolio
                 <ChevronDown
                   className="-mr-1 ml-2 h-5 w-5"
                   aria-hidden="true"
                 />
               </button>
-              {isProgrammesOpen && (
+              {isPortfolioOpen && (
                 <div
                   className="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-nord6 text-nord0 ring-1 ring-black ring-opacity-5 focus:outline-none"
                   role="menu"
@@ -51,30 +52,84 @@ function Navbar() {
                 >
                   <div className="py-1" role="none">
                     <a
-                      href="/programmes/incubation"
+                      href="/incubatees"
                       className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
                       role="menuitem"
                     >
-                      Incubation
+                      Incubatees
                     </a>
                     <a
-                      href="programmes/seep"
+                      href="/pre-incubatees"
                       className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
                       role="menuitem"
                     >
-                      SEEP
+                      Pre-Incubatees
                     </a>
                     <a
-                      href="/programmes/solve"
+                      href="/virtual-incubatees"
                       className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
                       role="menuitem"
                     >
-                      SOLVE
+                      Virtual Incubatees
                     </a>
                   </div>
                 </div>
               )}
             </div>
+            <NavLink title="Stakeholders" link="/stakeholders" />
+            <div className="relative inline-block text-left">
+              <button
+                onClick={() => setIsResourcesOpen(!isResourcesOpen)}
+                type="button"
+                className="inline-flex justify-center w-full rounded-md text-nord0 px-4 py-2 text-sm font-medium hover:text-nord10 focus:outline-none  focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+              >
+                Resources
+                <ChevronDown
+                  className="-mr-1 ml-2 h-5 w-5"
+                  aria-hidden="true"
+                />
+              </button>
+              {isResourcesOpen && (
+                <div
+                  className="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-nord6 text-nord0 ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="options-menu"
+                >
+                  <div className="py-1" role="none">
+                    <a
+                      href="/events"
+                      className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
+                      role="menuitem"
+                    >
+                      Events and Incubatees
+                    </a>
+                    <a
+                      href="announcements"
+                      className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
+                      role="menuitem"
+                    >
+                      Announcements and Updates
+                    </a>
+                    <a
+                      href="/news"
+                      className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
+                      role="menuitem"
+                    >
+                      News
+                    </a>
+                    <a
+                      href="/blogs"
+                      className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
+                      role="menuitem"
+                    >
+                      Blogs
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
+
             {/* <NavLink title="Partners" /> */}
             <NavLink title="Contact Us" link="/contact" />
             <div className="float-left">
@@ -98,7 +153,7 @@ function Navbar() {
             {/* Programmes Dropdown - Mobile */}
             <div className="relative inline-block text-left">
               <button
-                onClick={() => setIsProgrammesOpen(!isProgrammesOpen)}
+                onClick={() => setIsPortfolioOpen(!isPortfolioOpen)}
                 type="button"
                 className="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
               >
@@ -108,7 +163,7 @@ function Navbar() {
                   aria-hidden="true"
                 />
               </button>
-              {isProgrammesOpen && (
+              {isPortfolioOpen && (
                 <div
                   className=" origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                   role="menu"

@@ -1,28 +1,26 @@
 ---
 import PageLayout from "@/layouts/PageLayout.astro";
-import AboutGallery from "./aboutgallery";
 import Contentstable from "@/components/contents-table/contentstable.astro";
-import { MultiImageCarousel } from "@/components/carousel/carousel";
 import TeamCard from "@/components/cards/teamcard.astro";
 import Commongrid from "@/components/grid/commongrid.astro";
 
 const contents = [
   {
-    title: "BPHC",
-    link: "#bphc",
+    title: "Incubation",
+    link: "#incubation",
   },
   {
-    title: "TBI",
-    link: "#tbi",
+    title: "Pre Incubation",
+    link: "#pre-incubation",
   },
   {
-    title: "Thrust areas",
-    link: "#thrust-areas",
+    title: "Virtual Incubation",
+    link: "#virtual-incubation",
   },
 
   {
-    title: "Team",
-    link: "#team",
+    title: "SEEP",
+    link: "#seep",
   },
 ];
 
@@ -30,10 +28,8 @@ const pictures = [
   "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp",
   "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp",
   "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp",
-  "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp",
-  "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp",
-  "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp",
 ]
+
 
 ---
 
@@ -41,7 +37,7 @@ const pictures = [
   <main class="mt-8 md:flex md:flex-row gap-20 lg:px-[25vh] md:px-[10vh] px-2">
     <section>
       <div class="ml-3">
-        <h1>ABOUT</h1>
+        <h1>PROGRAMMES</h1>
         <div>
           <Contentstable contents={contents} />
         </div>
@@ -49,17 +45,25 @@ const pictures = [
     </section>
     <section class="mt-6 md:mt-0">
       <div id="bphc" class="mb-6 scroll-mt-20">
-        <h1 class="text-nord3 mb-2">BPHC</h1>
+        <h1 class="text-nord3 mb-2">Inucubation</h1>
         <p>
-          Birla Institute of Technology and Science, Pilani – Hyderabad Campus
-          is one of the five constituent campuses of the BITS Pilani university
-          located in Hyderabad, India. BITS opened its campus in Hyderabad upon
-          invitation by the Government of Andhra Pradesh in 2008 with the first
-          batch of campus graduating in 2012.
+          BITS Pilani Hyderabad campus houses a technology business incubator
+          (TBI) called BITS Pilani Hyderabad Campus TBI Society (TBIS) since
+          2012 to encourage innovative entrepreneurship, and to facilitate
+          translation of knowledge or technology-driven innovations from within
+          and outside the institute. TBIS offers services and incubation support
+          to innovative ideas across the sectors with major focus on:
+          Information & Computer Technology (ICT) for Healthcare,
+          Micro-Electro-Mechanical Systems & Miniaturized Devices, Biotechnology
+          & Pharmaceuticals, SpaceTech & Defence, Agriculture & AgriTech and
+          Other ICT, such as Social Media, Edutainment, E-commerce, etc. The
+          start-ups and innovators interested to seek incubation and
+          infrastructure support of TBIS are requested to provide the details as
+          prescribed in the Incubation Request Form as below.
         </p>
       </div>
       <div id="tbi" class="mb-6 scroll-mt-20">
-        <h1 class="text-nord3 mb-2">TBI</h1>
+        <h1 class="text-nord3 mb-2">Pre Incuabation</h1>
         <p>
           BITS Pilani Hyderabad campus houses a technology business incubator
           (TBI) called BITS Pilani Hyderabad Campus TBI Society (henceforth
@@ -72,7 +76,7 @@ const pictures = [
         </p>
       </div>
       <div id="thrust-areas" class="my-6 scroll-mt-20">
-        <h1 class="text-nord3 mb-2">Thrust Areas</h1>
+        <h1 class="text-nord3 mb-2">Virtual Incubation</h1>
         <p>
           Right from its inception, TBIS has had major focus on fostering
           technology/knowledge-based start-ups in the areas of Pharma &
@@ -84,22 +88,33 @@ const pictures = [
           including Invitro Diagnostics (IVD), MEMS, Pharma and
           Bio-Pharmaceuticals has always been predominant incubatees at TBIS.
         </p>
-        <Commongrid pictures={pictures}/>
       </div>
       <div id="team" class="my-6 scroll-mt-20">
-        <h1 class="text-nord3 mb-2">Team</h1>
+        <h1 class="text-nord3 mb-2">SEEP</h1>
         <div class="">
-          <section class="flex space-x-8">
-              <TeamCard
-                  name="Dr. Sandeep Raut"
-                  description="The General Manager for the Technology and Business Incubator, BITS Pilani, Hyderabad Campus"
-              />
-              <TeamCard
-                  name="Mr. Mir Ali"
-                  description="The Assistant Manager for the Technology and Business Incubator, BITS Pilani, Hyderabad Campus"
-              />
-          </section>
-      </div>
+          <ul class="">
+            <li class="text-md text-nord10 mt-2">SEEP 1.0</li>
+            <p class="mt-4">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Laboriosam in magni amet doloremque aliquid tempore dolor nam
+              harum culpa necessitatibus, nesciunt excepturi maiores non. Cum,
+              dicta! Sed perspiciatis quae numquam!
+            </p>
+            <div>
+              <Commongrid pictures={pictures}/>
+            </div>
+            <li class="text-md text-nord10 mt-2">SEEP 2.0</li>
+            <p class="mt-4">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Laboriosam in magni amet doloremque aliquid tempore dolor nam
+              harum culpa necessitatibus, nesciunt excepturi maiores non. Cum,
+              dicta! Sed perspiciatis quae numquam!
+            </p>
+            <div class="">
+              <Commongrid pictures={pictures}/>
+            </div>
+          </ul>
+        </div>
       </div>
     </section>
   </main>

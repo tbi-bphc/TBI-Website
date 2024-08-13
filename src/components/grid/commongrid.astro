@@ -1,0 +1,27 @@
+---
+const { pictures } = Astro.props;
+---
+
+<div class="flex items-center justify-center">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-8 mx-auto w-full"
+  >
+    {
+      pictures.map((picture: string, index: number) => (
+        <div>
+          <img
+            src={picture}
+            alt={index.toString()}
+            class="h-56 w-84 rounded-md"
+          />
+        </div>
+      ))
+    }
+
+    <!-- <img
+        src="https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp"
+        alt=""
+        class="h-56 w-84 rounded-md"
+      /> -->
+  </div>
+</div>

@@ -1,35 +1,23 @@
 ---
 import PageLayout from "@/layouts/PageLayout.astro";
-import Card from "@/components/cards/card.astro";
-import EventsGallery from "./eventsgallery";
-import Eventcard from "@/components/grid/brick.astro";
 import Blogcard from "@/components/cards/blogcard.astro";
-const events = await Astro.glob("@/pages/events/*.md");
+const announcements = await Astro.glob("@/pages/announcements/*.md");
 ---
 
 <PageLayout>
     <main class="px-6 md:px-[25vh]">
         <section class="my-8">
-            <h1 class="text-3xl text-nord10">
-                EVENTS AND TALKS CONDUCTED BY TBI
+            <h1 class="text-4xl text-center mr-2 text-nord10">
+                ANNOUNCEMENTS AND UPDATES
             </h1>
             <div class="mb-8">
                 <br />
-                <p class="mb-8">
-                    In case you have an incredible idea, a team in place and
-                    desire to turn your dreams into reality, we encourage you to
-                    grab this opportunity of participating in SEEP-2023. TBIS
-                    brings you an awesome opportunity to showcase your inner
-                    entrepreneur and pitch your idea to a panel of judges with
-                    substantial experience; the best, but also the most
-                    unyielding juries you could have asked for!
-                </p>
                 <div class="flex items-center justify-center w-full">
                     <div
                         class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 space-x-2"
                     >
                         {
-                            events.map((blog) => (
+                            announcements.map((blog) => (
                                 <div>
                                     <Blogcard
                                         name={blog.frontmatter.title}
