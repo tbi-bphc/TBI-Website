@@ -2,6 +2,7 @@
 import '@/styles/globals.css'
 import Navbar from "@/components/navbar/navbar";
 import Footer from '@/components/footer/footer.astro';
+const {title} = Astro.props
 ---
 <html lang="en">
 	<head>
@@ -9,7 +10,7 @@ import Footer from '@/components/footer/footer.astro';
 		<link rel="icon" href="/BITS_Pilani-Logo 4.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>TBI</title>
+		<title>{title??"TBI"}</title>
 	</head>
 	<body>
 		<div class="absolute inset-0 -z-10 h-full w-full bg-nord-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
