@@ -32,7 +32,7 @@ function ImpactItem( {title, number, icon, text}:ImpactItem){
 export function ImpactCarousel(){
     return(
         <div className="grid md:grid-cols-4 grid-cols-2 gap-10 md:gap-20">
-            <ImpactItem title="Current Startups" number={19} icon="Building2" text={''}/>
+            <ImpactItem title="Current Startups" number={21} icon="Building2" text={''}/>
             <ImpactItem title="Total Funds Raised" number={9} icon="CircleDollarSign" text={'Cr+'}/>
             <ImpactItem title="Employment Generated" number={60} icon="Users" text="+"/>
             <ImpactItem title="Startup Revenue" number={3} icon="HandCoins" text="Cr+"/>
