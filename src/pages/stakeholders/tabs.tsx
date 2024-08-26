@@ -53,30 +53,14 @@ function Stakeholders() {
 
     return (
         <div>
-            <Tabs defaultValue="all" className="px-2 md:px-6 lg:px-[25vh]">
+            <Tabs defaultValue="governing body" className="px-2 md:px-6 lg:px-[25vh]">
                 <TabsList className="flex items-center justify-around flex-wrap h-auto space-y-1 mt-14 mx-auto my-8">
-                    <TabsTrigger className="flex-1" value="all">All</TabsTrigger>
                     <TabsTrigger className="flex-1" value="governing body">Governing Body</TabsTrigger>
                     <TabsTrigger className="flex-1" value="entrepreneurship committee">Entrepreneurship Committee</TabsTrigger>
                     <TabsTrigger className="flex-1" value="mentors">Mentors</TabsTrigger>
                     <TabsTrigger className="flex-1" value="partners and sponsors">Partners and Sponsors</TabsTrigger>
                 </TabsList>
-                <TabsContent value="all">
-                    <div className="flex items-center justify-center">
-                        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                            {
-                                all.map((body: any) =>
-
-                                    <div>
-                                        <Element name={body} />
-                                    </div>
-
-                                )
-
-                            }
-                        </section>
-                    </div>
-                </TabsContent>
+                
                 <TabsContent value="governing body">
                     <div className="flex items-center justify-center">
                         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 gap-y-2">

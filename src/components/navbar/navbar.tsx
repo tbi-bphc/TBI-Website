@@ -23,7 +23,7 @@ function Navbar() {
           {/* Navigation Links - Desktop */}
           <div className="hidden md:flex justify-center items-center space-x-4 my-auto">
             <div className="float-left">
-            <NavImageLink image="/tbislogoblue 3.png" link="/home" size={{ height: 24, width: 16}}/>
+            <NavImageLink image="/tbislogoblue 3.png" link="/" size={{ height: 24, width: 16}}/>
             </div>
           <NavLink title="About Us" link="/about" />
             <NavLink title="Programs" link="/programmes" />
