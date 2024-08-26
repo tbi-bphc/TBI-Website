@@ -133,7 +133,7 @@ function Navbar() {
             {/* <NavLink title="Partners" /> */}
             <NavLink title="Contact Us" link="/contact" />
             <div className="float-left">
-                <NavImageLink image="/BITS_Pilani-Logo 4.png" link="/home" size={{height:12, width:10}}/>
+                <NavImageLink image="/BITS_Pilani-Logo 4.png" link="/" size={{height:12, width:10}}/>
             </div>
           </div>
         </div>
