@@ -41,15 +41,10 @@ function Element({ name, image, description }: Props) {
 
 function Stakeholders() {
 
-    const governingBody = ["Body-1", "Body-2", "Body-3", "Body-4"]
+    const governingBody = [{ name: "Body-1", image: "/team/sandeepraut.jpg" }, { name: "Body-2", image: "/team/sandeepraut.jpg" }, {name:"Body-3", image:"/team/sandeepraut.jpg"}, {name:"Body-4", image:"/team/sandeepraut.jpg"}]
     const entrepreneurshipCommittee = ["Committee-1", "Committee-2", "Committee-3", "Committee-4"]
     const mentors = ["Mentor-1", "Mentor-2"]
     const partnersSponsors = ["Partner-1"]
-    let all = [];
-    all.push(...governingBody)
-    all.push(...entrepreneurshipCommittee)
-    all.push(...mentors)
-    all.push(...partnersSponsors)
 
     return (
         <div>
@@ -60,7 +55,7 @@ function Stakeholders() {
                     <TabsTrigger className="flex-1" value="mentors">Mentors</TabsTrigger>
                     <TabsTrigger className="flex-1" value="partners and sponsors">Partners and Sponsors</TabsTrigger>
                 </TabsList>
-                
+
                 <TabsContent value="governing body">
                     <div className="flex items-center justify-center">
                         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 gap-y-2">
@@ -68,7 +63,7 @@ function Stakeholders() {
                                 governingBody.map((body: any) =>
 
                                     <div>
-                                        <Element name={body} />
+                                        <Element name={body.name} image={body.image}/>
                                     </div>
 
                                 )
