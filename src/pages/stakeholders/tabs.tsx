@@ -41,10 +41,34 @@ function Element({ name, image, description }: Props) {
 
 function Stakeholders() {
 
-    const governingBody = [{ name: "Body-1", image: "/team/sandeepraut.jpg" }, { name: "Body-2", image: "/team/sandeepraut.jpg" }, {name:"Body-3", image:"/team/sandeepraut.jpg"}, {name:"Body-4", image:"/team/sandeepraut.jpg"}]
-    const entrepreneurshipCommittee = ["Committee-1", "Committee-2", "Committee-3", "Committee-4"]
-    const mentors = ["Mentor-1", "Mentor-2"]
-    const partnersSponsors = ["Partner-1"]
+    const governingBody = [ {name: "Prof. Soumyo Mukherji", image: "/governing/Prof.SoumyoMukherji.png"}, {name: "Prof. P Yogeeswari", image: "/governing/Prof.PYogeeswari.png"}, 
+                            {name: "Mr. Sachin Arya", image: "/governing/SachinArya.png"} 
+                        ]
+    
+    const entrepreneurshipCommittee = [ {name: "Prof. Soumyo Mukherji", image: "/ecommittee/Prof.SoumyoMukherji.png"}, {name: "Prof. P Yogeeswari", image: "/ecommittee/Prof.PYogeeswari.png"}, 
+                                        {name: "Prof. P Sankar Ganesh", image: "/ecommittee/ProfPSankarGanesh.jpeg"}, {name: "Prof. Parikshit Sahatiya", image: "/ecommittee/ProfParikshitSahatiya.png"},
+                                        {name: "Prof. Ruchi Jain Dey", image: "/ecommittee/ProfRuchiJainDey.jpeg"},
+                                        {name: "Mr. Abhishek Khaitan", image: "/ecommittee/AbhishekKhaitan.png"}, {name: "Dr. Viswanadham", image: "/ecommittee/Dr.Viswanadham.png"}
+                                    ]
+
+    const mentors = [{name: "Mr. Abhishek Khaitan", image: "/mentors/AbhishekKhaitan.png"}, {name: "Mr. Atul Bhargava", image: "/mentors/AtulBhargava.png"}, 
+                    {name: "Mr. C A Shamik Ukil", image: "/mentors/CAShamikUkil.png"}, {name: "Mr. D V Krishna Rao", image: "/mentors/D.V.KrishnaRao.png"}, 
+                    {name: "Dr. Radha Rangarajan", image: "/mentors/Dr.RadhaRangarajan.png"}, {name: "Dr. Ramjee Palella", image: "/mentors/Dr.RamjeePalella.png"},
+                    {name: "Dr. Suresh Munuswamy", image: "/mentors/Dr.SureshMunuswamy.png"}, {name: "Dr. Sushmita Sundar", image: "/mentors/Dr.SushmitaSundar.png"},
+                    {name: "Dr. Viswanadham", image: "/mentors/Dr.Viswanadham.png"}, {name: "Er. Suresh Susurla", image: "/mentors/Er.SureshSusurla.png"},
+                    {name: "Mr. Gopi Krishna Tummala", image: "/mentors/GopiKrishnaTummala.png"}, {name: "Mr. Jay Pandit", image: "/mentors/JayPandit.png"},
+                    {name: "Mr. Karthik Gurumurthy", image: "/mentors/KarthikGurumurthy.png"}, {name: "Mr. Anuj Batra", image: "/mentors/Mr.AnujBatra.png"},
+                    {name: "Mr. Kamal Prasad", image: "/mentors/Mr.KamalPrasad.png"}, {name: "Mr. Rahul Bagga", image: "/mentors/RahulBagga.png"},
+                    {name: "Mr. Pradeep Yuvaraj", image: "/mentors/PradeepYuvaraj.png"}, {name: "Mr. Neel Mehta", image: "/mentors/NeelMehta.png"},
+                    {name: "Mr. Rajesh Butta", image: "/mentors/RajeshButta.png"}, {name: "Mr. Rajesh Dube", image: "/mentors/RajeshDube.png"}, {name: "Mr. Ramana Vemuri", image: "/mentors/RamanaVemuri.png"},
+                    {name: "Mr. Sunil Hans", image: "/mentors/SunilHans.png"}, {name: "Mrs. Usha Paliath", image: "/mentors/UshaPaliath.png"},                     
+                    {name: "Mr. Varadarajan Sridharan", image: "/mentors/VaradarajanSridharan.png"}, {name: "Mr. Vijay Nandiminti", image: "/mentors/VijayNandiminti.png"},
+                    ]
+    
+    const partnersSponsors = [  {name: "BIRAC", image: "/partnerspons/Birac.png"}, {name: "DST NIDHI", image: "/partnerspons/DSTNIDHI.png"},
+                                {name: "SISF", image: "/partnerspons/SISF.png"}, {name: "MEITY Startup Hub", image: "/partnerspons/MeityStartup.png"},
+                                {name: "Boeing", image: "/partnerspons/Boeing.png"}
+                            ]
 
     return (
         <div>
@@ -79,9 +103,8 @@ function Stakeholders() {
                                 entrepreneurshipCommittee.map((body: any) =>
 
                                     <div>
-                                        <Element name={body} />
+                                        <Element name={body.name} image={body.image}/>
                                     </div>
-
                                 )
 
                             }
@@ -95,7 +118,7 @@ function Stakeholders() {
                                 mentors.map((body: any) =>
 
                                     <div>
-                                        <Element name={body} />
+                                        <Element name={body.name} image={body.image}/>
                                     </div>
 
                                 )
@@ -111,7 +134,7 @@ function Stakeholders() {
                                 partnersSponsors.map((body: any) =>
 
                                     <div>
-                                        <Element name={body} />
+                                        <Element name={body.name} image={body.image}/>
                                     </div>
 
                                 )
