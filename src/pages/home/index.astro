@@ -1,8 +1,10 @@
 ---
-import HomeGallery from "./homegallery"
+import HomeGallery from "./homegallery";
 import PageLayout from "@/layouts/PageLayout.astro";
 import { MultiImageCarousel } from "@/components/carousel/carousel";
 import {ImpactCarousel} from  "@/components/carousel/impact"
+import SlidingText from "@/components/text/sliding-text";
+import { AppleCardsCarouselDemo } from "@/components/carousel/portfolio-carousel";
 
 ---
 
@@ -11,16 +13,18 @@ import {ImpactCarousel} from  "@/components/carousel/impact"
     <HomeGallery client:visible/>
   </section>
   <!-- introduction to TBI -->
-  <section class="md:flex items-center justify-center gap-24 px-6 md:px-2 lg:px-[25vh] mb-10">
+  <section class="md:flex items-center justify-center gap-24 px-6 py-2 md:px-2 lg:px-[25vh] pb-10 bg-nord2 ">
     <div class="md:w-[50%]">
       <div class="mb-6">
-        <h1 class="text-nord10 text-4xl mb-4">
-          Technology Business Incubator Society
+        <h1 class="text-4xl mb-4 ">
+          <SlidingText classes="text-white" text="Technology Business Incubator Society" stage={1} type="typewriter" client:visible/>
         </h1>
-        <h1 class="text-nord10 text-3xl">BITS Pilani, Hyderabad Campus</h1>
+        <h1 class="text-white text-3xl">
+          <SlidingText classes="text-white" text="BITS Pilani Hyderabad Campus" stage={0.5} type="slide up" client:visible/>
+        </h1>
       </div>
 
-      <p>
+      <p class="text-white">
         BITS Pilani Hyderabad campus houses a technology business incubator (TBI) called 
         BITS Pilani Hyderabad Campus TBI Society (henceforth referred to as “TBIS”) since 
         2012 to encourage innovative entrepreneurship, and to facilitate translation of 
@@ -39,41 +43,64 @@ import {ImpactCarousel} from  "@/components/carousel/impact"
       />
     </div>
   </section>
-  <hr class="h-1 my-8 border-0 bg-nord10" />
+  <hr class="h-1 border-0 bg-nord10" />
   <!-- Vision and Goals -->
-  <section class="flex flex-col items-center justify-center px-6 md:px-[25vh] -mb-8">
-    <h1 class="text-center text-4xl text-nord10 mb-5">
-      VISION AND GOALS
-    </h1>
-    <div class="md:flex gap-10">
-      <img src="/tech.gif" alt="tech-gif" class=" m-auto w-[300px]" />
-      <p class="md:mt-10 text-justify pr-4 mb-6 md:mb-0 ">
-        At BITS Pilani Hyderabad Campus TBI, our vision is to be a pivotal force in shaping a vibrant entrepreneurial ecosystem, where 
-        innovation and sustainable solutions emerge to address global challenges. Our goals include 
-        fostering a dynamic culture of entrepreneurship that transcends traditional boundaries, providing startups with comprehensive 
-        support to navigate the complexities of market entry, and forging strategic partnerships that amplify our impact. By nurturing 
-        interdisciplinary collaboration and harnessing the power of our academic and industry networks, we aim to drive economic growth, 
-        create meaningful social impact, and establish BITS Pilani Hyderabad TBI as a leading incubator on the global stage. 
+  <section class="flex flex-col items-center justify-center px-6 md:px-[25vh] -mb-8 pt-8 pb-16 bg-nord6">
+    
+    <div class="md:flex gap-10 py-8">
+      <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202306/dicarlo_900x600.jpg?itok=mCEPNnW-" alt="tech-gif" class="w-[300px] h-[220px] mr-10 rounded-xl" />
+
+      <div>
+        <div>
+          <h1 class="text-left text-4xl text-nord10">
+            Vision And Goals
+          </h1>
+          <SlidingText type="underline" classes="nord10" client:visible/>
+        </div>
+        
+        
+        <p class="md:mt-6 text-justify pr-4 mb-6 md:mb-0 text-nord2">
+          At BITS Pilani Hyderabad Campus TBI, our vision is to be a pivotal force in shaping a vibrant entrepreneurial ecosystem, where 
+          innovation and sustainable solutions emerge to address global challenges. Our goals include 
+          fostering a dynamic culture of entrepreneurship that transcends traditional boundaries, providing startups with comprehensive 
+          support to navigate the complexities of market entry, and forging strategic partnerships that amplify our impact. By nurturing 
+          interdisciplinary collaboration and harnessing the power of our academic and industry networks, we aim to drive economic growth, 
+          create meaningful social impact, and establish BITS Pilani Hyderabad TBI as a leading incubator on the global stage. 
+  
+      </div>
+  </div>
+
+  </section>
+  <hr class="h-1 border-0 bg-nord10" />
+  <!-- Portfolio -->
+  <!-- <section class="bg-nord2 py-8">
+    <div class="flex flex-col items-center justify-center px-20 md:px-[25vh]">
+      <h1 class="flex items-center justify-center text-4xl text-white mb-5">
+        Portfolio
+      </h1>
+      <div class="my-8">
+        <AppleCardsCarouselDemo client:visible/>
+      </div>
     </div>
   </section>
-  <hr class="h-1 my-8 border-0 bg-nord10" />
+  <hr class="h-1 border-0 bg-nord10" /> -->
   <!-- Incubatees -->
-  <section>
+  <section class="py-8">
     <div class="flex flex-col items-center justify-center px-20 md:px-[25vh]">
       <h1 class="flex items-center justify-center text-4xl text-nord10 mb-5">
-        INCUBATEES
+        Incubatees
       </h1>
       <div class="my-8">
         <MultiImageCarousel client:visible />
       </div>
     </div>
   </section>
-  <hr class="h-1 my-8 border-0 bg-nord10" />
+  <hr class="h-1 border-0 bg-nord10" />
   <!-- Impact -->
-  <section>
+  <section class="py-8">
     <div class="flex flex-col items-center justify-center px-6 md:px-[25vh]">
       <h1 class="text-center text-4xl text-nord10 mb-5">
-        IMPACT
+        Impact
       </h1>
       <div class="my-8 mt-8">
         <ImpactCarousel client:visible/>

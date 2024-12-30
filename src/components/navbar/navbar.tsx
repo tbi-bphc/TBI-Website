@@ -8,7 +8,7 @@ function Navbar() {
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
 
   return (
-    <nav className=" bg-nord4 w-full shadow-md sticky top-0 z-10 h-20 ">
+    <nav className=" bg-white w-full shadow-md sticky top-0 z-10 h-20 ">
       <div className="mx-auto flex md:items-center md:justify-center px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Hamburger Menu - Only on Mobile */}

@@ -7,7 +7,7 @@ import MainGallery from "@/components/gallery-main/gallery";
 //     "/HomeBackground.png"
 // ]
 const pictures = [
-     "/HomeBackground.png"
+     "https://images5.alphacoders.com/379/379348.jpg"
 ]
 
 export default function HomeGallery() {
