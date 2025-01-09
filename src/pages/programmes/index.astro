@@ -3,6 +3,7 @@ import PageLayout from "@/layouts/PageLayout.astro";
 import Contentstable from "@/components/contents-table/contentstable.astro";
 import TeamCard from "@/components/cards/teamcard.astro";
 import Commongrid from "@/components/grid/commongrid.astro";
+import IncubateesCardGrid from "./carousels/cards";
 
 const contents = [
   {
@@ -50,8 +51,10 @@ const seep2pictures = [
         </div>
       </div>
     </section>
+    
     <section class="mt-6 md:mt-0">
       <div id="bphc" class="mb-6 scroll-mt-20">
+        <IncubateesCardGrid />
         <h1 class="text-nord3 mb-2">Incubation</h1>
         <p>
           The Technology Business Incubator (TBI) at BITS Pilani, Hyderabad, offers a dynamic environment for startups and entrepreneurs 
