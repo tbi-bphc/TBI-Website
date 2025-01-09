@@ -2,9 +2,9 @@
 import PageLayout from "@/layouts/PageLayout.astro";
 import AboutGallery from "./aboutgallery";
 import Contentstable from "@/components/contents-table/contentstable.astro";
-import { MultiImageCarousel } from "@/components/carousel/carousel";
 import TeamCard from "@/components/cards/teamcard.astro";
 import Commongrid from "@/components/grid/commongrid.astro";
+import { FocusCards } from "@/components/cards/focus-cards";
 
 const contents = [
   {
@@ -35,12 +35,45 @@ const pictures = [
   "/thrustareas/ecommerce.png",
 ]
 
+const cards = [
+    {
+      title: "",
+      src: "/thrustareas/agritech.png",
+    },
+    {
+      title: "",
+      src: "/thrustareas/biotech.png",
+    },
+    {
+      title: "",
+      src: "/thrustareas/ict.png",
+    },
+    {
+      title: "",
+      src: "/thrustareas/mems.png",
+    },
+    {
+      title: "",
+      src: "/thrustareas/spacetech.png",
+    },
+    {
+      title: "",
+      src: "/thrustareas/ecommerce.png",
+    },
+  ];
+
 ---
 
 <PageLayout>
+  <div class="hidden md:block">
+    <AboutGallery client:visible />
+  </div>
   <main class="mt-8 md:flex md:flex-row gap-20 lg:px-[25vh] md:px-[10vh] px-2">
     <section>
-      <div class="ml-3">
+      
+    </section>
+    <section>
+      <div class="ml-6 md:ml-3">
         <h1>ABOUT</h1>
         <div>
           <Contentstable contents={contents} />
@@ -84,7 +117,8 @@ const pictures = [
           including Invitro Diagnostics (IVD), MEMS, Pharma and
           Bio-Pharmaceuticals has always been predominant incubatees at TBIS.
         </p>
-        <Commongrid pictures={pictures}/>
+        <!-- <Commongrid pictures={pictures}/> -->
+         <FocusCards client:visible cards={cards} height="h-[180px]" width="w-full"/>
       </div>
       <div id="team" class="my-6 scroll-mt-20">
         <h1 class="text-nord3 mb-2">Team</h1>
