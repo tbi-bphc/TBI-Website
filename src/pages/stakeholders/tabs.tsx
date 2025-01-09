@@ -14,21 +14,21 @@ function Element({ name, image, description }: Props) {
     return (
         <>
             <div
-                className="w-full my-4 md:max-w-72 items-center bg-white shadow-lg rounded-lg flex flex-col justify-center place-self-center"
+                className="w-full my-4 md:max-w-72 items-center bg-nord2 shadow-lg rounded-lg flex flex-col justify-center place-self-center"
             >
                 <img
                     src={image ?? "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp"}
                     alt="img"
                     title="img"
-                    className="w-full h-auto object-cover rounded-t-lg"
+                    className="w-full h-auto object-cover rounded-t-lg md:max-h-72"
                 />
                 <div className="w-full p-4 justify-start flex flex-col">
-                    <h4 className=" text-xl text-center pb-1">
+                    <h4 className=" text-xl text-center pb-1 text-nord6">
                         {name}
                     </h4>
                     {
                         description ?
-                            <p className="my-4 text-center">
+                            <p className="my-4 text-center text-nord6">
                                 {description}
                             </p> : <></>
                     }

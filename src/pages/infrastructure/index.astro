@@ -2,6 +2,7 @@
 import PageLayout from "@/layouts/PageLayout.astro";
 import Brick from "@/components/grid/brick.astro";
 import Contentstable from "@/components/contents-table/contentstable.astro";
+import Commongrid from "@/components/grid/commongrid.astro";
 const contents = [
     {
         title: "Bio Lab",
@@ -29,6 +30,12 @@ const contents = [
         link: "#institute-facilities",
     },
 ];
+
+const pictures = [
+    "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
+    "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
+    "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
+]
 ---
 
 <PageLayout>
@@ -81,7 +88,8 @@ const contents = [
                         networking with fellow innovators and industry experts.
                     </p>
                     <div class="flex items-center justify-center">
-                        <Brick
+                        <Commongrid pictures={pictures}/>
+                        <!-- <Brick
                             col1={[
                                 "https://upload.wikimedia.org/wikipedia/commons/3/39/BITS_Pilani_-_Hyderabad_campus.jpg",
                                 "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/Convocation_m.jpg",
@@ -102,7 +110,7 @@ const contents = [
                                 "https://i.pinimg.com/originals/80/73/99/807399268acab15b7f508261c3b1b0b5.jpg",
                                 "https://qph.cf2.quoracdn.net/main-qimg-2bd344acb4b37418fd4d88c45be2832a-lq",
                             ]}
-                        />
+                        /> -->
                     </div>
                     <div class="mb-8">
                         <h2
@@ -126,7 +134,7 @@ const contents = [
                             with fellow innovators and industry experts.
                         </p>
                         <div class="flex items-center justify-center">
-                            <Brick
+                            <!-- <Brick
                                 col1={[
                                     "https://upload.wikimedia.org/wikipedia/commons/3/39/BITS_Pilani_-_Hyderabad_campus.jpg",
                                     "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/Convocation_m.jpg",
@@ -147,7 +155,8 @@ const contents = [
                                     "https://i.pinimg.com/originals/80/73/99/807399268acab15b7f508261c3b1b0b5.jpg",
                                     "https://qph.cf2.quoracdn.net/main-qimg-2bd344acb4b37418fd4d88c45be2832a-lq",
                                 ]}
-                            />
+                            /> -->
+                            <Commongrid pictures={pictures}/>
                         </div>
                         <div class="mb-8">
                             <h2
@@ -172,7 +181,7 @@ const contents = [
                                 with fellow innovators and industry experts.
                             </p>
                             <div class="flex items-center justify-center">
-                                <Brick
+                                <!-- <Brick
                                     col1={[
                                         "https://upload.wikimedia.org/wikipedia/commons/3/39/BITS_Pilani_-_Hyderabad_campus.jpg",
                                         "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/Convocation_m.jpg",
@@ -193,7 +202,8 @@ const contents = [
                                         "https://i.pinimg.com/originals/80/73/99/807399268acab15b7f508261c3b1b0b5.jpg",
                                         "https://qph.cf2.quoracdn.net/main-qimg-2bd344acb4b37418fd4d88c45be2832a-lq",
                                     ]}
-                                />
+                                /> -->
+                                <Commongrid pictures={pictures}/>
                             </div>
                             <div class="mb-8">
                                 <h2
@@ -220,7 +230,7 @@ const contents = [
                                     industry experts.
                                 </p>
                                 <div class="flex items-center justify-center">
-                                    <Brick
+                                    <!-- <Brick
                                         col1={[
                                             "https://upload.wikimedia.org/wikipedia/commons/3/39/BITS_Pilani_-_Hyderabad_campus.jpg",
                                             "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/Convocation_m.jpg",
@@ -241,7 +251,8 @@ const contents = [
                                             "https://i.pinimg.com/originals/80/73/99/807399268acab15b7f508261c3b1b0b5.jpg",
                                             "https://qph.cf2.quoracdn.net/main-qimg-2bd344acb4b37418fd4d88c45be2832a-lq",
                                         ]}
-                                    />
+                                    /> -->
+                                    <Commongrid pictures={pictures}/>
                                 </div>
                                 <div class="mb-8">
                                     <h2
@@ -271,7 +282,7 @@ const contents = [
                                     <div
                                         class="flex items-center justify-center"
                                     >
-                                        <Brick
+                                        <!-- <Brick
                                             col1={[
                                                 "https://upload.wikimedia.org/wikipedia/commons/3/39/BITS_Pilani_-_Hyderabad_campus.jpg",
                                                 "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/Convocation_m.jpg",
@@ -292,7 +303,8 @@ const contents = [
                                                 "https://i.pinimg.com/originals/80/73/99/807399268acab15b7f508261c3b1b0b5.jpg",
                                                 "https://qph.cf2.quoracdn.net/main-qimg-2bd344acb4b37418fd4d88c45be2832a-lq",
                                             ]}
-                                        />
+                                        /> -->
+                                        <Commongrid pictures={pictures}/>
                                         
                                     </div>
                                     <h2 class="text-nord0 my-4 text-2xl scroll-mt-20" id="institute-facilities">
