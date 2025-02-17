@@ -2,9 +2,13 @@
 import PageLayout from "@/layouts/PageLayout.astro";
 import Contactcard from "@/components/cards/contactcard.astro";
 import { Mail, MapPinIcon, Phone} from 'lucide-react'
+import ContactGallery from "./gallery/contactgallery";
 ---
 
 <PageLayout>
+    <section>
+        <ContactGallery client:visible/>
+    </section>
     <main class="px-6 md:px-[25vh]">
         <div class="flex flex-col md:flex-row my-8 w-full">
             <div class="my-auto flex flex-col items-center justify-center">

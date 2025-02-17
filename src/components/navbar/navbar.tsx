@@ -21,31 +21,26 @@ function Navbar() {
             </button>
           </div>
           {/* Navigation Links - Desktop */}
-          <div className="hidden md:flex justify-center items-center space-x-4 my-auto">
+          <div className="hidden md:flex justify-center items-center space-x-4 my-auto relative">
             <div className="float-left">
-            <NavImageLink image="/tbislogoblue 3.png" link="/" size={{ height: 24, width: 16}}/>
+              <NavImageLink image="/tbislogoblue 3.png" link="/" size={{ height: 24, width: 16 }} />
             </div>
-          <NavLink title="About Us" link="/about" />
+            <NavLink title="About Us" link="/about" />
             <NavLink title="Programs" link="/programmes" />
-            {/* <NavLink title="Events" link="/events" />
-            <NavLink title="Mentors" link="/mentors" /> */}
             <NavLink title="Infrastructure" link="/infrastructure" />
             {/* Programmes Dropdown - Desktop */}
             <div className="relative inline-block text-left">
               <button
                 onClick={() => setIsPortfolioOpen(!isPortfolioOpen)}
                 type="button"
-                className="inline-flex justify-center w-full rounded-md text-nord0 px-4 py-2 text-sm font-medium hover:text-nord10 focus:outline-none  focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+                className="relative z-1000 inline-flex justify-center w-full rounded-md text-nord0 px-4 py-2 text-sm font-medium hover:text-nord10 focus:outline-none  focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
               >
                 Portfolio
-                <ChevronDown
-                  className="-mr-1 ml-2 h-5 w-5"
-                  aria-hidden="true"
-                />
+                <ChevronDown className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
               </button>
               {isPortfolioOpen && (
                 <div
-                  className="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-nord6 text-nord0 ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  className="origin-top-left absolute left-0 z-10000 mt-2 w-56 rounded-md shadow-lg bg-nord6 text-nord0 ring-1 ring-black ring-opacity-5 focus:outline-none"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"
@@ -60,7 +55,7 @@ function Navbar() {
                     </a>
                     <a
                       href="/pre-incubatees"
-                      className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
+                      className=" block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
                       role="menuitem"
                     >
                       Pre-Incubatees
@@ -84,10 +79,7 @@ function Navbar() {
                 className="inline-flex justify-center w-full rounded-md text-nord0 px-4 py-2 text-sm font-medium hover:text-nord10 focus:outline-none  focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
               >
                 Resources
-                <ChevronDown
-                  className="-mr-1 ml-2 h-5 w-5"
-                  aria-hidden="true"
-                />
+                <ChevronDown className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
               </button>
               {isResourcesOpen && (
                 <div
@@ -129,75 +121,117 @@ function Navbar() {
                 </div>
               )}
             </div>
-
-            {/* <NavLink title="Partners" /> */}
             <NavLink title="Contact Us" link="/contact" />
             <div className="float-left">
-                <NavImageLink image="/BITS_Pilani-Logo 4.png" link="/" size={{height:12, width:10}}/>
+              <NavImageLink image="/BITS_Pilani-Logo 4.png" link="/" size={{ height: 12, width: 10 }} />
             </div>
           </div>
         </div>
       </div>
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-800 py-2">
+        <div className="md:hidden bg-nord4 py-2 rounded-b-2xl">
           <div className="px-2 pt-2 pb-3 space-y-1">
-          {/* <NavLink title="Home" link="/home" /> */}
-            <NavImageLink image="/tbislogoblue 3.png" link="/home" size={{ height: 24, width: 16}}/>
+            <NavImageLink image="/tbislogoblue 3.png" link="/" size={{ height: 24, width: 16 }} />
             <NavLink title="About Us" link="/about" />
-            <NavLink title="Incubatees" link="/incubatees" />
-            <NavLink title="Events" link="/events" />
-            <NavLink title="Team" link="/team" />
-            <NavLink title="Mentors" link="/mentors" />
-            <NavLink title="Facilities" link="/facilities" />
-            {/* Programmes Dropdown - Mobile */}
-            <div className="relative inline-block text-left">
+            <NavLink title="Programs" link="/programmes" />
+            <NavLink title="Infrastructure" link="/infrastructure" />
+            {/* Portfolio Dropdown - Mobile */}
+            <div className="relative inline-block text-left z-[10000]">
               <button
                 onClick={() => setIsPortfolioOpen(!isPortfolioOpen)}
-                type="button"
-                className="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+                className="inline-flex justify-center w-full rounded-md bg-nord4 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-nord5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 z-100"
               >
-                Programmes
-                <ChevronDown
-                  className="-mr-1 ml-2 h-5 w-5"
-                  aria-hidden="true"
-                />
+                Portfolio
+                <ChevronDown className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
               </button>
               {isPortfolioOpen && (
                 <div
-                  className=" origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  className="origin-top-left absolute z-1000 left-0 mt-2 w-56 rounded-md shadow-lg bg-nord4 ring-1 ring-black ring-opacity-5 focus:outline-none z-1000"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"
                 >
                   <div className="py-1" role="none">
                     <a
-                      href="/programmes/incubation/"
+                      href="/incubatees"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                       role="menuitem"
                     >
-                      Incubation
+                      Incubatees
                     </a>
                     <a
-                      href="/programmes/seep/"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                      href="/pre-incubatees"
+                      className="relative block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                       role="menuitem"
                     >
-                      SEEP
+                      Pre-Incubatees
                     </a>
                     <a
-                      href="/programmes/solve/"
+                      href="/virtual-incubatees"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                       role="menuitem"
                     >
-                      SOLVE
+                      Virtual Incubatees
                     </a>
                   </div>
                 </div>
               )}
             </div>
-            {/* <NavLink title="Partners" /> */}
+            <NavLink title="Stakeholders" link="/stakeholders" />
+            {/* Resources Dropdown - Mobile */}
+            <div className="relative inline-block text-left z-100">
+              <button
+                onClick={() => setIsResourcesOpen(!isResourcesOpen)}
+                className="relative z-50 inline-flex justify-center w-full rounded-md bg-nord4 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-nord5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+              >
+                Resources
+                <ChevronDown className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+              </button>
+              {isResourcesOpen && (
+                <div
+                  className="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-nord4 ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="options-menu"
+                >
+                  <div className="py-1" role="none">
+                    <a
+                      href="/events"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                      role="menuitem"
+                    >
+                      Events and Incubatees
+                    </a>
+                    <a
+                      href="announcements"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                      role="menuitem"
+                    >
+                      Announcements and Updates
+                    </a>
+                    <a
+                      href="/news"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                      role="menuitem"
+                    >
+                      News
+                    </a>
+                    <a
+                      href="/blogs"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                      role="menuitem"
+                    >
+                      Blogs
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
             <NavLink title="Contact Us" link="/contact" />
+            <div className="float-left md:block hidden">
+              <NavImageLink image="/BITS_Pilani-Logo 4.png" link="/" size={{ height: 12, width: 10 }} />
+            </div>
           </div>
         </div>
       )}
@@ -210,7 +244,7 @@ interface NavLinkProps {
   link: string;
 }
 
-function NavLink({ title, link, }: NavLinkProps) {
+function NavLink({ title, link }: NavLinkProps) {
   return (
     <a
       href={link}

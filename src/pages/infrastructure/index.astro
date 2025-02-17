@@ -3,6 +3,7 @@ import PageLayout from "@/layouts/PageLayout.astro";
 import Brick from "@/components/grid/brick.astro";
 import Contentstable from "@/components/contents-table/contentstable.astro";
 import Commongrid from "@/components/grid/commongrid.astro";
+import FacilityCardGrid from "./cards/facilitycards";
 const contents = [
     {
         title: "Bio Lab",
@@ -328,7 +329,8 @@ const pictures = [
                                         networking with fellow innovators and
                                         industry experts.
                                     </p>
-                                    <ul>
+                                    <FacilityCardGrid client:visible/>
+                                    <!-- <ul>
                                         <li>
                                             <h1
                                                 class="mt-2 text-nord10 text-md"
@@ -380,7 +382,7 @@ const pictures = [
                                                 sequi repellendus.
                                             </p>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
