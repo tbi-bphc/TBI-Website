@@ -71,59 +71,11 @@ function Navbar() {
                 </div>
               )}
             </div>
+            <NavLink title="Activites" link="/events" />
             <NavLink title="Stakeholders" link="/stakeholders" />
-            <div className="relative inline-block text-left">
-              <button
-                onClick={() => setIsResourcesOpen(!isResourcesOpen)}
-                type="button"
-                className="inline-flex justify-center w-full rounded-md text-nord0 px-4 py-2 text-sm font-medium hover:text-nord10 focus:outline-none  focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
-              >
-                Resources
-                <ChevronDown className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
-              </button>
-              {isResourcesOpen && (
-                <div
-                  className="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-nord6 text-nord0 ring-1 ring-black ring-opacity-5 focus:outline-none"
-                  role="menu"
-                  aria-orientation="vertical"
-                  aria-labelledby="options-menu"
-                >
-                  <div className="py-1" role="none">
-                    <a
-                      href="/events"
-                      className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
-                      role="menuitem"
-                    >
-                      Events and Incubatees
-                    </a>
-                    <a
-                      href="announcements"
-                      className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
-                      role="menuitem"
-                    >
-                      Announcements and Updates
-                    </a>
-                    <a
-                      href="/news"
-                      className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
-                      role="menuitem"
-                    >
-                      News
-                    </a>
-                    <a
-                      href="/blogs"
-                      className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-gray-50"
-                      role="menuitem"
-                    >
-                      Blogs
-                    </a>
-                  </div>
-                </div>
-              )}
-            </div>
             <NavLink title="Contact Us" link="/contact" />
             <div className="float-left">
-              <NavImageLink image="/BITS_Pilani-Logo 4.png" link="/" size={{ height: 12, width: 10 }} />
+              <NavImageLink image="/BITS_Pilani-Logo 4.png" link="/" size={{ height: 12, width: 12 }} />
             </div>
           </div>
         </div>
@@ -230,7 +182,7 @@ function Navbar() {
             </div>
             <NavLink title="Contact Us" link="/contact" />
             <div className="float-left md:block hidden">
-              <NavImageLink image="/BITS_Pilani-Logo 4.png" link="/" size={{ height: 12, width: 10 }} />
+              <NavImageLink image="/BITS_Pilani-Logo 4.png" link="/" size={{ height: 10, width: 10 }} />
             </div>
           </div>
         </div>

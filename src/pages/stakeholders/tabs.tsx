@@ -41,8 +41,13 @@ function Element({ name, image, description }: Props) {
 
 function Stakeholders() {
 
-    const governingBody = [ {name: "Prof. Soumyo Mukherji", image: "/governing/Prof.SoumyoMukherji.png"}, {name: "Prof. P Yogeeswari", image: "/governing/Prof.PYogeeswari.png"}, 
-                            {name: "Mr. Sachin Arya", image: "/governing/SachinArya.png"} 
+    const governingBody = [ {name: "Prof. Soumyo Mukherji", image: "/governing/Prof.SoumyoMukherji.png"},
+                            {name: "Prof. G Sundar", image: "/governing/gsundar.jpg"},
+                            {name: "Dr. Sandeep Raut", image: "/governing/sandeepraut.png"},
+                            {name: "Prof. P Yogeeswari", image: "/governing/Prof.PYogeeswari.png"}, 
+                            {name: "CA Sunitha Suresh", image: "/governing/"},
+                            {name: "Prof. Sankar Ganesh", image: "/governing/ProfPSankarGanesh.jpeg"},
+                            {name: "Prof. Parikshit Sahatiya", image: "/governing/ProfParikshitSahatiya.png"},
                         ]
     
     const entrepreneurshipCommittee = [ {name: "Prof. Soumyo Mukherji", image: "/ecommittee/Prof.SoumyoMukherji.png"}, {name: "Prof. P Yogeeswari", image: "/ecommittee/Prof.PYogeeswari.png"}, 
@@ -74,7 +79,7 @@ function Stakeholders() {
         <div>
             <Tabs defaultValue="governing body" className="px-2 md:px-6 lg:px-[25vh]">
                 <TabsList className="flex items-center justify-around flex-wrap h-auto space-y-1 mt-14 mx-auto my-8">
-                    <TabsTrigger className="flex-1" value="governing body">Governing Body</TabsTrigger>
+                    <TabsTrigger className="flex-1" value="governing body">Board of Governors</TabsTrigger>
                     <TabsTrigger className="flex-1" value="entrepreneurship committee">Entrepreneurship Committee</TabsTrigger>
                     <TabsTrigger className="flex-1" value="mentors">Mentors</TabsTrigger>
                     <TabsTrigger className="flex-1" value="partners and sponsors">Partners and Sponsors</TabsTrigger>
