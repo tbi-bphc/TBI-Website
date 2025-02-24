@@ -37,10 +37,10 @@ export function ImpactCarousel(){
             <ImpactItem title="Total Funds Raised" number={9} icon="CircleDollarSign" text={'Cr+'}/>
             <ImpactItem title="Employment Generated" number={60} icon="Users" text="+"/>
             <ImpactItem title="Startup Revenue" number={3} icon="HandCoins" text="Cr+"/>
-            <ImpactItem title="Student Pre-Startups" number={21} icon="Building2" text={''}/>
-            <ImpactItem title="Mentors" number={30} icon="CircleDollarSign" text={'+'}/>
-            <ImpactItem title="Patents" number={0} icon="Users" text="+"/>
-            <ImpactItem title="Incubation Programs" number={4} icon="HandCoins" text="+"/>
+            <ImpactItem title="Student Pre-Startups" number={21} icon="HandCoins" text={''}/>
+            <ImpactItem title="Mentors" number={30} icon="Users" text={'+'}/>
+            <ImpactItem title="Patents" number={0} icon="CircleDollarSign" text="+"/>
+            <ImpactItem title="Incubation Programs" number={4} icon="Building2" text="+"/>
         </div>
     )
 }
