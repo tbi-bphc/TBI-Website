@@ -40,7 +40,7 @@ export function ImpactCarousel(){
             <ImpactItem title="Student Pre-Startups" number={21} icon="HandCoins" text={''}/>
             <ImpactItem title="Mentors" number={30} icon="Users" text={'+'}/>
             <ImpactItem title="Patents" number={0} icon="CircleDollarSign" text="+"/>
-            <ImpactItem title="Incubation Programs" number={4} icon="Building2" text="+"/>
+            <ImpactItem title="Incubation Programs" number={5} icon="Building2" text=" "/>
         </div>
     )
 }
