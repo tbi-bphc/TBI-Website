@@ -1,0 +1,4 @@
+A talk on National Startup Day – “Incubate to Elevate: Unleash the power of startup success” - January 16, 2024
+TBI Society (TBIS) at BITS Pilani Hyderabad Campus celebrated National Startup Day by hosting Mr. Anuj Batra, Director at Abbstrat Partners and former CEO of Birla Global Corp, for an enlightening session titled “Incubate to Elevate: Unleash the Power of Startup Success.”
+The event witnessed an impressive turnout, drawing over 50+ participants, including innovative students, researchers, faculty members, and startup founders incubated at the TBI of BITS Pilani Hyderabad Campus.
+Mr. Batra shared his profound insights into the characteristics that define successful startup founders, highlighting the essential role that a robust incubation ecosystem plays in nurturing and propelling early-stage ventures to success. The session was both engaging and informative, leaving the audience with valuable takeaways on how to leverage incubation for startup growth.

@@ -20,9 +20,9 @@ const InspireCard = ({ title, image, description }: CardProps) => {
 const InspireGrid = () => {
   const cards = [
     {
-      title: "Inspire",
+      title: "Ideate",
       image: "/homepageicons/Inspire.png", // Replace with actual image URL
-      description: "Inspiring innovation and bold ideas that turn dreams into reality",
+      description: "Turning dreams and concepts into actionable plans",
     },
     {
       title: "Create",
@@ -30,9 +30,9 @@ const InspireGrid = () => {
       description: "Building tools and solutions to shape the future",
     },
     {
-      title: "Achieve",
-      image: "/homepageicons/Achieve.png", // Replace with actual image URL
-      description: "Turning ambitions into actionable results for success",
+      title: "Elevate",
+      image: "/homepageicons/Achieve.png", // Replace with acTurningtual image URL
+      description: "Scaling innovations to market ready products",
     },
   ];
 

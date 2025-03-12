@@ -20,6 +20,8 @@ function Card({ title, description, link }: CardProps) {
                 <div className="text content mt-8">
                     <h1 className="font-bold text-2xl md:text-2xl text-gray-50 relative z-10 h-12">{title}</h1>
                     <p className="font-normal text-lg text-gray-50 relative z-10 my-4 h-32">{description}</p>
+                    <hr className="h-1 mt-8 border-0 bg-nord" />
+                    <hr className="h-1 mt-8 border-0 bg-nord" />
                     <a href={link} className="text-gray-50 relative z-10">
                         <p className="text-gray-50 ">
                             Learn More {"->"}
@@ -35,24 +37,23 @@ function Card({ title, description, link }: CardProps) {
 export function CardGrid() {
     const cards = [
         {
-            link:"/incubatees",
-            title: "Academia",
-            description:"We help nurture an innovative mindset within academic institutions.",
-        },
+            link:"https://www.bits-pilani.ac.in/hyderabad/",
+            title: "Host Institute",
+            description:"Birla Institute of Technology and Science, Pilani - Hyderabad campus is one of the premier technical and science institutes of higher learning in India.",       },
         {
             link:"/incubatees",
             title: "Startups",
-            description:"We create launchpads for disruptive ventures and game-changing ideas.",
+            description:"TBI has supported more than 70 startups and 30+ student pre-startups since its inception. Currently, TBI houses 21 startups along with 12 student innovation ideas.",
         },
         {
             link:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAHAe0g1f5ng-92MI1s6prc0NW9ZnRPDlHuQ&s",
-            title: "Corporates",
-            description: "We propel growth by establishing connections with corporates and cultivating international partnerships.",
+            title: "Mentors",
+            description: "TBIS offers mentorship from ideation to commercialization providing assistance in fund-raising from crafting pitch-decks to facilitating connections with venture capitalists.",
         },
         {
-            link:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAHAe0g1f5ng-92MI1s6prc0NW9ZnRPDlHuQ&s",
+            link:"https://www.indiascienceandtechnology.gov.in/",
             title: "Government",
-            description: "We support public-sector transformation through pioneering solutions and collaborations.",
+            description: "TBIS was initially established  in the year 2012 with the support of National Science and Technology Entrepreneurship Development Board (NSTEDB), DST, Govt. of India.",
         },
     ];
 

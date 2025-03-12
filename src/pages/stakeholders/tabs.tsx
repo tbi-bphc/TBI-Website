@@ -53,7 +53,11 @@ function Stakeholders() {
     const entrepreneurshipCommittee = [ {name: "Prof. Soumyo Mukherji", image: "/ecommittee/Prof.SoumyoMukherji.png"}, {name: "Prof. P Yogeeswari", image: "/ecommittee/Prof.PYogeeswari.png"}, 
                                         {name: "Prof. P Sankar Ganesh", image: "/ecommittee/ProfPSankarGanesh.jpeg"}, {name: "Prof. Parikshit Sahatiya", image: "/ecommittee/ProfParikshitSahatiya.png"},
                                         {name: "Prof. Ruchi Jain Dey", image: "/ecommittee/ProfRuchiJainDey.jpeg"},
-                                        {name: "Mr. Abhishek Khaitan", image: "/ecommittee/AbhishekKhaitan.png"}, {name: "Dr. Viswanadham", image: "/ecommittee/Dr.Viswanadham.png"}
+                                        {name: "Mr. Abhishek Khaitan", image: "/ecommittee/AbhishekKhaitan.png"}, {name: "Dr. Viswanadham", image: "/ecommittee/Dr.Viswanadham.png"},
+                                        
+                                        {name: "Ms. Sita Pallachola", image: "/ecommittee/sitapallachola.jpg"},
+                                        {name: "Mr. Kamal Prasad", image: "/ecommittee/kamalprasad.jpg"},
+                                        {name: "Mr. Shreeram Iyer", image: "/ecommittee/shreeramiyer.jpg"},
                                     ]
 
     const mentors = [{name: "Mr. Abhishek Khaitan", image: "/mentors/AbhishekKhaitan.png"}, {name: "Mr. Atul Bhargava", image: "/mentors/AtulBhargava.png"}, 
