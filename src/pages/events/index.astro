@@ -8,32 +8,110 @@ const events = await Astro.glob("@/pages/events/*.md");
 ---
 
 <PageLayout>
-    <main class="px-6 md:px-[25vh]">
+    <main class="px-6 md:px-[15vh]">
         <section class="my-8">
             <h1 class="text-3xl text-nord10">
-                Activities and Events 
+                Activities and Events
             </h1>
             <div class="mb-8">
                 <br />
                 <p class="mb-8">
-                    Description
+                    Technology Business Incubator, BITS Pilani, Hyderabad Campus conducts numerous events throughout the year for
+                    campus engagement with First Degree students, Higher Degree students, Academic Faculty and PhD Faculty. These involve
+                    competitions, engaging sessions, interactive bootcamps, and sessions on days of note like Entrepreneurship Day, National 
+                    Startup Day.
                 </p>
                 <div class="flex items-center justify-center w-full">
                     <div
-                        class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 space-x-2"
+                        class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 space-x-3"
                     >
                         {
-                            events.map((blog) => (
+                            events.map((blog) => (                              
                                 <div>
                                     <Blogcard
-                                        name={blog.frontmatter.title}
-                                        description={
-                                            blog.frontmatter.description
-                                        }
+                                        name="SEEP 2.0"
                                         link={blog.frontmatter.link}
-                                        img={blog.frontmatter.thumbnail}
+                                        img="/activities/headerimgs/seep.jpg"
                                     />
                                 </div>
+                                <div>
+                                    <Blogcard
+                                        name="IGNITE Bootcamp"
+                                        link={blog.frontmatter.link}
+                                        img="/activities/headerimgs/ignite.jpg"
+                                    />
+                                </div>
+                                <div>
+                                    <Blogcard
+                                        name="Angel Investment & Venture Capital"
+                                        link={blog.frontmatter.link}
+                                        img="/activities/headerimgs/angel.JPG"
+                                    />
+                                </div>
+                                <div>
+                                    <Blogcard
+                                        name="World Entrepreneurs Day"
+                                        link={blog.frontmatter.link}
+                                        img="/activities/headerimgs/worldent.jpg"
+                                    />
+                                </div>
+
+                                <div>
+                                    <Blogcard
+                                        name="MVP Session"
+                                        link={blog.frontmatter.link}
+                                        img="/activities/headerimgs/MVP.JPG"
+                                    />
+                                </div> 
+                                <div>
+                                    <Blogcard
+                                        name="Hakimpet Airforce Visit"
+                                        link={blog.frontmatter.link}
+                                        img="/activities/headerimgs/hakimpet.jpg"
+                                    />
+                                </div> 
+                                <div>
+                                    <Blogcard
+                                        name="BIRAC BIG Scheme"
+                                        link={blog.frontmatter.link}
+                                        img="/activities/headerimgs/birac.jpg"
+                                    />
+                                </div> 
+                                <div>
+                                    <Blogcard
+                                        name="Lean Canvas Model"
+                                        link={blog.frontmatter.link}
+                                        img="/activities/headerimgs/lean.jpg"
+                                    />
+                                </div> 
+                                <div>
+                                    <Blogcard
+                                        name="Pitch Perfect"
+                                        link={blog.frontmatter.link}
+                                        img="/activities/headerimgs/pitch.jpg"
+                                    />
+                                </div> 
+                                <div>
+                                    <Blogcard
+                                        name="Director's Visit"
+                                        link={blog.frontmatter.link}
+                                        img="/activities/headerimgs/director.jpg"
+                                    />
+                                </div> 
+                                <div>
+                                    <Blogcard
+                                        name="National Startup Day"
+                                        link={blog.frontmatter.link}
+                                        img="/activities/headerimgs/natstart.jpg"
+                                    />
+                                </div> 
+                                <div>
+                                    <Blogcard
+                                        name="SEEP 1.0"
+                                        link={blog.frontmatter.link}
+                                        img="/activities/headerimgs/seep1.jpg"
+                                    />
+                                </div> 
                             ))
                         }
                     </div>

@@ -11,9 +11,9 @@ const pictures = [
 ]
 
 const images = [
-    "https://c4.wallpaperflare.com/wallpaper/732/528/984/dark-abstract-grid-tech-hd-wallpaper-preview.jpg",
-    "https://c4.wallpaperflare.com/wallpaper/878/896/39/tech-technomancer-abstract-minimalism-futuristic-hd-wallpaper-preview.jpg",
-    "https://c4.wallpaperflare.com/wallpaper/876/999/720/minimalism-abstract-tech-futuristic-technomancer-hd-wallpaper-preview.jpg",
+    "/homegallery/rocket.jpg", 
+    "/homegallery/pharma.jpg", 
+    "/homegallery/aero.jpg",  
 ];
 
 export default function HomeGallery() {

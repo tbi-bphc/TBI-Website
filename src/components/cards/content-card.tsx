@@ -35,28 +35,22 @@ function Card({ title, description, link }: CardProps) {
 export function CardGrid() {
     const cards = [
         {
-            link:
-                "/incubatees",
+            link:"/incubatees",
             title: "Academia",
-            description:
-                "We help nurture an innovative mindset within academic institutions.",
+            description:"We help nurture an innovative mindset within academic institutions.",
         },
         {
-            link:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAHAe0g1f5ng-92MI1s6prc0NW9ZnRPDlHuQ&s",
+            link:"/incubatees",
             title: "Startups",
-            description:
-                "We create launchpads for disruptive ventures and game-changing ideas.",
+            description:"We create launchpads for disruptive ventures and game-changing ideas.",
         },
         {
-            link:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAHAe0g1f5ng-92MI1s6prc0NW9ZnRPDlHuQ&s",
+            link:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAHAe0g1f5ng-92MI1s6prc0NW9ZnRPDlHuQ&s",
             title: "Corporates",
             description: "We propel growth by establishing connections with corporates and cultivating international partnerships.",
         },
         {
-            link:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAHAe0g1f5ng-92MI1s6prc0NW9ZnRPDlHuQ&s",
+            link:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAHAe0g1f5ng-92MI1s6prc0NW9ZnRPDlHuQ&s",
             title: "Government",
             description: "We support public-sector transformation through pioneering solutions and collaborations.",
         },

@@ -45,7 +45,7 @@ function Stakeholders() {
                             {name: "Prof. G Sundar", image: "/governing/gsundar.jpg"},
                             {name: "Dr. Sandeep Raut", image: "/governing/sandeepraut.png"},
                             {name: "Prof. P Yogeeswari", image: "/governing/Prof.PYogeeswari.png"}, 
-                            {name: "CA Sunitha Suresh", image: "/governing/"},
+                            {name: "CA Sunitha Suresh", image: "/governing/ssuresh.jpg"},
                             {name: "Prof. Sankar Ganesh", image: "/governing/ProfPSankarGanesh.jpeg"},
                             {name: "Prof. Parikshit Sahatiya", image: "/governing/ProfParikshitSahatiya.png"},
                         ]

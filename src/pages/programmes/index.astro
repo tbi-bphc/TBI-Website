@@ -24,9 +24,9 @@ const seep1pictures = [
 ]
 
 const seep2pictures = [
-  "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp",
-  "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp",
-  "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp",
+  "/programs/seep2guest.JPG",
+  "/programs/seep2winner.JPG",
+  "/programs/seep2grp.JPG",
 ]
 
 
@@ -49,6 +49,16 @@ const seep2pictures = [
       <div id="team" class="my-6 scroll-mt-20">
         <div class="">
           <ul class="">
+            <li class="text-md text-nord10 mt-2">SEEP 2.0</li>
+            <p class="mt-4">
+              The Second Edition of SEEP - Student Entrepreneurs Encouragement Program was successfully held in 2024 - providing
+              a platform for upcoming entrepreneurs to pitch their ideas and build them into reality. The program included an "Ignite 
+              Bootcamp" supported by the Wadhwani Foundation, and the Grand Finale itnessed a thrilling display of innovation as 
+              finalists pitched for a spot in a six-month pre-incubation program with funding and mentorship.
+            </p>
+            <div>
+              <Commongrid pictures={seep2pictures}/>
+            </div>
             <li class="text-md text-nord10 mt-2">SEEP 1.0</li>
             <p class="mt-4">
               Student Entrepreneurs Encouragement Program, hosted by TBI BITS Hyderabad, is an event dedicated to fostering 
@@ -59,10 +69,6 @@ const seep2pictures = [
             <div>
               <Commongrid pictures={seep1pictures}/>
             </div>
-            <li class="text-md text-nord10 mt-2">SEEP 2.0</li>
-            <p class="mt-4">
-              Coming soon!
-            </p>
           </ul>
         </div>
       </div>

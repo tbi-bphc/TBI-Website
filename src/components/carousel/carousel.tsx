@@ -15,12 +15,18 @@ const pictures = [
   "/startups/atreves.png",
   "/startups/cinnova.png",
   "/startups/cleome.png",
-  "/startups/loka.png",
   "/startups/masuu.png",
   "/startups/pharmajen.png",
   "/startups/pyrome.png",
   "/startups/sensome.png",
   "/startups/tangerne.png",
+  "/startups/ArnoAI.png",
+  "/startups/zeromatter.png",
+  "/startups/sparsha.png",
+  "/startups/sasha.png",
+  "/startups/yantra.png",
+  "/startups/jagruthi.png",
+  "/startups/vanshaj.png",
 ]
 
 export function MultiImageCarousel() {
