@@ -2,16 +2,13 @@
 const {contents} = Astro.props
 ---
 
-<div class=" border-l-2 border-solid border-nord10">
-    <div class=" list-none ml-2">
-        {contents.map((item:any, index:number)=>(
-            <>
-                <li class="mt-4 hover:underline cursor-pointer">
-                    <a href={item.link}>
-                        {item.title}
-                    </a>
-                </li>
-            </>
-        )
-    )}
+<div class="border-l-2 border-solid border-nord10">
+    <ul class="list-none ml-2">
+        {contents.map((item: any, index: number) => (
+            <li class="mt-4 hover:underline cursor-pointer">
+                <a href={item.link}>{item.title}</a>
+            </li>
+        ))}
+    </ul>
 </div>
+

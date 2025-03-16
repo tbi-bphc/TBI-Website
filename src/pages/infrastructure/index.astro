@@ -4,6 +4,7 @@ import Brick from "@/components/grid/brick.astro";
 import Contentstable from "@/components/contents-table/contentstable.astro";
 import Commongrid from "@/components/grid/commongrid.astro";
 import FacilityCardGrid from "./cards/facilitycards";
+import { InfraGallery } from "./infragallery";
 const contents = [
     {
         title: "Bio Lab",
@@ -59,6 +60,9 @@ const prototypepictures = [
 ---
 
 <PageLayout>
+    <section class="flex items-center justify-center md:px-0">
+        <InfraGallery client:visible/>
+    </section>
     <main class="flex px-2 md:px-6 lg:px-[25vh]">
         <section>
             <div class="ml-3 mr-12 mt-10">

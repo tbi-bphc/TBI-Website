@@ -1,6 +1,6 @@
 ---
 import PageLayout from "@/layouts/PageLayout.astro";
-import AboutGallery from "./aboutgallery";
+import {AboutGallery, SecondaryAboutGallery} from "./aboutgallery";
 import Contentstable from "@/components/contents-table/contentstable.astro";
 import TeamCard from "@/components/cards/teamcard.astro";
 import Commongrid from "@/components/grid/commongrid.astro";
@@ -10,7 +10,6 @@ import { MultiImageCarousel } from "@/components/carousel/carousel";
 import InspireGrid from "@/components/carousel/home-carousel";
 import { ImpactCarousel } from "@/components/carousel/impact";
 import SlidingText from "@/components/text/sliding-text";
-import HomeGallery from "../home/homegallery";
 
 const contents = [
   {
@@ -41,32 +40,21 @@ const pictures = [
   "/thrustareas/ecommerce.png",
 ]
 
+const pictures2 = [
+  "https://images5.alphacoders.com/379/379348.jpg",
+  "https://www.catalyser.in/public/img/blog/bitcblog1.jpg",
+  "https://www.bitsadmission.com/images/Home_Page_Image_1.png",
+];
+
 const cards = [
-    {
-      title: "",
-      src: "/thrustareas/agritech.png",
-    },
-    {
-      title: "",
-      src: "/thrustareas/biotech.png",
-    },
-    {
-      title: "",
-      src: "/thrustareas/ict.png",
-    },
-    {
-      title: "",
-      src: "/thrustareas/mems.png",
-    },
-    {
-      title: "",
-      src: "/thrustareas/spacetech.png",
-    },
-    {
-      title: "",
-      src: "/thrustareas/ecommerce.png",
-    },
-  ];
+  "/thrustareas/agritech.png",
+  "/thrustareas/biotech.png",
+  "/thrustareas/ict.png",
+  "/thrustareas/mems.png",
+  "/thrustareas/spacetech.png",
+  "/thrustareas/ecommerce.png",
+];
+
 
 ---
 
@@ -79,7 +67,7 @@ const cards = [
   <section class="md:flex items-center justify-center gap-20 px-6 md:px-2 lg:px-[15vh] pb-10 bg-nord6 ">
    
       
-    <div class="md:w-[50%]">
+    <div class="md:w-[50%] mt-12">
       <div class="mb-6">
         <h1 class="text-4xl mb-4 md:block hidden">
           <SlidingText classes="text-nord10" text="Technology Business Incubator" stage={1} type="typewriter" client:visible/>
@@ -105,11 +93,7 @@ const cards = [
     </div>
 
     <div class="mt-12">
-      <img
-        src="/about.png"
-        alt="bits"
-        class="rounded-3xl w-[50vh] object-fill"
-      />
+      <SecondaryAboutGallery pictures={pictures2} client:only="react"/>
     </div>
   </section>
   <hr class="h-1 border-0 bg-nord10" />
@@ -139,24 +123,36 @@ const cards = [
   </div>
   </section>
 
-  <section class="md:flex items-center justify-center gap-24 px-6 md:px-2 lg:px-[35vh] pb-10 bg-nord6">
-      <div id="thrust-areas" class="my-6 scroll-mt-20 ">
-        <h1 class="flex items-center justify-center text-4xl text-nord10 mb-5">
-          Thrust Areas
-        </h1>
-        <p>
-          From its inception, TBIS has maintained a strong focus on accelerating 
-          technology and knowledge-driven startups, particularly in the high-impact 
-          sectors of Pharma & Biopharma, ICT in Healthcare, Medical Devices, Biotechnology, 
-          and MicroElectroMechanical Systems (MEMS) for Diagnostic Devices and Point-of-Care (PoC) Healthcare.
-          Situated within an academic powerhouse with 12 diverse departments, TBIS is a dynamic 
-          and welcoming ecosystem for sector-agnostic innovations. However, its primary thrust 
-          remains on healthcare-related startups, particularly in In Vitro Diagnostics (IVD), 
-          MEMS, Pharma, and Bio-Pharmaceuticals—areas that have consistently been the focus of its successful incubations.
+  <hr class="h-1 border-0 bg-nord10" />
 
-        </p>
+  <section class="md:flex items-center justify-center gap-24 px-6 md:px-2 lg:px-[35vh] pb-10 bg-nord6">
+      <div id="thrust-areas" class="my-6 scroll-mt-20 flex items-center justify-center space-x-6">
+        <div class="my-4">
+          <h1 class="flex text-4xl text-nord10 mb-5">
+            Thrust Areas
+          </h1>
+          <p>
+            From its inception, TBIS has maintained a strong focus on accelerating 
+            technology and knowledge-driven startups, particularly in the high-impact 
+            sectors of Pharma & Biopharma, ICT in Healthcare, Medical Devices, Biotechnology, 
+            and MicroElectroMechanical Systems (MEMS) for Diagnostic Devices and Point-of-Care (PoC) Healthcare.
+            Situated within an academic powerhouse with 12 diverse departments, TBIS is a dynamic 
+            and welcoming ecosystem for sector-agnostic innovations. However, its primary thrust 
+            remains on healthcare-related startups, particularly in In Vitro Diagnostics (IVD), 
+            MEMS, Pharma, and Bio-Pharmaceuticals—areas that have consistently been the focus of its successful incubations.
+  
+          </p>
+        </div>
+
+        <div>
+          <SecondaryAboutGallery pictures={cards} client:only="react"/>
+        </div>
+        
         <!-- <Commongrid pictures={pictures}/> -->
-         <FocusCards client:visible cards={cards} height="h-[180px]" width="w-full"/>
+         <!-- <FocusCards client:visible cards={cards} height="h-[180px]" width="w-full"/>
+           -->
+
+
       </div>
   </section>
 

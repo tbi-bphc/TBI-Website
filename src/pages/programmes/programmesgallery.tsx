@@ -1,19 +1,9 @@
 import MainGallery from "@/components/gallery-main/gallery";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useEffect } from "react";
 
-
-
-export function SecondaryAboutGallery({pictures}: {pictures: string[]}) {
+export function SecondaryProgrammesGallery({pictures}: {pictures: string[]}) {
     const autoplay = Autoplay({ delay: 5000, stopOnInteraction: false });
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [autoplay]);
   
@@ -44,10 +34,11 @@ export function SecondaryAboutGallery({pictures}: {pictures: string[]}) {
   
 const pictures = ["https://images5.alphacoders.com/379/379348.jpg"];
 
-export function AboutGallery() {
+export function ProgrammesGallery() {
   return (
     <>
-      <MainGallery title="About Us" subtitle="" images={pictures} />
+      <MainGallery title="Programmes" subtitle="" images={pictures} />
     </>
   );
 }
+

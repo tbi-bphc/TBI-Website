@@ -4,6 +4,7 @@ import Contentstable from "@/components/contents-table/contentstable.astro";
 import TeamCard from "@/components/cards/teamcard.astro";
 import Commongrid from "@/components/grid/commongrid.astro";
 import IncubateesCardGrid from "./carousels/cards";
+import { ProgrammesGallery } from "./programmesgallery";
 
 const contents = [
   {
@@ -33,6 +34,9 @@ const seep2pictures = [
 ---
 
 <PageLayout>
+  <section class="flex items-center justify-center md:px-0">
+    <ProgrammesGallery client:visible/>
+  </section>
   <main class="mt-8 md:flex md:flex-row gap-20 lg:px-[25vh] md:px-[10vh] px-2">
     <section>
       <div class="ml-3">
