@@ -26,7 +26,7 @@ function Card({ title, description, link }: CardProps) {
           </p>
           <hr className="h-1 mt-8 border-0 bg-nord" />
           <hr className="h-1 mt-8 border-0 bg-nord" />
-          <div className="flex items-center justify-center mt-10">
+          <div className="flex items-center mt-10">
             <a href={link} className="text-white relative z-10">
               <button className="bg-nord9 rounded-xl p-2 hover:bg-nord8">
                 <p className="text-gray-50 ">Learn More</p>
@@ -54,13 +54,13 @@ export function CardGrid() {
         "TBI has supported more than 70 startups and 30+ student pre-startups since its inception. Currently, TBI houses 21 startups along with 12 student innovation ideas.",
     },
     {
-      link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAHAe0g1f5ng-92MI1s6prc0NW9ZnRPDlHuQ&s",
+      link: "/stakeholders",
       title: "Mentors",
       description:
         "TBIS offers mentorship from ideation to commercialization providing assistance in fund-raising from crafting pitch-decks to facilitating connections with venture capitalists.",
     },
     {
-      link: "https://www.indiascienceandtechnology.gov.in/",
+      link: "https://dst.gov.in/",
       title: "Government",
       description:
         "TBIS was initially established  in the year 2012 with the support of National Science and Technology Entrepreneurship Development Board (NSTEDB), DST, Govt. of India.",

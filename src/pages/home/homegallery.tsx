@@ -19,7 +19,7 @@ const images = [
 export default function HomeGallery() {
     return (
         <>
-            <MainGallery title="Technology and Business Incubator" subtitle="BITS Pilani Hyderabad Campus" images={images}/>
+            <MainGallery title="Technology Business Incubator" subtitle="BITS Pilani, Hyderabad Campus" images={images}/>
         </>
     )
 }
