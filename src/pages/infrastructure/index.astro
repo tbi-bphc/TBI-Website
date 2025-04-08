@@ -1,10 +1,9 @@
 ---
 import PageLayout from "@/layouts/PageLayout.astro";
-import Brick from "@/components/grid/brick.astro";
-import Contentstable from "@/components/contents-table/contentstable.astro";
 import Commongrid from "@/components/grid/commongrid.astro";
 import FacilityCardGrid from "./cards/facilitycards";
 import { InfraGallery } from "./infragallery";
+
 const contents = [
     {
         title: "Bio Lab",
@@ -27,12 +26,6 @@ const contents = [
         link: "#institute-facilities",
     },
 ];
-
-const pictures = [
-    "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
-    "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
-    "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
-]
 
 const coworkingpictures = [
     "/infrastructure/coworking/coworking1.jpg",
@@ -63,266 +56,107 @@ const prototypepictures = [
     <section class="flex items-center justify-center md:px-0">
         <InfraGallery client:visible/>
     </section>
-    <main class="flex px-2 md:px-6 lg:px-[25vh]">
-        <!-- <section>
-            <div class="ml-3 mr-12 mt-10">
-                <h1>CONTENT</h1>
-                <div>
-                    <Contentstable contents={contents} />
-                </div>
+    
+    <main class="px-2 md:px-6 lg:px-[25vh] max-w-[1800px] mx-auto">
+        <section class="my-8">
+            <p class="text-justify">
+                At TBI, we provide an ecosystem designed to accelerate the growth of innovative 
+                startups in the biotech, pharma, and biopharma sectors. Our state-of-the-art 
+                facilities are tailored to meet the unique needs of early-stage ventures, 
+                offering access to cutting-edge resources and collaborative spaces.
+            </p>
+        </section>
+
+        <!-- Bio Lab Section -->
+        <section class="my-12">
+            <h2 class="text-nord0 my-4 text-2xl scroll-mt-20" id="bio-lab">
+                Bio Lab
+            </h2>
+            <p class="mb-8 text-justify">
+                Our 2,400 square foot Biotech/Pharma Lab is fully equipped to support the development of groundbreaking prototypes. 
+                The lab features Specialized Chemical Hoods and a Cell Culture Facility, a Bacteriological Lab, Refrigeration Room, Media Room,
+                a Wash & Autoclave Area, along with four dedicated research labs designed for biotech and pharma startups. 
+                The lab's high-tech environment enables startups to carry out research and development with the highest precision.
+            </p>
+            <div class="w-full my-8">
+                <Commongrid pictures={biolabpictures} class="mx-auto"/>
             </div>
-        </section> -->
-        <div>
-            <section class="my-8">
-                <br>
-                <p>
-                    At TBI, we provide an ecosystem designed to accelerate the growth of innovative 
-                    startups in the biotech, pharma, and biopharma sectors. Our state-of-the-art 
-                    facilities are tailored to meet the unique needs of early-stage ventures, 
-                    offering access to cutting-edge resources and collaborative spaces.
-                </p>
-            </section>
-            <section class="my-8">
-                <div class="mb-8">
-                    <h2
-                        class="text-nord0 my-4 text-2xl scroll-mt-20"
-                        id="bio-lab"
-                    >
-                        Bio Lab
-                    </h2>
-                    <p class="mb-8">
-                        Our 2,400 square foot Biotech/Pharma Lab is fully equipped to support the development of groundbreaking prototypes. 
-                        The lab features Specialized Chemical Hoods and a Cell Culture Facility, a Bacteriological Lab, Refrigeration Room, Media Room,
-                        a Wash & Autoclave Area, along with four dedicated research labs designed for biotech and pharma startups. 
-                        The lab's high-tech environment enables startups to carry out research and development with the highest precision.
+        </section>
 
-                        
-                    </p>
-                    <div class="flex items-center justify-center">
-                        <Commongrid pictures={biolabpictures}/>
-                        <!-- <Brick
-                            col1={[
-                                "https://upload.wikimedia.org/wikipedia/commons/3/39/BITS_Pilani_-_Hyderabad_campus.jpg",
-                                "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/Convocation_m.jpg",
-                                "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
-                            ]}
-                            col2={[
-                                "https://preview.redd.it/bitsians-drop-best-wallpaper-landscape-worthy-pics-of-the-v0-2hyx3vgd70qa1.png?width=1169&format=png&auto=webp&s=5b1a28fa8d42eee949a5e30bae0f259b6481ca5d",
-                                "https://i.pinimg.com/originals/80/73/99/807399268acab15b7f508261c3b1b0b5.jpg",
-                                "https://qph.cf2.quoracdn.net/main-qimg-2bd344acb4b37418fd4d88c45be2832a-lq",
-                            ]}
-                            col3={[
-                                "https://upload.wikimedia.org/wikipedia/commons/3/39/BITS_Pilani_-_Hyderabad_campus.jpg",
-                                "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/Convocation_m.jpg",
-                                "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
-                            ]}
-                            col4={[
-                                "https://preview.redd.it/bitsians-drop-best-wallpaper-landscape-worthy-pics-of-the-v0-2hyx3vgd70qa1.png?width=1169&format=png&auto=webp&s=5b1a28fa8d42eee949a5e30bae0f259b6481ca5d",
-                                "https://i.pinimg.com/originals/80/73/99/807399268acab15b7f508261c3b1b0b5.jpg",
-                                "https://qph.cf2.quoracdn.net/main-qimg-2bd344acb4b37418fd4d88c45be2832a-lq",
-                            ]}
-                        /> -->
-                    </div>
-                    <div class="mb-8">
-                        <h2
-                            class="text-nord0 my-4 text-2xl scroll-mt-20"
-                            id="incubatee-offices"
-                        >
-                            Incubatee Offices and Conference Rooms
-                        </h2>
-                        <p class="mb-8">
-                            TBI provides office space with 12 private offices and 34 flexible coworking hot-desks, 
-                            creating an ideal environment for productivity. Whether you need a private space to 
-                            focus or prefer a dynamic coworking setup, TBI has a place for you.
-                        </p>
-                        <div class="flex items-center justify-center">
-                            <!-- <Brick
-                                col1={[
-                                    "https://upload.wikimedia.org/wikipedia/commons/3/39/BITS_Pilani_-_Hyderabad_campus.jpg",
-                                    "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/Convocation_m.jpg",
-                                    "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
-                                ]}
-                                col2={[
-                                    "https://preview.redd.it/bitsians-drop-best-wallpaper-landscape-worthy-pics-of-the-v0-2hyx3vgd70qa1.png?width=1169&format=png&auto=webp&s=5b1a28fa8d42eee949a5e30bae0f259b6481ca5d",
-                                    "https://i.pinimg.com/originals/80/73/99/807399268acab15b7f508261c3b1b0b5.jpg",
-                                    "https://qph.cf2.quoracdn.net/main-qimg-2bd344acb4b37418fd4d88c45be2832a-lq",
-                                ]}
-                                col3={[
-                                    "https://upload.wikimedia.org/wikipedia/commons/3/39/BITS_Pilani_-_Hyderabad_campus.jpg",
-                                    "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/Convocation_m.jpg",
-                                    "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
-                                ]}
-                                col4={[
-                                    "https://preview.redd.it/bitsians-drop-best-wallpaper-landscape-worthy-pics-of-the-v0-2hyx3vgd70qa1.png?width=1169&format=png&auto=webp&s=5b1a28fa8d42eee949a5e30bae0f259b6481ca5d",
-                                    "https://i.pinimg.com/originals/80/73/99/807399268acab15b7f508261c3b1b0b5.jpg",
-                                    "https://qph.cf2.quoracdn.net/main-qimg-2bd344acb4b37418fd4d88c45be2832a-lq",
-                                ]}
-                            /> -->
-                            <Commongrid pictures={conferencepictures}/>
-                        </div>
-                        <div class="mb-8">
-                            <h2
-                                class="text-nord0 my-4 text-2xl scroll-mt-20"
-                                id="co-working-spaces"
-                            >
-                                Co-working spaces
-                            </h2>
-                            <p class="mb-8">
-                                TBI provides modern office spaces and
-                                well-equipped workspaces designed to foster
-                                innovation and productivity. Startups have
-                                access to dedicated labs, collaborative
-                                co-working areas, and private offices, creating
-                                an environment that supports both individual
-                                focus and team collaboration. The flexible
-                                workspace options and high-speed internet ensure
-                                that entrepreneurs can efficiently develop and
-                                scale their ventures. Additionally, the
-                                incubator’s infrastructure is geared towards
-                                facilitating seamless interaction and networking
-                                with fellow innovators and industry experts.
-                            </p>
-                            <div class="flex items-center justify-center">
-                                <!-- <Brick
-                                    col1={[
-                                        "https://upload.wikimedia.org/wikipedia/commons/3/39/BITS_Pilani_-_Hyderabad_campus.jpg",
-                                        "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/Convocation_m.jpg",
-                                        "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
-                                    ]}
-                                    col2={[
-                                        "https://preview.redd.it/bitsians-drop-best-wallpaper-landscape-worthy-pics-of-the-v0-2hyx3vgd70qa1.png?width=1169&format=png&auto=webp&s=5b1a28fa8d42eee949a5e30bae0f259b6481ca5d",
-                                        "https://i.pinimg.com/originals/80/73/99/807399268acab15b7f508261c3b1b0b5.jpg",
-                                        "https://qph.cf2.quoracdn.net/main-qimg-2bd344acb4b37418fd4d88c45be2832a-lq",
-                                    ]}
-                                    col3={[
-                                        "https://upload.wikimedia.org/wikipedia/commons/3/39/BITS_Pilani_-_Hyderabad_campus.jpg",
-                                        "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/Convocation_m.jpg",
-                                        "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
-                                    ]}
-                                    col4={[
-                                        "https://preview.redd.it/bitsians-drop-best-wallpaper-landscape-worthy-pics-of-the-v0-2hyx3vgd70qa1.png?width=1169&format=png&auto=webp&s=5b1a28fa8d42eee949a5e30bae0f259b6481ca5d",
-                                        "https://i.pinimg.com/originals/80/73/99/807399268acab15b7f508261c3b1b0b5.jpg",
-                                        "https://qph.cf2.quoracdn.net/main-qimg-2bd344acb4b37418fd4d88c45be2832a-lq",
-                                    ]}
-                                /> -->
-                                <Commongrid pictures={coworkingpictures}/>
-                            </div>
-                            
-                                <div class="mb-8">
-                                    <h2
-                                        class="text-nord0 my-4 text-2xl scroll-mt-20"
-                                        id="prototyping-facilities"
-                                    >
-                                        Prototyping Facilties
-                                    </h2>
-                                    <p class="mb-8">
-                                        Our 3,000 square foot shared prototyping space is a hub for collaboration, where startups can bring their 
-                                        ideas to life. This facility includes: SLA Printers and 3D Printers, A 33W Laser Engraving Machine, DiniLite Digital microscopes, 
-                                        2D Scanners and a variety of prototyping tools co-created with TBIS support. Startups also have access to the 
-                                        institute’s highly equipped prototyping facilities on demand, ensuring you have the resources you need 
-                                        at every stage of prototype development.
+        <!-- Offices Section -->
+        <section class="my-12">
+            <h2 class="text-nord0 my-4 text-2xl scroll-mt-20" id="incubatee-offices">
+                Incubatee Offices and Conference Rooms
+            </h2>
+            <p class="mb-8 text-justify">
+                TBI provides office space with 12 private offices and 34 flexible coworking hot-desks, 
+                creating an ideal environment for productivity. Whether you need a private space to 
+                focus or prefer a dynamic coworking setup, TBI has a place for you.
+            </p>
+            <div class="w-full my-8">
+                <Commongrid pictures={conferencepictures} class="mx-auto"/>
+            </div>
+        </section>
 
-                                    </p>
-                                    <div
-                                        class="flex items-center justify-center"
-                                    >
-                                        <!-- <Brick
-                                            col1={[
-                                                "https://upload.wikimedia.org/wikipedia/commons/3/39/BITS_Pilani_-_Hyderabad_campus.jpg",
-                                                "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/Convocation_m.jpg",
-                                                "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
-                                            ]}
-                                            col2={[
-                                                "https://preview.redd.it/bitsians-drop-best-wallpaper-landscape-worthy-pics-of-the-v0-2hyx3vgd70qa1.png?width=1169&format=png&auto=webp&s=5b1a28fa8d42eee949a5e30bae0f259b6481ca5d",
-                                                "https://i.pinimg.com/originals/80/73/99/807399268acab15b7f508261c3b1b0b5.jpg",
-                                                "https://qph.cf2.quoracdn.net/main-qimg-2bd344acb4b37418fd4d88c45be2832a-lq",
-                                            ]}
-                                            col3={[
-                                                "https://upload.wikimedia.org/wikipedia/commons/3/39/BITS_Pilani_-_Hyderabad_campus.jpg",
-                                                "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/Convocation_m.jpg",
-                                                "https://content.jdmagicbox.com/comp/hyderabad/m9/040pxx40.xx40.090622140123.j5m9/catalogue/birla-institute-of-technology-and-science-shamirpet-rangareddy-universities-5qqwd2xqb4-250.jpg",
-                                            ]}
-                                            col4={[
-                                                "https://preview.redd.it/bitsians-drop-best-wallpaper-landscape-worthy-pics-of-the-v0-2hyx3vgd70qa1.png?width=1169&format=png&auto=webp&s=5b1a28fa8d42eee949a5e30bae0f259b6481ca5d",
-                                                "https://i.pinimg.com/originals/80/73/99/807399268acab15b7f508261c3b1b0b5.jpg",
-                                                "https://qph.cf2.quoracdn.net/main-qimg-2bd344acb4b37418fd4d88c45be2832a-lq",
-                                            ]}
-                                        /> -->
-                                        <Commongrid pictures={prototypepictures}/>
-                                        
-                                    </div>
-                                    <h2 class="text-nord0 my-4 text-2xl scroll-mt-20" id="institute-facilities">
-                                        Institute Facilties
-                                    </h2>
-                                    <p class="mb-8">
-                                        TBI startups also enjoy unmatched access to a broad range of 
-                                        institute facilities. These include the Central Analytical Lab, 
-                                        Clean Room, Central Animal Facility, and more. Whether it's for 
-                                        cutting-edge research, preclinical testing, or drug discovery, 
-                                        our access to top-tier resources ensures your startup has everything 
-                                        it needs to succeed.Join us and accelerate your journey from concept 
-                                        to market with the right tools, resources, and collaborative space.
-                                    </p>
-                                    <FacilityCardGrid client:visible/>
-                                    <!-- <ul>
-                                        <li>
-                                            <h1
-                                                class="mt-2 text-nord10 text-md"
-                                            >
-                                                Clean Room
-                                            </h1>
-                                            <p>
-                                                Lorem ipsum dolor sit amet
-                                                consectetur, adipisicing elit.
-                                                Eius laborum, quos unde eveniet
-                                                suscipit eligendi, obcaecati non
-                                                dolorum, aperiam ad veritatis
-                                                veniam impedit reiciendis.
-                                                Itaque molestias facere eligendi
-                                                sequi repellendus.
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h1
-                                                class="mt-2 text-nord10 text-md"
-                                            >
-                                                Animal Facility
-                                            </h1>
-                                            <p>
-                                                Lorem ipsum dolor sit amet
-                                                consectetur, adipisicing elit.
-                                                Eius laborum, quos unde eveniet
-                                                suscipit eligendi, obcaecati non
-                                                dolorum, aperiam ad veritatis
-                                                veniam impedit reiciendis.
-                                                Itaque molestias facere eligendi
-                                                sequi repellendus.
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h1
-                                                class="mt-2 text-nord10 text-md"
-                                            >
-                                                CAL LAB
-                                            </h1>
-                                            <p>
-                                                Lorem ipsum dolor sit amet
-                                                consectetur, adipisicing elit.
-                                                Eius laborum, quos unde eveniet
-                                                suscipit eligendi, obcaecati non
-                                                dolorum, aperiam ad veritatis
-                                                veniam impedit reiciendis.
-                                                Itaque molestias facere eligendi
-                                                sequi repellendus.
-                                            </p>
-                                        </li>
-                                    </ul> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main></PageLayout
->
+        <!-- Coworking Section -->
+        <section class="my-12">
+            <h2 class="text-nord0 my-4 text-2xl scroll-mt-20" id="co-working-spaces">
+                Co-working spaces
+            </h2>
+            <p class="mb-8 text-justify">
+                TBI provides modern office spaces and
+                well-equipped workspaces designed to foster
+                innovation and productivity. Startups have
+                access to dedicated labs, collaborative
+                co-working areas, and private offices, creating
+                an environment that supports both individual
+                focus and team collaboration. The flexible
+                workspace options and high-speed internet ensure
+                that entrepreneurs can efficiently develop and
+                scale their ventures. Additionally, the
+                incubator's infrastructure is geared towards
+                facilitating seamless interaction and networking
+                with fellow innovators and industry experts.
+            </p>
+            <div class="w-full my-8">
+                <Commongrid pictures={coworkingpictures} class="mx-auto"/>
+            </div>
+        </section>
+
+        <!-- Prototyping Section -->
+        <section class="my-12">
+            <h2 class="text-nord0 my-4 text-2xl scroll-mt-20" id="prototyping-facilities">
+                Prototyping Facilities
+            </h2>
+            <p class="mb-8 text-justify">
+                Our 3,000 square foot shared prototyping space is a hub for collaboration, where startups can bring their 
+                ideas to life. This facility includes: SLA Printers and 3D Printers, A 33W Laser Engraving Machine, DiniLite Digital microscopes, 
+                2D Scanners and a variety of prototyping tools co-created with TBIS support. Startups also have access to the 
+                institute's highly equipped prototyping facilities on demand, ensuring you have the resources you need 
+                at every stage of prototype development.
+            </p>
+            <div class="w-full my-8">
+                <Commongrid pictures={prototypepictures} class="mx-auto"/>
+            </div>
+        </section>
+
+        <!-- Institute Facilities -->
+        <section class="my-12">
+            <h2 class="text-nord0 my-4 text-2xl scroll-mt-20" id="institute-facilities">
+                Institute Facilities
+            </h2>
+            <p class="mb-8 text-justify">
+                TBI startups also enjoy unmatched access to a broad range of 
+                institute facilities. These include the Central Analytical Lab, 
+                Clean Room, Central Animal Facility, and more. Whether it's for 
+                cutting-edge research, preclinical testing, or drug discovery, 
+                our access to top-tier resources ensures your startup has everything 
+                it needs to succeed.Join us and accelerate your journey from concept 
+                to market with the right tools, resources, and collaborative space.
+            </p>
+            <div class="w-full my-8">
+                <FacilityCardGrid client:visible/>
+            </div>
+        </section>
+    </main>
+</PageLayout>

@@ -1,139 +1,152 @@
 ---
 import PageLayout from "@/layouts/PageLayout.astro";
-import Card from "@/components/cards/card.astro";
-import EventsGallery from "./eventsgallery";
-import Eventcard from "@/components/grid/brick.astro";
-import Blogcard from "@/components/cards/blogcard.astro";
-const events = await Astro.glob("@/pages/events/*.md");  
+import EventsTabs from "./tabs";
+import Blogcard from "@/components/cards/blogcard";
+const events = await Astro.glob("@/pages/events/event-blogs/*.md");  
+import type { MarkdownInstance } from "astro";
 
-console.log(events[1].frontmatter)
+const mapToBlogItem = (event : MarkdownInstance<Record<string, any>>) => ({
+    frontmatter: {
+        title: event.frontmatter.title,
+        description: event.frontmatter.description,
+        link: event.frontmatter.link,
+        image: event.frontmatter.image,
+    }
+});
+
+const talks = events
+    .filter((event) => event.frontmatter.type === "talks")
+    .map(mapToBlogItem);
+
+const innovations = events
+    .filter((event) => event.frontmatter.type === "innovation")
+    .map(mapToBlogItem);
+
+const networking = events
+    .filter((event) => event.frontmatter.type === "networking")
+    .map(mapToBlogItem);
+
 ---
 
 <PageLayout>
-    <main class="px-6 md:px-[15vh]">
-        <section class="my-8">
-            <div class="mb-8">
-                <br />
-                <div class="flex items-start space-x-6">
-                    <div class="w-[16%] p-0 m-0 flex items-center justify-center ">
-                        <img 
-                            src="tech.gif" 
-                            alt="TBI Events GIF"                         />
-                    </div>
-                    <div class="w-[84%] ml-10">
-                        <h1 class="text-3xl mr-32 text-nord10 mb-4">
-                            Activities and Events
-                        </h1>
-                        <p class="text-lg text-justify">
-                            Technology Business Incubator, BITS Pilani, Hyderabad Campus conducts numerous events throughout the year for
-                            campus engagement with First Degree students, Higher Degree students, Academic Faculty and PhD Faculty. These involve
-                            competitions, engaging sessions, interactive bootcamps, and sessions on days of note like Entrepreneurship Day, National 
-                            Startup Day. These events are directed to improve the engagement of TBI with campus students, faculty, PhD students and 
-                            administration.
-                        </p>
-                    </div>                  
+    <main class="px-4 md:px-[10vw] lg:px-[15vw] py-8">
+        <section class="mb-12">
+            {/* Hero Section */}
+            <div class="flex flex-col md:flex-row items-center gap-6 mb-12">
+                <div class="w-full md:w-1/5 flex justify-center">
+                    <img 
+                        src="tech.gif" 
+                        alt="TBI Events GIF"
+                        class="w-32 h-32 md:w-full md:h-auto object-contain"
+                    />
                 </div>
-                
-                <div class="flex items-center justify-center w-full">
-                    <div
-                        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 space-x-3"
-                    >
-                        {
-                            events.map((blog) => (                              
-                                <div>
-                                    <Blogcard
-                                        name={blog.frontmatter.title}
-                                        link={blog.frontmatter.link}
-                                        img="/activities/headerimgs/seep.jpg"
-                                    />
-                                </div>
-                                <div>
-                                    <Blogcard
-                                        name={blog.frontmatter.title}
-                                        link={blog.frontmatter.link}
-                                        img="/activities/headerimgs/ignite.jpg"
-                                    />
-                                </div>
-                                <div>
-                                    <Blogcard
-                                        name={blog.frontmatter.title}
-                                        link={blog.frontmatter.link}
-                                        img="/activities/headerimgs/angel.JPG"
-                                    />
-                                </div>
-                                <div>
-                                    <Blogcard
-                                        name="World Entrepreneurs Day"
-                                        link={blog.frontmatter.link}
-                                        img="/activities/headerimgs/worldent.jpg"
-                                    />
-                                </div>
-
-                                <div>
-                                    <Blogcard
-                                        name="MVP Session"
-                                        link={blog.frontmatter.link}
-                                        img="/activities/headerimgs/MVP.JPG"
-                                    />
-                                </div> 
-                                <div>
-                                    <Blogcard
-                                        name="Hakimpet Airforce Visit"
-                                        link={blog.frontmatter.link}
-                                        img="/activities/headerimgs/hakimpet.jpg"
-                                    />
-                                </div> 
-                                <div>
-                                    <Blogcard
-                                        name="BIRAC BIG Scheme"
-                                        link={blog.frontmatter.link}
-                                        img="/activities/headerimgs/birac.jpg"
-                                    />
-                                </div> 
-                                <div>
-                                    <Blogcard
-                                        name="Lean Canvas Model"
-                                        link={blog.frontmatter.link}
-                                        img="/activities/headerimgs/lean.jpg"
-                                    />
-                                </div> 
-                                <div>
-                                    <Blogcard
-                                        name="Pitch Perfect"
-                                        link={blog.frontmatter.link}
-                                        img="/activities/headerimgs/pitch.jpg"
-                                    />
-                                </div> 
-                                <div>
-                                    <Blogcard
-                                        name="Director's Visit"
-                                        link={blog.frontmatter.link}
-                                        img="/activities/headerimgs/director.jpg"
-                                    />
-                                </div> 
-                                <div>
-                                    <Blogcard
-                                        name="National Startup Day"
-                                        link={blog.frontmatter.link}
-                                        img="/activities/headerimgs/natstart.jpg"
-                                    />
-                                </div> 
-                                <div>
-                                    <Blogcard
-                                        name="SEEP 1.0"
-                                        link={blog.frontmatter.link}
-                                        img="/activities/headerimgs/seep1.jpg"
-                                    />
-                                </div> 
-                            ))
-                        }
-                    </div>
-                </div>
+                <div class="w-full md:w-4/5">
+                    <h1 class="text-3xl lg:text-4xl font-bold text-nord10 mb-4">
+                        Activities and Events
+                    </h1>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Technology Business Incubator, BITS Pilani, Hyderabad Campus conducts numerous events throughout the year for
+                        campus engagement with First Degree students, Higher Degree students, Academic Faculty and PhD Faculty. These involve
+                        competitions, engaging sessions, interactive bootcamps, and sessions on days of note like Entrepreneurship Day, National 
+                        Startup Day. These events are directed to improve the engagement of TBI with campus students, faculty, PhD students and 
+                        administration.
+                    </p>
+                </div>                  
             </div>
 
-            <!-- <section class="my-8">
-                <h1 class="text-3xl text-nord10">PHOTO GALLERY</h1>
-                <div class="relative">
+            <section class="mb-16 w-full">
+                <h2 class="text-2xl font-semibold text-nord10 mb-6 pb-2 border-b border-gray-200">Our Events</h2>
+                <EventsTabs
+                    talks = {talks}
+                    innovations = {innovations}
+                    networking = {networking}
+                    client:visible
+                />
+            </section>
+            
+            {/* Events Grid */}
+            <!-- <div class="mb-16">
+                <h2 class="text-2xl font-semibold text-nord10 mb-6 pb-2 border-b border-gray-200">Our Events</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
+                    <Blogcard
+                        name="SEEP"
+                        link={events[0]?.frontmatter.link || '#'}
+                        img="/activities/headerimgs/seep.jpg"
+                        description="Student Entrepreneurship Engagement Program"
+                    />
+                    <Blogcard
+                        name="Ignite"
+                        link={events[0]?.frontmatter.link || '#'}
+                        img="/activities/headerimgs/ignite.jpg"
+                        description="Startup ideation competition"
+                    />
+                    <Blogcard
+                        name="Angel Investing"
+                        link={events[0]?.frontmatter.link || '#'}
+                        img="/activities/headerimgs/angel.JPG"
+                        description="Learn about startup investments"
+                    />
+                    <Blogcard
+                        name="World Entrepreneurs Day"
+                        link={events[0]?.frontmatter.link || '#'}
+                        img="/activities/headerimgs/worldent.jpg"
+                        description="Celebrating entrepreneurship"
+                    />
+                    <Blogcard
+                        name="MVP Session"
+                        link={events[0]?.frontmatter.link || '#'}
+                        img="/activities/headerimgs/MVP.JPG"
+                        description="Building Minimum Viable Products"
+                    />
+                    <Blogcard
+                        name="Hakimpet Airforce Visit"
+                        link={events[0]?.frontmatter.link || '#'}
+                        img="/activities/headerimgs/hakimpet.jpg"
+                        description="Industry exposure visit"
+                    />
+                    <Blogcard
+                        name="BIRAC BIG Scheme"
+                        link={events[0]?.frontmatter.link || '#'}
+                        img="/activities/headerimgs/birac.jpg"
+                        description="Biotechnology funding program"
+                    />
+                    <Blogcard
+                        name="Lean Canvas Model"
+                        link={events[0]?.frontmatter.link || '#'}
+                        img="/activities/headerimgs/lean.jpg"
+                        description="Business model workshop"
+                    />
+                    <Blogcard
+                        name="Pitch Perfect"
+                        link={events[0]?.frontmatter.link || '#'}
+                        img="/activities/headerimgs/pitch.jpg"
+                        description="Startup pitching competition"
+                    />
+                    <Blogcard
+                        name="Director's Visit"
+                        link={events[0]?.frontmatter.link || '#'}
+                        img="/activities/headerimgs/director.jpg"
+                        description="TBI progress review"
+                    />
+                    <Blogcard
+                        name="National Startup Day"
+                        link={events[0]?.frontmatter.link || '#'}
+                        img="/activities/headerimgs/natstart.jpg"
+                        description="Celebrating Indian startups"
+                    />
+                    <Blogcard
+                        name="SEEP 1.0"
+                        link={events[0]?.frontmatter.link || '#'}
+                        img="/activities/headerimgs/seep1.jpg"
+                        description="First edition of SEEP program"
+                    />
+                </div>
+            </div> -->
+
+            {/* Photo Gallery (commented out) */}
+            <!-- <section class="my-12">
+                <h2 class="text-2xl font-semibold text-nord10 mb-6 pb-2 border-b border-gray-200">Photo Gallery</h2>
+                <div class="relative rounded-xl overflow-hidden">
                     <EventsGallery client:visible />
                 </div>
             </section> -->
