@@ -4,30 +4,70 @@ import { Linkedin, Mail } from "lucide-react";
 ---
 
 <div
-    class="w-full my-4 md:max-w-90 items-center bg-white shadow-lg rounded-lg flex flex-col justify-center place-self-center"
+  class="w-full max-w-xs bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full"
 >
+  <!-- Image container with fixed aspect ratio -->
+  <div class="w-full aspect-square overflow-hidden">
     <img
-        src={image??"https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp"}
-        alt="img"
-        title="img"
-        class="w-full h-auto object-cover rounded-t-lg"
-        id="whoobe-ixxe5"
+      src={image ??
+        "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp"}
+      alt={name}
+      class="w-full h-full object-cover"
+      loading="lazy"
     />
-    <div class="w-full p-4 justify-start flex flex-col">
-        <h4 class="border-b-2 text-2xl text-center pb-1">
-            {name}
-        </h4>
-        <p class="my-4 text-center">
-            {description}
-        </p>
-        <section class="flex items-center justify-center mt-2">
-            <div class="flex gap-4">
-                <a href={linkedin} target="_blank">
-                    <div class="hover:bg-nord6 p-1 rounded-3xl">
-                        <Linkedin />
-                    </div>
-                </a>
-            </div>
-        </section>
+  </div>
+
+  <!-- Content container with fixed height -->
+  <div class="p-4 flex flex-col flex-grow">
+    <!-- Title with fixed height and overflow handling -->
+    <h4
+      class="text-xl font-semibold text-center mb-3 h-14 flex items-center justify-center"
+    >
+      <span class="line-clamp-2">{name}</span>
+    </h4>
+
+    <!-- Description with fixed height and overflow handling -->
+    <p class="text-gray-600 text-center mb-4 h-20 overflow-hidden line-clamp-3">
+      {description}
+    </p>
+
+    <!-- Social links centered at bottom -->
+    <div class="mt-auto flex justify-center">
+      <div class="flex gap-4">
+        <a
+          href={linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:bg-gray-100 p-2 rounded-full transition-colors cursor-pointer"
+          aria-label={`${name}'s LinkedIn`}
+        >
+          <Linkedin size={20} />
+        </a>
+
+        <!-- <a
+          href={`mailto:${mail}`}
+          class="hover:bg-gray-100 p-2 rounded-full transition-colors"
+          aria-label={`Email ${name}`}
+        >
+          <Mail />
+        </a> -->
+      </div>
     </div>
+  </div>
 </div>
+
+<style>
+  /* Ensure consistent line clamping */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
