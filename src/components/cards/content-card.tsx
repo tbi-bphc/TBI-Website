@@ -27,7 +27,7 @@ function Card({ title, description, link }: CardProps) {
           <hr className="h-1 mt-8 border-0 bg-nord" />
           <hr className="h-1 mt-8 border-0 bg-nord" />
           <div className="flex items-center mt-10">
-            <a href={link} className="text-white relative z-10">
+            <a href={link}  target="_blank" className="text-white relative z-10">
               <button className="bg-nord9 rounded-xl p-2 hover:bg-nord8">
                 <p className="text-gray-50 ">Learn More</p>
               </button>

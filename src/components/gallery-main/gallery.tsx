@@ -31,7 +31,7 @@ export default function MainGallery({title, subtitle, images} : GalleryProps) {
                 className="z-50 flex flex-col justify-center items-center"
             >
                 <motion.h1
-                    className="text-2xl px-4 md:text-4xl lg:text-5xl text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto opacity-80 "
+                    className="text-2xl px-4 font-bold md:text-4xl lg:text-5xl text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto opacity-80 "
                 >
                     {title} <br />
                     <TextGenerateEffect duration={1} className="text-white" words={subtitle} />

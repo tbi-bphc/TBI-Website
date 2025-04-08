@@ -3,6 +3,7 @@ import { Users } from "lucide-react"
 import { Building2 } from "lucide-react"
 import { HandCoins } from "lucide-react"
 import { CircleDollarSign } from "lucide-react"
+import { BadgePercent } from "lucide-react"
 
 interface ImpactItem {
     title:string,
@@ -19,6 +20,7 @@ function ImpactItem( {title, number, icon, text}:ImpactItem){
             {icon ==="Building2"?<Building2 size={60} color="white"/>:<></>}
             {icon ==="HandCoins"?<HandCoins size={60} color="white"/>:<></>}
             {icon ==="CircleDollarSign"?<CircleDollarSign size={60} color="white"/>:<></>}
+            {icon ==="BadgePercent"?<BadgePercent size={60} color="white"/>:<></>}
             
             <p className="text-2xl my-auto ml-6 flex space-x-1 text-nord6">
                 <CountUpAnimation targetValue={number}/> 
@@ -37,7 +39,7 @@ export function ImpactCarousel(){
             <ImpactItem title="Total Funds Raised" number={9} icon="CircleDollarSign" text={'Cr+'}/>
             <ImpactItem title="Employment Generated" number={60} icon="Users" text="+"/>
             <ImpactItem title="Startup Revenue" number={3} icon="HandCoins" text="Cr+"/>
-            <ImpactItem title="Student Pre-Startups" number={12} icon="HandCoins" text={''}/>
+            <ImpactItem title="Student Pre-Startups" number={12} icon="BadgePercent" text={''}/>
             <ImpactItem title="Mentors" number={30} icon="Users" text={'+'}/>
             <ImpactItem title="Patents" number={10} icon="CircleDollarSign" text="+"/>
             <ImpactItem title="Incubation Programs" number={5} icon="Building2" text=" "/>

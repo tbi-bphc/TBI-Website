@@ -4,7 +4,9 @@ import Card from "@/components/cards/card.astro";
 import EventsGallery from "./eventsgallery";
 import Eventcard from "@/components/grid/brick.astro";
 import Blogcard from "@/components/cards/blogcard.astro";
-const events = await Astro.glob("@/pages/events/*.md");
+const events = await Astro.glob("@/pages/events/*.md");  
+
+console.log(events[1].frontmatter)
 ---
 
 <PageLayout>
@@ -34,27 +36,27 @@ const events = await Astro.glob("@/pages/events/*.md");
                 
                 <div class="flex items-center justify-center w-full">
                     <div
-                        class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 space-x-3"
+                        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 space-x-3"
                     >
                         {
                             events.map((blog) => (                              
                                 <div>
                                     <Blogcard
-                                        name="SEEP 2.0"
+                                        name={blog.frontmatter.title}
                                         link={blog.frontmatter.link}
                                         img="/activities/headerimgs/seep.jpg"
                                     />
                                 </div>
                                 <div>
                                     <Blogcard
-                                        name="IGNITE Bootcamp"
+                                        name={blog.frontmatter.title}
                                         link={blog.frontmatter.link}
                                         img="/activities/headerimgs/ignite.jpg"
                                     />
                                 </div>
                                 <div>
                                     <Blogcard
-                                        name="Angel Investment & Venture Capital"
+                                        name={blog.frontmatter.title}
                                         link={blog.frontmatter.link}
                                         img="/activities/headerimgs/angel.JPG"
                                     />

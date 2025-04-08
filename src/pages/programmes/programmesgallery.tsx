@@ -37,7 +37,7 @@ const pictures = ["https://images5.alphacoders.com/379/379348.jpg"];
 export function ProgrammesGallery() {
   return (
     <>
-      <MainGallery title="Programmes" subtitle="" images={pictures} />
+      <MainGallery title="Programs" subtitle="" images={pictures} />
     </>
   );
 }
