@@ -19,7 +19,7 @@ interface EventsTabsProps {
 function EventsTabs({  innovations, talks, networking }: EventsTabsProps) {
   return (
     <div className="w-full">
-      <Tabs defaultValue="talks" className="w-full">
+      <Tabs defaultValue="innovation-contests" className="w-full">
         {/* Tabs List */}
         <TabsList className="grid w-full grid-cols-3 mt-10 mb-8 h-12">
           <TabsTrigger 

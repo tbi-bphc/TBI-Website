@@ -1,9 +1,9 @@
 ---
 layout: "@/layouts/BlogLayout.astro"
-title: "Ignite"
+title: "Ignite Bootcamp"
 link: "/events/event-blogs/ignite"
 image: "/activities/headerimgs/ignite.jpg"
-description: "Startup ideation competition"
+description: "Startup Ideation Workshop"
 thumbnail: "/activities/headerimgs/ignite.jpg"
 type: "innovation"
 ---
