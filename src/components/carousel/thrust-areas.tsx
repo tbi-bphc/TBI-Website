@@ -1,9 +1,10 @@
 import CountUpAnimation from "@/helpers/countUp"
-import { Users } from "lucide-react"
-import { Building2 } from "lucide-react"
+import { FlaskConical } from "lucide-react"
+import { HeartPulse } from "lucide-react"
+import { Cpu } from "lucide-react"
+import { Rocket } from "lucide-react"
 import { HandCoins } from "lucide-react"
-import { CircleDollarSign } from "lucide-react"
-import { BadgePercent } from "lucide-react"
+import { Sprout } from "lucide-react"
 
 interface Area {
     title:string,
@@ -16,14 +17,14 @@ function Element( {title, number, icon, text}:Area){
     return (
         <div>
           <div className="flex mb-4">
-            {icon ==="Users"?<Users size={60} color="white" />:<></>}
-            {icon ==="Building2"?<Building2 size={60} color="white"/>:<></>}
-            {icon ==="HandCoins"?<HandCoins size={60} color="white"/>:<></>}
-            {icon ==="CircleDollarSign"?<CircleDollarSign size={60} color="white"/>:<></>}
-            {icon ==="BadgePercent"?<BadgePercent size={60} color="white"/>:<></>}
-            
+            {icon ==="FlaskConical"?<FlaskConical size={80} color="white"/>:<></>}
+            {icon ==="HeartPulse"?<HeartPulse size={80} color="white"/>:<></>}
+            {icon ==="Cpu"?<Cpu size={80} color="white"/>:<></>}
+            {icon ==="Rocket"?<Rocket size={80} color="white"/>:<></>}
+            {icon ==="HandCoins"?<HandCoins size={80} color="white"/>:<></>}
+            {icon ==="Sprout"?<Sprout size={80} color="white"/>:<></>}
+
             <p className="text-2xl my-auto ml-6 flex space-x-1 text-nord6">
-                <CountUpAnimation targetValue={number}/> 
                 <span>{text}</span>
             </p>
           </div>
@@ -34,13 +35,13 @@ function Element( {title, number, icon, text}:Area){
 
 export default function ThrustAreasCarousel(){
     return(
-        <div className="grid md:grid-cols-3 grid-cols-2 gap-10 md:gap-x-40">
-            <Element title="Agri-Tech" number={21} icon="Building2" text={''}/>
-            <Element title="Health-Tech" number={9} icon="CircleDollarSign" text={'Cr+'}/>
-            <Element title="Fin-Tech" number={60} icon="Users" text="+"/>
-            <Element title="Edu-Tech" number={3} icon="HandCoins" text="Cr+"/>
-            <Element title="Food-Tech" number={12} icon="BadgePercent" text={''}/>
-            <Element title="E-Commerce" number={30} icon="Users" text={'+'}/>
+        <div className="grid md:grid-cols-3 font-bold grid-cols-2 gap-10 md:gap-x-40">
+            <Element title="BioTech & Pharmacy" number={21} icon="FlaskConical" text={""}/>
+            <Element title="ICT for Healthcare" number={9} icon="HeartPulse" text={""}/>
+            <Element title="Micro Electro Mechanical Systems (MEMS)" number={60} icon="Cpu" text={""}/>
+            <Element title="SpaceTech & Defence" number={3} icon="Rocket" text={""}/>
+            <Element title="Edutainment & E-Commerce" number={12} icon="HandCoins" text={""}/>
+            <Element title="Agri-BioTech & Agri-Tech" number={30} icon="Sprout" text={""}/>
         </div>
     )
 }

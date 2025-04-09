@@ -34,15 +34,13 @@ function ImpactItem( {title, number, icon, text}:ImpactItem){
 
 export function ImpactCarousel(){
     return(
-        <div className="grid md:grid-cols-4 grid-cols-2 gap-10 md:gap-20">
+        <div className="grid md:grid-cols-3 grid-cols-2 font-bold gap-10 md:gap-20">
             <ImpactItem title="Current Startups" number={21} icon="Building2" text={''}/>
-            <ImpactItem title="Total Funds Raised" number={9} icon="CircleDollarSign" text={'Cr+'}/>
+            <ImpactItem title="Total Funds Raised" number={12} icon="CircleDollarSign" text={'Cr+'}/>
             <ImpactItem title="Employment Generated" number={60} icon="Users" text="+"/>
             <ImpactItem title="Startup Revenue" number={3} icon="HandCoins" text="Cr+"/>
-            <ImpactItem title="Student Pre-Startups" number={12} icon="BadgePercent" text={''}/>
-            <ImpactItem title="Mentors" number={30} icon="Users" text={'+'}/>
-            <ImpactItem title="Patents" number={10} icon="CircleDollarSign" text="+"/>
-            <ImpactItem title="Incubation Programs" number={5} icon="Building2" text=" "/>
+            <ImpactItem title="Student Pre-Startups" number={12} icon="Building2" text={''}/>
+            <ImpactItem title="Incubation Programs" number={5} icon="BadgePercent" text=" "/>
         </div>
     )
 }
