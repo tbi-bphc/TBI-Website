@@ -14,12 +14,12 @@ const mapToBlogItem = (event : MarkdownInstance<Record<string, any>>) => ({
     }
 });
 
-const talks = events
-    .filter((event) => event.frontmatter.type === "talks")
-    .map(mapToBlogItem);
-
 const innovations = events
     .filter((event) => event.frontmatter.type === "innovation")
+    .map(mapToBlogItem);
+
+const talks = events
+    .filter((event) => event.frontmatter.type === "talks")
     .map(mapToBlogItem);
 
 const networking = events
@@ -57,91 +57,12 @@ const networking = events
             <section class="mb-16 w-full">
                 <h2 class="text-2xl font-semibold text-nord10 mb-6 pb-2 border-b border-gray-200">Our Events</h2>
                 <EventsTabs
-                    talks = {talks}
                     innovations = {innovations}
+                    talks = {talks}
                     networking = {networking}
                     client:visible
                 />
             </section>
-            
-            {/* Events Grid */}
-            <!-- <div class="mb-16">
-                <h2 class="text-2xl font-semibold text-nord10 mb-6 pb-2 border-b border-gray-200">Our Events</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
-                    <Blogcard
-                        name="SEEP"
-                        link={events[0]?.frontmatter.link || '#'}
-                        img="/activities/headerimgs/seep.jpg"
-                        description="Student Entrepreneurship Engagement Program"
-                    />
-                    <Blogcard
-                        name="Ignite"
-                        link={events[0]?.frontmatter.link || '#'}
-                        img="/activities/headerimgs/ignite.jpg"
-                        description="Startup ideation competition"
-                    />
-                    <Blogcard
-                        name="Angel Investing"
-                        link={events[0]?.frontmatter.link || '#'}
-                        img="/activities/headerimgs/angel.JPG"
-                        description="Learn about startup investments"
-                    />
-                    <Blogcard
-                        name="World Entrepreneurs Day"
-                        link={events[0]?.frontmatter.link || '#'}
-                        img="/activities/headerimgs/worldent.jpg"
-                        description="Celebrating entrepreneurship"
-                    />
-                    <Blogcard
-                        name="MVP Session"
-                        link={events[0]?.frontmatter.link || '#'}
-                        img="/activities/headerimgs/MVP.JPG"
-                        description="Building Minimum Viable Products"
-                    />
-                    <Blogcard
-                        name="Hakimpet Airforce Visit"
-                        link={events[0]?.frontmatter.link || '#'}
-                        img="/activities/headerimgs/hakimpet.jpg"
-                        description="Industry exposure visit"
-                    />
-                    <Blogcard
-                        name="BIRAC BIG Scheme"
-                        link={events[0]?.frontmatter.link || '#'}
-                        img="/activities/headerimgs/birac.jpg"
-                        description="Biotechnology funding program"
-                    />
-                    <Blogcard
-                        name="Lean Canvas Model"
-                        link={events[0]?.frontmatter.link || '#'}
-                        img="/activities/headerimgs/lean.jpg"
-                        description="Business model workshop"
-                    />
-                    <Blogcard
-                        name="Pitch Perfect"
-                        link={events[0]?.frontmatter.link || '#'}
-                        img="/activities/headerimgs/pitch.jpg"
-                        description="Startup pitching competition"
-                    />
-                    <Blogcard
-                        name="Director's Visit"
-                        link={events[0]?.frontmatter.link || '#'}
-                        img="/activities/headerimgs/director.jpg"
-                        description="TBI progress review"
-                    />
-                    <Blogcard
-                        name="National Startup Day"
-                        link={events[0]?.frontmatter.link || '#'}
-                        img="/activities/headerimgs/natstart.jpg"
-                        description="Celebrating Indian startups"
-                    />
-                    <Blogcard
-                        name="SEEP 1.0"
-                        link={events[0]?.frontmatter.link || '#'}
-                        img="/activities/headerimgs/seep1.jpg"
-                        description="First edition of SEEP program"
-                    />
-                </div>
-            </div> -->
         </section>
     </main>
 </PageLayout>
