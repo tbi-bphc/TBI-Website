@@ -6,6 +6,7 @@ image: "/activities/headerimgs/director.jpg"
 description: "TBI Progress review by Director, BITS Hyderabad"
 thumbnail: "/activities/headerimgs/director.jpg"
 type: "networking"
+date: "2024-04-12"
 ---
 
 Prof. Soumyo Mukherji, Director of BITS Pilani Hyderabad Campus along with Prof. Yogeeswari, Dean Administration visited the TBI on January 31, 2024. 

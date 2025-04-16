@@ -1,30 +1,36 @@
 ---
 import PageLayout from "@/layouts/PageLayout.astro";
 import EventsTabs from "./tabs";
-import Blogcard from "@/components/cards/blogcard";
 const events = await Astro.glob("@/pages/events/event-blogs/*.md");  
 import type { MarkdownInstance } from "astro";
 
-const mapToBlogItem = (event : MarkdownInstance<Record<string, any>>) => ({
+const mapToBlogItem = (event: MarkdownInstance<Record<string, any>>) => ({
     frontmatter: {
         title: event.frontmatter.title,
         description: event.frontmatter.description,
         link: event.frontmatter.link,
         image: event.frontmatter.image,
+        date: event.frontmatter.date,
     }
 });
 
+const sortByDate = (a:any, b:any) => 
+    new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
+
 const innovations = events
     .filter((event) => event.frontmatter.type === "innovation")
-    .map(mapToBlogItem);
+    .map(mapToBlogItem)
+    .sort(sortByDate);
 
 const talks = events
     .filter((event) => event.frontmatter.type === "talks")
-    .map(mapToBlogItem);
+    .map(mapToBlogItem)
+    .sort(sortByDate);
 
 const networking = events
     .filter((event) => event.frontmatter.type === "networking")
-    .map(mapToBlogItem);
+    .map(mapToBlogItem)
+    .sort(sortByDate);
 
 ---
 
