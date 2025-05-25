@@ -1,0 +1,28 @@
+---
+interface Card {
+  name: string;
+  img: string;
+  description: string;
+  link: string;
+}
+
+const { name, img, link, description } = Astro.props as Card;
+---
+
+<div
+  class="border-1 w-[26vh] m-4 border-2 bg-white border-black rounded-md py-4 px-4"
+>
+  <p class="text-lg text-left mb-6 h-18 font-bold">
+    {name}
+  </p>
+  <div
+    class="group-hover:cursor-pointer h-28 w-full top-3 text-black text-left "
+  >
+    {description}
+  </div>    
+  <button class="rounded-xl bg-nord10 text-white p-2" >
+    <a href={link} target="_blank" referrerpolicy="no-referrer" >
+            Read more
+    </a>
+  </button>
+</div>

@@ -14,13 +14,13 @@ function Element({ name, image, description }: Props) {
     return (
         <>
             <div
-                className="w-full my-4 md:max-w-72 items-center shadow-lg rounded-lg flex flex-col justify-center place-self-center"
+                className="w-full my-4 items-center shadow-lg rounded-lg flex flex-col justify-center place-self-center"
             >
                 <img
                     src={image ?? "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp"}
                     alt="img"
                     title="img"
-                    className="w-full h-auto object-cover rounded-t-lg md:max-h-72"
+                    className="w-full h-auto object-cover rounded-t-lg md:h-72"
                 />
                 <div className="w-full p-4 justify-start flex flex-col">
                     <h4 className=" text-xl text-center pb-1 text-nord10">
@@ -90,7 +90,7 @@ function Stakeholders() {
 
                 <TabsContent value="governing body">
                     <div className="flex items-center justify-center">
-                        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 gap-y-2">
+                        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 2xl:gap-10 md:gap-6 gap-y-2">
                             {
                                 governingBody.map((body: any) =>
 
