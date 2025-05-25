@@ -26,7 +26,7 @@ function Card({ icon, title, description, buttonText, link }: CardProps) {
 export default function FacilityCardGrid() {
   const cards = [
     {
-      icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M9 16h6m2 5H7a2 2 0 01-2-2V7a2 2 0 012-2h10a2 2 0 012 2v12a2 2 0 01-2 2z" /></svg>,
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-test-tube-diagonal-icon lucide-test-tube-diagonal"><path d="M21 7 6.82 21.18a2.83 2.83 0 0 1-3.99-.01a2.83 2.83 0 0 1 0-4L17 3"/><path d="m16 2 6 6"/><path d="M12 16H4"/></svg>,
         // use img tag for editing here, that's fine
       title: " Clean Room ",
       description:
@@ -35,14 +35,14 @@ export default function FacilityCardGrid() {
       link: "https://www.bits-pilani.ac.in/hyderabad/clean-room-micro-and-nano-fabrication-facility/",
     },
     {
-      icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A2 2 0 013 15.382V8.618a2 2 0 011.553-1.894L9 4m6 16l5.447-2.724A2 2 0 0021 15.382V8.618a2 2 0 00-1.553-1.894L15 4M8 12h.01M16 12h.01M12 12h.01M12 12h0" /></svg>,
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-rabbit-icon lucide-rabbit"><path d="M13 16a3 3 0 0 1 2.24 5"/><path d="M18 12h.01"/><path d="M18 21h-8a4 4 0 0 1-4-4 7 7 0 0 1 7-7h.2L9.6 6.4a1 1 0 1 1 2.8-2.8L15.8 7h.2c3.3 0 6 2.7 6 6v1a2 2 0 0 1-2 2h-1a3 3 0 0 0-3 3"/><path d="M20 8.54V4a2 2 0 1 0-4 0v3"/><path d="M7.612 12.524a3 3 0 1 0-1.6 4.3"/></svg>,
       title: "Central Animal Facility",
       description: "The Central Animal Facility at BITS Pilani, Hyderabad Campus is a CCSEA (Committee for Control and Supervision of Experiments on Animals) approved facility. It is used for conducting advanced research in the areas of ocular studies, pre-clinical pharmacokinetics, bioavailability studies and pharmacological screening of various drugs.",
       buttonText: "Explore",
       link: "https://www.bits-pilani.ac.in/hyderabad/central-animal-facility/",
     },
     {
-      icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0-1.104-.9-2-2-2H7c-1.1 0-2 .896-2 2m6 0c0 1.104-.9 2-2 2m0 0c-1.104 0-2 .896-2 2m2-4c1.104 0 2 .896 2 2m2-4c1.104 0 2 .896 2 2m0 0c0-1.104.896-2 2-2m-2 4c-1.104 0-2-.896-2-2m0 0c1.104 0 2-.896 2-2m0 4c1.104 0 2-.896 2-2m-2 4c1.104 0 2-.896 2-2m-2 4h2m0 0h-2m0 0h2" /></svg>,
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-drafting-compass-icon lucide-drafting-compass"><path d="m12.99 6.74 1.93 3.44"/><path d="M19.136 12a10 10 0 0 1-14.271 0"/><path d="m21 21-2.16-3.84"/><path d="m3 21 8.02-14.26"/><circle cx="12" cy="5" r="2"/></svg>,
       title: "Central Analytical Laboratory",
       description:
         "The Central Analytical Laboratory (CAL) at BITS Pilani, Hyderabad Campus is well equipped with a number of sophisticated analytical instruments for the regular course works and research related activities. It facilitates training students as well as carrying out research work at all levels.",
@@ -50,7 +50,7 @@ export default function FacilityCardGrid() {
       link: "https://www.bits-pilani.ac.in/hyderabad/central-analytical-laboratory//",
     },
     {
-      icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0-1.104-.9-2-2-2H7c-1.1 0-2 .896-2 2m6 0c0 1.104-.9 2-2 2m0 0c-1.104 0-2 .896-2 2m2-4c1.104 0 2 .896 2 2m2-4c1.104 0 2 .896 2 2m0 0c0-1.104.896-2 2-2m-2 4c-1.104 0-2-.896-2-2m0 0c1.104 0 2-.896 2-2m0 4c1.104 0 2-.896 2-2m-2 4c1.104 0 2-.896 2-2m-2 4h2m0 0h-2m0 0h2" /></svg>,
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-monitor-cog-icon lucide-monitor-cog"><path d="M12 17v4"/><path d="m14.305 7.53.923-.382"/><path d="m15.228 4.852-.923-.383"/><path d="m16.852 3.228-.383-.924"/><path d="m16.852 8.772-.383.923"/><path d="m19.148 3.228.383-.924"/><path d="m19.53 9.696-.382-.924"/><path d="m20.772 4.852.924-.383"/><path d="m20.772 7.148.924.383"/><path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M8 21h8"/><circle cx="18" cy="6" r="3"/></svg>,
       title: "Sharanga",
       description:"Sharanga is the high performance computing cluster at the BITS Pilani - Hyderabad Campus. It provides computational resources to cater the needs of faculty and research students in several areas of engineering and science. It is a heterogeneous system consisting of AMD EPYC processors and NVIDIA's Data Center GPUs supporting CPU and GPU parallel computations.",
       buttonText: "Explore",
