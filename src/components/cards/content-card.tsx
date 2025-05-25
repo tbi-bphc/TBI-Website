@@ -12,7 +12,7 @@ function Card({ title, description, link }: CardProps) {
     <div className="max-w-xs w-full group/card">
       <div
         className={cn(
-          "overflow-hidden relative card h-80 rounded-xl shadow-xl max-w-sm mx-auto flex flex-col justify-between p-4",
+          "overflow-hidden relative card h-80 rounded-xl shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] max-w-sm mx-auto flex flex-col justify-between p-4",
         )}
       >
         <div className="absolute w-full h-full top-0 left-0 transition duration-300"></div>

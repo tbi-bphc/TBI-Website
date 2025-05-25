@@ -14,7 +14,7 @@ function Element({ name, image, description }: Props) {
     return (
         <>
             <div
-                className="w-full my-4 items-center shadow-lg rounded-lg flex flex-col justify-center place-self-center"
+                className="w-full my-4 items-center shadow-lg rounded-lg bg-white flex flex-col justify-center place-self-center"
             >
                 <img
                     src={image ?? "https://res.cloudinary.com/moodgiver/image/upload/v1633344243/adventure_woman_rujic1.webp"}
