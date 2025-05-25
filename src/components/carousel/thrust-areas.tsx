@@ -35,7 +35,7 @@ function Element( {title, number, icon, text}:Area){
 
 export default function ThrustAreasCarousel(){
     return(
-        <div className="grid md:grid-cols-3 font-bold grid-cols-2 gap-4 md:gap-x-2">
+        <div className="grid lg:grid-cols-3 font-bold grid-cols-2 gap-4 md:gap-x-2 md:px-2 xl:px-[15vh]">
             <Element title="BioTech & Pharmacy" number={21} icon="FlaskConical" text={""}/>
             <Element title="ICT for Healthcare" number={9} icon="HeartPulse" text={""}/>
             <Element title="Micro Electro Mechanical Systems (MEMS)" number={60} icon="Cpu" text={""}/>
