@@ -13,7 +13,7 @@ function Card({ icon, title, description, buttonText, link }: CardProps) {
     <div className="flex flex-col items-center text-center bg-white rounded-lg shadow-md p-6 space-y-4">
       <div className="text-nord2 text-4xl">{icon}</div>
       <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
-      <p className="text-gray-600 h-36 my-4 text-left">{description}</p>
+      <p className="text-gray-600 h-36 my-4 text-justify">{description}</p>
       <a href={link}  target="_blank">
       <button className="px-4 py-2 bg-nord10 text-white rounded-lg font-medium hover:bg-nord2 transition">
         {buttonText}
