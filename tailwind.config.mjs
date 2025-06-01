@@ -18,9 +18,9 @@ export default {
     },
     extend: {
       colors: {
-        nord0: "#2E3440",
+        nord0: "#10385A",
         nord1: "#3B4252",
-        nord2: "#434C5E",
+        nord2: "#10385A",
         nord3: "#4C566A",
         nord4: "#D8DEE9",
         nord5: "#E5E9F0",
