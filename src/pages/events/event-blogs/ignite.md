@@ -6,6 +6,7 @@ image: "/activities/headerimgs/ignite.jpg"
 description: "Startup Ideation Workshop"
 thumbnail: "/activities/headerimgs/ignite.jpg"
 type: "innovation"
+date: "2024-09-20"
 ---
 
 TBI in collaboration with Wadhwani Foundation organized a three-days’ Entrepreneurship Bootcamp as a part of Institute Innovation Contest. 

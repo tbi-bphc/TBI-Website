@@ -21,7 +21,7 @@ export default {
         nord0: "#10385A",
         nord1: "#3B4252",
         nord2: "#10385A",
-        nord3: "#4C566A",
+        nord3: "#10385A",
         nord4: "#D8DEE9",
         nord5: "#E5E9F0",
         nord6: "#ECEFF4",

@@ -6,6 +6,7 @@ image: "/activities/headerimgs/birac.jpg"
 description: "Biotechnology funding program"
 thumbnail: "/activities/headerimgs/birac.jpg"
 type: "talks"
+date: "2024-04-25"
 ---
 
 TBI in collaboration with IKP Knowledge Park, hosted an Awareness Session on the BIRAC-BIG Scheme on April 24, 2024.

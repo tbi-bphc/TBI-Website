@@ -6,6 +6,7 @@ image: "/activities/headerimgs/worldent.jpg"
 description: "Celebrating entrepreneurship spirit at BITS Hyderabad"
 thumbnail: "/activities/headerimgs/worldent.jpg"
 type: "talks"
+date: "2024-08-21"
 ---
 TBI celebrated World Entrepreneurs Day with a panel discussion on “Opportunities for Innovative Entrepreneurs in India – Perspective of Ecosystem Enablers.” 
  Panellists:

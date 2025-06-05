@@ -6,6 +6,7 @@ image: "/activities/headerimgs/seep.jpg"
 description: "Student Entrepreneurs Encouragement Program 2.0"
 thumbnail: "/activities/headerimgs/seep.jpg"
 type: "innovation"
+date: "2024-10-16"
 ---
 The Second Edition of SEEP - Student Entrepreneurs Encouragement Program was successfully held in 2024 - providing a platform for upcoming entrepreneurs to pitch their ideas and build them into reality. The program included an "Ignite Bootcamp" supported by the Wadhwani Foundation, and the Grand Finale itnessed a thrilling display of innovation as finalists pitched for a spot in a six-month pre-incubation program with funding and mentorship.
 
