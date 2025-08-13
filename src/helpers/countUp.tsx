@@ -27,7 +27,7 @@ const CountUpAnimation = ({targetValue}:Props) => {
     }, [targetValue, 0]);
 
     return (
-        <div>
+        <div className="text-white">
             <span>{count}</span>
         </div>
     );

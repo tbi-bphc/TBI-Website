@@ -9,22 +9,22 @@ interface Card {
 const { name, img, link, description } = Astro.props as Card;
 ---
 
-<div class="border-1 w-[26vh] m-4 border-2 bg-white border-black rounded-md">
+<div class="w-[26vh] m-4 bg-white rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.15)]">
   <div class="group relative">
     <img
       src={img}
       alt="card"
-      class="h-48 w-full object-contain p-2 rounded-t-sm duration-300 group-hover:opacity-0 group-hover:scale-120"
+      class="h-48 w-full object-contain p-4 rounded-t-sm duration-300 group-hover:opacity-0 group-hover:scale-120"
     />
     <div
-      class="absolute opacity-0 group-hover:cursor-pointer group-hover:opacity-100 duration-700 h-full w-full top-3 text-black text-center px-2"
+      class="absolute opacity-0 group-hover:cursor-pointer group-hover:opacity-100 duration-700 h-full w-full top-0 left-0 text-black text-center px-2 flex items-center justify-center"
     >
       {description}
     </div>
   </div>
 
-  <p class="text-sm p-4 text-center">
-    <a href={link} class=" hover:text-nord15">
+  <p class="text-lg p-4 text-center font-bold">
+    <a href={link} class="hover:text-blue-600">
       {name}
     </a>
   </p>

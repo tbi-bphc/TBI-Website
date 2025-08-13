@@ -22,12 +22,12 @@ function ImpactItem( {title, number, icon, text}:ImpactItem){
             {icon ==="CircleDollarSign"?<CircleDollarSign size={60} color="white"/>:<></>}
             {icon ==="BadgePercent"?<BadgePercent size={60} color="white"/>:<></>}
             
-            <p className="text-2xl my-auto ml-6 flex space-x-1 text-nord6">
+            <p className="text-2xl my-auto ml-6 flex space-x-1 text-white">
                 <CountUpAnimation targetValue={number}/> 
                 <span>{text}</span>
             </p>
           </div>
-          <div style={{ fontSize: "24px" }} className="text-nord6">{title}</div>
+          <div style={{ fontSize: "24px" }} className="text-white">{title}</div>
         </div>
     )
 }

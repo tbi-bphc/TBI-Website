@@ -10,19 +10,23 @@ const { name, img, link, description } = Astro.props as Card;
 ---
 
 <div
-  class="border-1 w-[26vh] m-4 border-2 bg-white border-black rounded-md py-4 px-4"
+  class="w-[26vh] h-[32vh] m-4 bg-white rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.15)] py-4 px-4 flex flex-col justify-between"
 >
-  <p class="text-lg text-left mb-6 h-18 font-bold">
-    {name}
-  </p>
-  <div
-    class="group-hover:cursor-pointer h-28 w-full top-3 text-black text-left "
-  >
-    {description}
-  </div>    
-  <button class="px-4 py-2 bg-nord10 text-white rounded-lg font-medium hover:bg-nord2 transition" >
-    <a href={link} target="_blank" referrerpolicy="no-referrer" >
-            Read More
-    </a>
-  </button>
+  <div>
+    <p class="text-2xl text-left mb-4 h-12 font-bold line-clamp-2">
+      {name}
+    </p>
+    <div
+      class="h-24 w-full text-black text-left text-base overflow-hidden"
+    >
+      <p class="line-clamp-4">{description}</p>
+    </div>
+  </div>
+  <div class="text-right">
+    <button class="px-4 py-2 bg-nord10 text-white rounded-lg font-medium hover:bg-nord2 transition mt-auto" >
+      <a href={link} target="_blank" referrerpolicy="no-referrer" >
+              Know More
+      </a>
+    </button>
+  </div>
 </div>
