@@ -43,9 +43,8 @@ function Stakeholders() {
 
     const governingBody = [ {name: "Prof. Soumyo Mukherji", image: "/governing/Prof.SoumyoMukherji.png"},
                             {name: "Prof. G Sundar", image: "/governing/gsundar.jpg"},
-                            {name: "Dr. Sandeep Raut", image: "/governing/sandeepraut.png"},
                             {name: "Prof. P Yogeeswari", image: "/governing/Prof.PYogeeswari.png"}, 
-                            {name: "CA Sunitha Suresh", image: "/governing/ssuresh.jpg"},
+                            {name: "CA Sunitha Suresh", image: "/governing/casunitha.png"},
                             {name: "Prof. Sankar Ganesh", image: "/governing/ProfPSankarGanesh.jpeg"},
                             {name: "Prof. Parikshit Sahatiya", image: "/governing/ProfParikshitSahatiya.png"},
                         ]
