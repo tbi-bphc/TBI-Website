@@ -15,7 +15,7 @@ interface GalleryProps {
 
 export default function MainGallery({title, subtitle, images} : GalleryProps) {
     return (
-        <ImagesSlider className="h-[30rem]" images={images}>
+        <ImagesSlider className="h-[25rem]" images={images}>
             <motion.div
                 initial={{
                     opacity: 0,
