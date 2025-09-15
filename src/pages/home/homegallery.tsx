@@ -11,9 +11,8 @@ const pictures = [
 ]
 
 const images = [
-    "/homegallery/rocket.jpg", 
-    "/homegallery/pharma.jpg", 
-    "/homegallery/aero.jpg",  
+    "/homegallery/bits2.jpg", 
+    "/homegallery/bits1.jpg",
 ];
 
 export default function HomeGallery() {
