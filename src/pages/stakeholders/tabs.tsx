@@ -60,13 +60,10 @@ function Stakeholders() {
 
     const mentors = [{name: "Mr. Abhishek Khaitan", image: "/mentors/AbhishekKhaitan.png"}, {name: "Mr. Atul Bhargava", image: "/mentors/AtulBhargava.png"}, 
                     {name: "Mr. C A Shamik Ukil", image: "/mentors/CAShamikUkil.png"}, {name: "Mr. D V Krishna Rao", image: "/mentors/D.V.KrishnaRao.png"}, 
-                    {name: "Dr. Radha Rangarajan", image: "/mentors/Dr.RadhaRangarajan.png"}, {name: "Dr. Ramjee Palella", image: "/mentors/Dr.RamjeePalella.png"},
-                    {name: "Dr. Suresh Munuswamy", image: "/mentors/Dr.SureshMunuswamy.png"}, {name: "Dr. Sushmita Sundar", image: "/mentors/Dr.SushmitaSundar.png"},
                     {name: "Dr. Viswanadham", image: "/mentors/Dr.Viswanadham.png"}, {name: "Er. Suresh Susurla", image: "/mentors/Er.SureshSusurla.png"},
                     {name: "Mr. Gopi Krishna Tummala", image: "/mentors/GopiKrishnaTummala.png"}, {name: "Mr. Jay Pandit", image: "/mentors/JayPandit.png"},
                     {name: "Mr. Karthik Gurumurthy", image: "/mentors/KarthikGurumurthy.png"}, {name: "Mr. Anuj Batra", image: "/mentors/Mr.AnujBatra.png"},
                     {name: "Mr. Kamal Prasad", image: "/mentors/Mr.KamalPrasad.png"}, {name: "Mr. Rahul Bagga", image: "/mentors/RahulBagga.png"},
-                    {name: "Mr. Pradeep Yuvaraj", image: "/mentors/PradeepYuvaraj.png"}, {name: "Mr. Neel Mehta", image: "/mentors/NeelMehta.png"},
                     {name: "Mr. Rajesh Butta", image: "/mentors/RajeshButta.png"}, {name: "Mr. Rajesh Dube", image: "/mentors/RajeshDube.png"}, {name: "Mr. Ramana Vemuri", image: "/mentors/RamanaVemuri.png"},
                     {name: "Mr. Sunil Hans", image: "/mentors/SunilHans.png"}, {name: "Mrs. Usha Paliath", image: "/mentors/UshaPaliath.png"},                     
                     {name: "Mr. Varadarajan Sridharan", image: "/mentors/VaradarajanSridharan.png"}, {name: "Mr. Vijay Nandiminti", image: "/mentors/VijayNandiminti.png"},
