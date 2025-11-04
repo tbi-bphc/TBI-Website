@@ -2,7 +2,7 @@
 layout: "@/layouts/BlogLayout.astro"
 title: "SEEP 2.0"
 link: "/events/event-blogs/seep2"
-image: "/activities/headerimgs/seep.jpg"
+image: "/activities/headerimgs/seep2.jpg"
 description: "Student Entrepreneurs Encouragement Program 2.0"
 thumbnail: "/activities/headerimgs/seep.jpg"
 type: "innovation"
