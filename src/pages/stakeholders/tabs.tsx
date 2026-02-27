@@ -41,16 +41,14 @@ function Element({ name, image, description }: Props) {
 
 function Stakeholders() {
 
-    const governingBody = [ {name: "Prof. Soumyo Mukherji", image: "/governing/Prof.SoumyoMukherji.png"},
-                            {name: "Prof. G Sundar", image: "/governing/gsundar.jpg"},
-                            {name: "Prof. P Yogeeswari", image: "/governing/Prof.PYogeeswari.png"}, 
+    const governingBody = [ {name: "Prof. D. Sriram", image: "/governing/dsriram.png"},
+                            {name: "Prof. G Sundar", image: "/governing/gsundar.jpg"}, 
                             {name: "CA Sunitha Suresh", image: "/governing/casunitha.png"},
                             {name: "Prof. Sankar Ganesh", image: "/governing/ProfPSankarGanesh.jpeg"},
                             {name: "Prof. Parikshit Sahatiya", image: "/governing/ProfParikshitSahatiya.png"},
                         ]
     
-    const entrepreneurshipCommittee = [ {name: "Prof. P Yogeeswari", image: "/ecommittee/Prof.PYogeeswari.png"}, 
-                                        {name: "Prof. P Sankar Ganesh", image: "/ecommittee/ProfPSankarGanesh.jpeg"}, {name: "Prof. Parikshit Sahatiya", image: "/ecommittee/ProfParikshitSahatiya.png"},
+    const entrepreneurshipCommittee = [ {name: "Prof. P Sankar Ganesh", image: "/ecommittee/ProfPSankarGanesh.jpeg"}, {name: "Prof. Parikshit Sahatiya", image: "/ecommittee/ProfParikshitSahatiya.png"},
                                         {name: "Prof. Ruchi Jain Dey", image: "/ecommittee/ProfRuchiJainDey.jpeg"},
                                         {name: "Mr. Abhishek Khaitan", image: "/ecommittee/AbhishekKhaitan.png"}, {name: "Dr. Viswanadham", image: "/ecommittee/Dr.Viswanadham.png"},
                                         {name: "Ms. Sita Pallachola", image: "/ecommittee/sitapallachola.jpg"},
@@ -64,7 +62,6 @@ function Stakeholders() {
                     {name: "Mr. Gopi Krishna Tummala", image: "/mentors/GopiKrishnaTummala.png"}, {name: "Mr. Jay Pandit", image: "/mentors/JayPandit.png"},
                     {name: "Mr. Karthik Gurumurthy", image: "/mentors/KarthikGurumurthy.png"}, {name: "Mr. Anuj Batra", image: "/mentors/Mr.AnujBatra.png"},
                     {name: "Mr. Kamal Prasad", image: "/mentors/Mr.KamalPrasad.png"}, {name: "Mr. Rahul Bagga", image: "/mentors/RahulBagga.png"},
-                    {name: "Mr. Rajesh Butta", image: "/mentors/RajeshButta.png"}, {name: "Mr. Rajesh Dube", image: "/mentors/RajeshDube.png"}, {name: "Mr. Ramana Vemuri", image: "/mentors/RamanaVemuri.png"},
                     {name: "Mr. Sunil Hans", image: "/mentors/SunilHans.png"}, {name: "Mrs. Usha Paliath", image: "/mentors/UshaPaliath.png"},                     
                     {name: "Mr. Varadarajan Sridharan", image: "/mentors/VaradarajanSridharan.png"}, {name: "Mr. Vijay Nandiminti", image: "/mentors/VijayNandiminti.png"},
                     ]
