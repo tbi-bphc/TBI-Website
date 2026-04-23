@@ -1,0 +1,234 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import { SerpGallery } from "./serpGallery";
+
+const phases = [
+  {
+    title: "Phase 1",
+    subtitle: "Outreach & Applications",
+    description:
+      "Virtual outreach to SHG networks with open applications for eligible women entrepreneurs.",
+  },
+  {
+    title: "Phase 2",
+    subtitle: "Training Bootcamp",
+    description:
+      "Up to 250 participants undergo 64 hours of training in entrepreneurship and management.",
+  },
+  {
+    title: "Phase 3",
+    subtitle: "Launchpad",
+    description:
+      "A 2-month hybrid program focused on scalable business models and market strategies.",
+  },
+  {
+    title: "Phase 4",
+    subtitle: "Incubation Support",
+    description:
+      "12–18 months of intensive mentoring with access to grants and soft loans.",
+  },
+];
+---
+
+<PageLayout title="SERP Project">
+
+
+  <section class="flex items-center justify-center md:px-0">
+    <SerpGallery client:visible />
+  </section>
+
+
+  <section class="max-w-6xl mx-auto px-6 py-12 space-y-12">
+
+    <!-- Overview -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-4 text-nord10 border-l-4 border-nord10 pl-3">
+        Overview
+      </h2>
+      <p class="text-gray-700 leading-relaxed">
+        TBI at BITS Pilani Hyderabad Campus hosts the SERP Project under the
+        Deendayal Antyodaya Yojana - National Rural Livelihoods Mission
+        (DAY-NRLM), aimed at strengthening women-led enterprises in rural
+        Telangana. The program supports 150 growth-oriented Self-Help Group
+        (SHG) enterprises through structured incubation and mentoring.
+      </p>
+    </div>
+
+    <!-- Objectives -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-4 text-nord10 border-l-4 border-nord10 pl-3">
+        Program Objectives
+      </h2>
+      <p class="text-gray-700 leading-relaxed">
+        The program focuses on scaling micro-enterprises by providing business
+        mentoring, market linkages, financial access, and capacity building. It
+        aims to enhance operational efficiency, achieve at least 15% year-on-year
+        revenue growth, and create sustainable employment opportunities.
+      </p>
+    </div>
+
+    <!-- Key Interventions -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-6 text-nord10 border-l-4 border-nord10 pl-3">
+        Key Interventions
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-5 border rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 class="font-semibold text-lg mb-2">Challenge Fund</h3>
+          <p class="text-gray-600 text-sm">
+            Grants up to ₹20 lakh and interest-free loans covering up to 75% of growth needs.
+          </p>
+        </div>
+
+        <div class="p-5 border rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 class="font-semibold text-lg mb-2">Incubation & Mentorship</h3>
+          <p class="text-gray-600 text-sm">
+            Customized business plans with expert mentoring and technical guidance.
+          </p>
+        </div>
+
+        <div class="p-5 border rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 class="font-semibold text-lg mb-2">Capacity Building</h3>
+          <p class="text-gray-600 text-sm">
+            Training programs in entrepreneurship, management, and technical skills.
+          </p>
+        </div>
+
+        <div class="p-5 border rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 class="font-semibold text-lg mb-2">Financial Inclusion</h3>
+          <p class="text-gray-600 text-sm">
+            Credit linkages, investor readiness, and financial literacy support.
+          </p>
+        </div>
+
+        <div class="p-5 border rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 class="font-semibold text-lg mb-2">Market Enhancement</h3>
+          <p class="text-gray-600 text-sm">
+            Branding, packaging, and access to digital and offline platforms.
+          </p>
+        </div>
+
+        <div class="p-5 border rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 class="font-semibold text-lg mb-2">Monitoring & Linkages</h3>
+          <p class="text-gray-600 text-sm">
+            Supply chain integration, certifications, and performance tracking.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Program Phases -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-6 text-nord10 border-l-4 border-nord10 pl-3">
+        Program Phases
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {phases.map((phase) => (
+          <div class="p-6 border rounded-xl shadow-sm hover:shadow-lg transition bg-white">
+            <h3 class="text-lg font-bold text-nord10 mb-1">
+              {phase.title}
+            </h3>
+            <p class="font-medium text-gray-800 mb-2">
+              {phase.subtitle}
+            </p>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {phase.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Eligibility -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-6 text-nord10 border-l-4 border-nord10 pl-3">
+        Eligibility Criteria
+      </h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full border rounded-lg overflow-hidden">
+          <thead class="bg-nord10 text-white">
+            <tr>
+              <th class="p-3 text-left">Criteria</th>
+              <th class="p-3 text-left">Description</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="border-t even:bg-gray-50">
+              <td class="p-3">Ownership Stake</td>
+              <td class="p-3">
+                At least 51% owned by SHG women members
+              </td>
+            </tr>
+            <tr class="border-t even:bg-gray-50">
+              <td class="p-3">Enterprise Type</td>
+              <td class="p-3">
+                Individual, group, or registered enterprises in manufacturing,
+                textiles, handicrafts, food processing, or services
+              </td>
+            </tr>
+            <tr class="border-t even:bg-gray-50">
+              <td class="p-3">SHG Membership</td>
+              <td class="p-3">
+                Active for at least 12 months with regular participation
+              </td>
+            </tr>
+            <tr class="border-t even:bg-gray-50">
+              <td class="p-3">Revenue Stage</td>
+              <td class="p-3">
+                Unregistered: &gt; ₹12 lakh, Group: &gt; ₹15 lakh,
+                Registered: &gt; ₹20 lakh (average of last 2 years)
+              </td>
+            </tr>
+            <tr class="border-t even:bg-gray-50">
+              <td class="p-3">Location</td>
+              <td class="p-3">
+                Telangana residents operating businesses within the state
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Outcomes -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-4 text-nord10 border-l-4 border-nord10 pl-3">
+        Expected Outcomes
+      </h2>
+      <p class="text-gray-700 leading-relaxed">
+        The program enables enterprises to achieve sustainable growth, improve
+        access to formal finance, and generate local employment. It contributes
+        to building scalable rural business models across regions.
+      </p>
+    </div>
+
+    <!-- team and contact -->
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-4 text-nord10 border-l-4 border-nord10 pl-3">
+          Project Team
+        </h2>
+        <ul class="text-gray-700 space-y-2">
+          <li><strong>Project Lead:</strong> Dr. Naveen Krishna</li>
+          <li><strong>Project Manager:</strong> G. Vinod Kumar</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-4 text-nord10 border-l-4 border-nord10 pl-3">
+          Contact
+        </h2>
+        <p class="text-gray-700">
+          📞 040-68012030 <br />
+          📧 tbi@hyderabad.bits-pilani.ac.in
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+</PageLayout>

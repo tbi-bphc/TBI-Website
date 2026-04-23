@@ -71,6 +71,7 @@ function Navbar() {
                 </div>
               )}
             </div>
+            <NavLink title="Serp" link="/serp-project" />
             <NavLink title="Activites" link="/events" />
             <NavLink title="Stakeholders" link="/stakeholders" />
             <NavLink title="Contact Us" link="/contact" />
