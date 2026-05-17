@@ -1,172 +1,121 @@
+"use client";
+
 import { useState } from "react";
 
 const englishContent = {
-  overview: {
-    title: "Overview",
+  hero: {
+    title: "NRLM Incubator Program",
+    subtitle:
+      "Empowering SHG Women Entrepreneurs through Innovation, Incubation & Sustainable Enterprise Development",
+  },
+
+  about: {
+    title: "About the Scheme",
     description:
-      "TBI at BITS Pilani Hyderabad Campus hosts the SERP Project under the Deendayal Antyodaya Yojana - National Rural Livelihoods Mission (DAY-NRLM), aimed at strengthening women-led enterprises in rural Telangana.",
+      "The NRLM Incubator Program is an initiative under the Deendayal Antyodaya Yojana – National Rural Livelihoods Mission (DAY-NRLM) aimed at promoting entrepreneurship among Self-Help Group (SHG) women. The program supports the transformation of SHG members into sustainable micro and small entrepreneurs through structured incubation, training, and mentoring support.",
   },
 
   objectives: {
-    title: "Program Objectives",
-    description:
-      "The program focuses on scaling micro-enterprises by providing business mentoring, market linkages, financial access, and capacity building.",
-  },
-
-  interventions: {
-    title: "Key Interventions",
+    title: "Objectives",
 
     items: [
-      {
-        title: "Challenge Fund",
-        description:
-          "Grants up to ₹20 lakh and interest-free loans covering up to 75% of growth needs.",
-      },
-
-      {
-        title: "Incubation & Mentorship",
-        description:
-          "Customized business plans with expert mentoring and technical guidance.",
-      },
-
-      {
-        title: "Capacity Building",
-        description:
-          "Training programs in entrepreneurship, management, and technical skills.",
-      },
-
-      {
-        title: "Financial Inclusion",
-        description:
-          "Credit linkages, investor readiness, and financial literacy support.",
-      },
+      "Promote women-led enterprises in rural areas",
+      "Strengthen SHG members into business entrepreneurs",
+      "Provide structured incubation and mentoring support",
+      "Improve livelihood and income generation",
+      "Facilitate market linkages and enterprise growth",
     ],
   },
-
-  phasesTitle: "Program Phases",
-
-  phases: [
-    {
-      title: "Phase 1",
-      subtitle: "Outreach & Applications",
-      description:
-        "Virtual outreach to SHG networks with open applications.",
-    },
-
-    {
-      title: "Phase 2",
-      subtitle: "Training Bootcamp",
-      description:
-        "Up to 250 participants undergo entrepreneurship training.",
-    },
-  ],
 
   eligibility: {
-    title: "Eligibility Criteria",
+    title: "Eligibility",
 
-    tableHeaders: ["Criteria", "Description"],
-
-    rows: [
-      [
-        "Ownership Stake",
-        "At least 51% owned by SHG women members",
-      ],
-
-      [
-        "Location",
-        "Telangana residents operating businesses within the state",
-      ],
+    items: [
+      "Women members of SHGs under NRLM",
+      "SHG members with existing or aspiring business ideas",
+      "Individuals or groups willing to start or scale enterprises",
+      "Priority for vulnerable and economically weaker sections",
     ],
   },
 
-  outcomes: {
-    title: "Expected Outcomes",
+  support: {
+    title: "Support Provided",
+
+    items: [
+      "Entrepreneurship Development Programs",
+      "Sector-specific skill training",
+      "Mentoring & handholding support",
+      "Business plan development assistance",
+      "Financial linkages and subsidy guidance",
+      "Market linkage & branding support",
+      "Monitoring and performance tracking",
+    ],
+  },
+
+  duration: {
+    title: "Program Duration",
 
     description:
-      "The program enables enterprises to achieve sustainable growth and improve access to finance.",
-  },
-
-  team: {
-    title: "Project Team",
-    lead: "Dr. Naveen Krishna",
-    manager: "G. Vinod Kumar",
-  },
-
-  contact: {
-    title: "Contact",
+      "The incubation support duration typically ranges from 3 to 6 months including business training, sector-specific training, and continuous mentoring.",
   },
 };
 
 const teluguContent = {
-  overview: {
-    title: "అవలోకనం",
+  hero: {
+    title: "NRLM ఇన్క్యుబేటర్ ప్రోగ్రామ్",
+    subtitle:
+      "గ్రామీణ మహిళా వ్యాపారవేత్తలకు శిక్షణ, మార్గదర్శకత్వం మరియు వ్యాపారాభివృద్ధి సహాయం",
+  },
+
+  about: {
+    title: "పథకం గురించి",
+
     description:
-      "గ్రామీణ తెలంగాణలో మహిళా ఆధారిత సంస్థలను బలోపేతం చేయడానికి SERP ప్రాజెక్ట్ నిర్వహించబడుతోంది.",
+      "NRLM ఇన్క్యుబేటర్ ప్రోగ్రామ్ భారత ప్రభుత్వ గ్రామీణ అభివృద్ధి మంత్రిత్వ శాఖ ఆధ్వర్యంలో అమలు చేయబడుతున్న కార్యక్రమం. ఈ ప్రోగ్రామ్ ద్వారా SHG మహిళలను స్థిరమైన సూక్ష్మ మరియు చిన్న వ్యాపారవేత్తలుగా తీర్చిదిద్దడం లక్ష్యం.",
   },
 
   objectives: {
-    title: "కార్యక్రమ లక్ష్యాలు",
-
-    description:
-      "వ్యాపార అభివృద్ధి, ఆర్థిక సహాయం మరియు మార్కెట్ అవకాశాలను అందించడం.",
-  },
-
-  interventions: {
-    title: "ప్రధాన కార్యక్రమాలు",
+    title: "ప్రధాన లక్ష్యాలు",
 
     items: [
-      {
-        title: "చాలెంజ్ ఫండ్",
-        description: "₹20 లక్షల వరకు గ్రాంట్లు మరియు వడ్డీ లేని రుణాలు.",
-      },
-
-      {
-        title: "మెంటార్‌షిప్",
-        description: "వ్యాపార మార్గదర్శకత్వం మరియు సాంకేతిక సహాయం.",
-      },
+      "గ్రామీణ మహిళలలో వ్యాపారాన్ని ప్రోత్సహించడం",
+      "SHG ఆధారిత వ్యాపారాలను బలోపేతం చేయడం",
+      "శిక్షణ మరియు మార్గదర్శకత్వం అందించడం",
+      "ఆదాయం మరియు జీవనోపాధిని పెంచడం",
+      "మార్కెట్ అవకాశాలు కల్పించడం",
     ],
   },
-
-  phasesTitle: "కార్యక్రమ దశలు",
-
-  phases: [
-    {
-      title: "దశ 1",
-      subtitle: "దరఖాస్తులు",
-
-      description:
-        "మహిళా వ్యాపారులకు దరఖాస్తుల ఆహ్వానం.",
-    },
-  ],
 
   eligibility: {
-    title: "అర్హత ప్రమాణాలు",
+    title: "అర్హత",
 
-    tableHeaders: ["ప్రమాణం", "వివరణ"],
-
-    rows: [
-      [
-        "యాజమాన్యం",
-        "కనీసం 51% SHG మహిళల యాజమాన్యం",
-      ],
+    items: [
+      "NRLM కింద ఉన్న SHG మహిళా సభ్యులు",
+      "వ్యాపార ఆలోచనలు ఉన్న వారు",
+      "వ్యాపారాన్ని ప్రారంభించాలనుకునే వ్యక్తులు లేదా గ్రూపులు",
+      "ఆర్థికంగా బలహీన వర్గాలకు ప్రాధాన్యం",
     ],
   },
 
-  outcomes: {
-    title: "అంచనా ఫలితాలు",
+  support: {
+    title: "అందించే సహాయం",
+
+    items: [
+      "వ్యాపార అభివృద్ధి శిక్షణ",
+      "రంగాల వారీ నైపుణ్య శిక్షణ",
+      "మెంటారింగ్ మరియు హ్యాండ్ హోల్డింగ్",
+      "బిజినెస్ ప్లాన్ సహాయం",
+      "బ్యాంకు రుణాలు మరియు ఆర్థిక సహాయం",
+      "మార్కెట్ మరియు బ్రాండింగ్ సహాయం",
+      "పర్యవేక్షణ మరియు పనితీరు ట్రాకింగ్",
+    ],
+  },
+
+  duration: {
+    title: "ప్రోగ్రామ్ వ్యవధి",
 
     description:
-      "స్థిరమైన వ్యాపార అభివృద్ధి మరియు ఉపాధి అవకాశాలు.",
-  },
-
-  team: {
-    title: "ప్రాజెక్ట్ టీమ్",
-    lead: "డా. నవీన్ కృష్ణ",
-    manager: "జి. వినోద్ కుమార్",
-  },
-
-  contact: {
-    title: "సంప్రదించండి",
+      "ఈ ప్రోగ్రామ్ సాధారణంగా 3 నుండి 6 నెలల పాటు కొనసాగుతుంది. ఇందులో శిక్షణ, రంగాల వారీ అభ్యాసం మరియు నిరంతర మార్గదర్శకత్వం ఉంటుంది.",
   },
 };
 
@@ -181,211 +130,162 @@ export default function SerpContent() {
       : teluguContent;
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-12 space-y-12">
+    <section className="bg-white text-gray-800">
 
-     {/* Language Toggle */}
-<div className="flex justify-end items-center gap-3">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-nord10 to-cyan-700 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-24">
 
-  <span
-    className={`text-sm font-medium transition ${
-      language === "english"
-        ? "text-nord10"
-        : "text-gray-500"
-    }`}
-  >
-    English
-  </span>
+          <div className="flex justify-end mb-8">
+            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full">
 
-  <button
-    onClick={() =>
-      setLanguage(
-        language === "english"
-          ? "telugu"
-          : "english"
-      )
-    }
-    className={`relative w-14 h-8 rounded-full transition-colors duration-300 ${
-      language === "telugu"
-        ? "bg-nord10"
-        : "bg-gray-300"
-    }`}
-  >
-    <div
-      className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 ${
-        language === "telugu"
-          ? "translate-x-6"
-          : ""
-      }`}
-    />
-  </button>
+              <span
+                className={`text-sm ${
+                  language === "english"
+                    ? "text-white font-semibold"
+                    : "text-white/60"
+                }`}
+              >
+                English
+              </span>
 
-  <span
-    className={`text-sm font-medium transition ${
-      language === "telugu"
-        ? "text-nord10"
-        : "text-gray-500"
-    }`}
-  >
-    తెలుగు
-  </span>
+              <button
+                onClick={() =>
+                  setLanguage(
+                    language === "english"
+                      ? "telugu"
+                      : "english"
+                  )
+                }
+                className={`w-14 h-7 rounded-full relative transition-all duration-300 ${
+                  language === "telugu"
+                    ? "bg-white"
+                    : "bg-white/40"
+                }`}
+              >
+                <div
+                  className={`absolute top-1 w-5 h-5 bg-nord10 rounded-full transition-transform duration-300 ${
+                    language === "telugu"
+                      ? "translate-x-8"
+                      : "translate-x-1"
+                  }`}
+                />
+              </button>
 
-</div>
+              <span
+                className={`text-sm ${
+                  language === "telugu"
+                    ? "text-white font-semibold"
+                    : "text-white/60"
+                }`}
+              >
+                తెలుగు
+              </span>
 
-      {/* Overview */}
-      <div>
-        <h2 className="text-2xl font-semibold mb-4 text-nord10 border-l-4 border-nord10 pl-3">
-          {content.overview.title}
-        </h2>
-
-        <p className="text-gray-700 leading-relaxed">
-          {content.overview.description}
-        </p>
-      </div>
-
-      {/* Objectives */}
-      <div>
-        <h2 className="text-2xl font-semibold mb-4 text-nord10 border-l-4 border-nord10 pl-3">
-          {content.objectives.title}
-        </h2>
-
-        <p className="text-gray-700 leading-relaxed">
-          {content.objectives.description}
-        </p>
-      </div>
-
-      {/* Interventions */}
-      <div>
-        <h2 className="text-2xl font-semibold mb-6 text-nord10 border-l-4 border-nord10 pl-3">
-          {content.interventions.title}
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          {content.interventions.items.map((item, index) => (
-            <div
-              key={index}
-              className="p-5 border rounded-xl shadow-sm hover:shadow-md transition"
-            >
-              <h3 className="font-semibold text-lg mb-2">
-                {item.title}
-              </h3>
-
-              <p className="text-gray-600 text-sm">
-                {item.description}
-              </p>
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
-      {/* Phases */}
-      <div>
-        <h2 className="text-2xl font-semibold mb-6 text-nord10 border-l-4 border-nord10 pl-3">
-          {content.phasesTitle}
-        </h2>
+          <h1 className="text-5xl md:text-6xl font-bold max-w-4xl leading-tight">
+            {content.hero.title}
+          </h1>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {content.phases.map((phase, index) => (
-            <div
-              key={index}
-              className="p-6 border rounded-xl shadow-sm hover:shadow-lg transition bg-white"
-            >
-              <h3 className="text-lg font-bold text-nord10 mb-1">
-                {phase.title}
-              </h3>
-
-              <p className="font-medium text-gray-800 mb-2">
-                {phase.subtitle}
-              </p>
-
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {phase.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Eligibility */}
-      <div>
-        <h2 className="text-2xl font-semibold mb-6 text-nord10 border-l-4 border-nord10 pl-3">
-          {content.eligibility.title}
-        </h2>
-
-        <div className="overflow-x-auto">
-          <table className="w-full border rounded-lg overflow-hidden">
-
-            <thead className="bg-nord10 text-white">
-              <tr>
-                {content.eligibility.tableHeaders.map((header, index) => (
-                  <th
-                    key={index}
-                    className="p-3 text-left"
-                  >
-                    {header}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-
-            <tbody className="text-gray-700">
-              {content.eligibility.rows.map((row, index) => (
-                <tr
-                  key={index}
-                  className="border-t even:bg-gray-50"
-                >
-                  <td className="p-3">{row[0]}</td>
-                  <td className="p-3">{row[1]}</td>
-                </tr>
-              ))}
-            </tbody>
-
-          </table>
-        </div>
-      </div>
-
-      {/* Outcomes */}
-      <div>
-        <h2 className="text-2xl font-semibold mb-4 text-nord10 border-l-4 border-nord10 pl-3">
-          {content.outcomes.title}
-        </h2>
-
-        <p className="text-gray-700 leading-relaxed">
-          {content.outcomes.description}
-        </p>
-      </div>
-
-      {/* Team */}
-      <div className="grid md:grid-cols-2 gap-8">
-
-        <div>
-          <h2 className="text-2xl font-semibold mb-4 text-nord10 border-l-4 border-nord10 pl-3">
-            {content.team.title}
-          </h2>
-
-          <ul className="text-gray-700 space-y-2">
-            <li>
-              <strong>Project Lead:</strong> {content.team.lead}
-            </li>
-
-            <li>
-              <strong>Project Manager:</strong> {content.team.manager}
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h2 className="text-2xl font-semibold mb-4 text-nord10 border-l-4 border-nord10 pl-3">
-            {content.contact.title}
-          </h2>
-
-          <p className="text-gray-700">
-            📞 040-68012030 <br />
-            📧 tbi@hyderabad.bits-pilani.ac.in
+          <p className="mt-6 text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed">
+            {content.hero.subtitle}
           </p>
-        </div>
 
+        </div>
       </div>
 
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-6 py-16 space-y-16">
+
+        {/* About */}
+        <section>
+          <h2 className="text-3xl font-bold mb-6 text-nord10">
+            {content.about.title}
+          </h2>
+
+          <p className="text-lg leading-8 text-gray-700">
+            {content.about.description}
+          </p>
+        </section>
+
+        {/* Objectives */}
+        <section>
+          <h2 className="text-3xl font-bold mb-8 text-nord10">
+            {content.objectives.title}
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {content.objectives.items.map((item, index) => (
+              <div
+                key={index}
+                className="p-5 rounded-2xl border border-gray-200 bg-gray-50 hover:shadow-lg transition"
+              >
+                <p className="font-medium leading-relaxed">
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Eligibility */}
+        <section>
+          <h2 className="text-3xl font-bold mb-8 text-nord10">
+            {content.eligibility.title}
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {content.eligibility.items.map((item, index) => (
+              <div
+                key={index}
+                className="border-l-4 border-nord10 bg-white shadow-sm rounded-xl p-5"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Support */}
+        <section>
+          <h2 className="text-3xl font-bold mb-8 text-nord10">
+            {content.support.title}
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {content.support.items.map((item, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-2xl bg-gradient-to-br from-white to-gray-50 border shadow-sm hover:shadow-xl transition-all"
+              >
+                <div className="w-12 h-12 rounded-full bg-nord10/10 flex items-center justify-center mb-4">
+                  <span className="text-nord10 font-bold">
+                    {index + 1}
+                  </span>
+                </div>
+
+                <p className="font-medium text-gray-700 leading-relaxed">
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Duration */}
+        <section className="bg-nord10 text-white rounded-3xl p-10">
+          <h2 className="text-3xl font-bold mb-5">
+            {content.duration.title}
+          </h2>
+
+          <p className="text-lg leading-8 text-white/90">
+            {content.duration.description}
+          </p>
+        </section>
+
+      </div>
     </section>
   );
 }
