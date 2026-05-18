@@ -27,6 +27,8 @@ function Navbar() {
             </div>
             <NavLink title="About Us" link="/about" />
             <NavLink title="Programs" link="/programmes" />
+            <NavLink title="TBI-SERP" link="/serp-project" />
+
             <NavLink title="Infrastructure" link="/infrastructure" />
             {/* Programmes Dropdown - Desktop */}
             <div className="relative inline-block text-left">
@@ -87,6 +89,8 @@ function Navbar() {
             <NavImageLink image="/tbislogoblue 3.png" link="/" size={{ height: 24, width: 16 }} />
             <NavLink title="About Us" link="/about" />
             <NavLink title="Programs" link="/programmes" />
+            <NavLink title="TBI-SERP" link="/serp-project" />
+
             <NavLink title="Infrastructure" link="/infrastructure" />
             {/* Portfolio Dropdown - Mobile */}
             <div className="relative inline-block text-left z-[10000]">
