@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import serpImage from "public/homegallery/serp.png";
+import qr from "public/serp/qr.jpeg";
+import vid from "public/serp/output.mp4";
 
 const englishContent = {
   hero: {
-    title: "SERP Telangana Incubator Program",
+    title: "Incubator program by Serp Telangana",
     subtitle:
       "Empowering Rural Women Entrepreneurs through Innovation, Incubation, Mentorship & Sustainable Enterprise Development",
   },
@@ -173,19 +175,25 @@ const englishContent = {
         title: "Growth & Scale-up",
         icon: "📈",
         color: "from-pink-600 to-rose-500",
-        points: [
-          "Expansion support",
-          "Branding",
-          "Technology adoption",
-        ],
+        points: ["Expansion support", "Branding", "Technology adoption"],
       },
     ],
+  },
+  apply: {
+    title: "How to Apply",
+    subtitle:
+      "Follow the steps below to register your enterprise for the incubator program.",
+    videoLabel: "Watch Tutorial",
+    qrTitle: "Scan to Apply",
+    qrSubtitle:
+      "Scan the QR code with your phone to open the application form directly.",
+    buttonText: "Open Application Form",
   },
 };
 
 const teluguContent = {
   hero: {
-    title: "తెలంగాణ SERP ఇన్క్యుబేటర్ ప్రోగ్రామ్",
+    title: "తెలంగాణ SERP ఇంక్యుబేటర్ కార్యక్రమం",
 
     subtitle:
       "గ్రామీణ మహిళా పారిశ్రామికవేత్తలకు శిక్షణ, ఇంక్యుబేషన్, మెంటరింగ్ మరియు వ్యాపారాభివృద్ధి సహాయం",
@@ -225,36 +233,31 @@ const teluguContent = {
       {
         title: "మెంటరింగ్ & నిపుణుల సహాయం",
         icon: "👥",
-        description:
-          "ఇండస్ట్రీ నిపుణులు మరియు వ్యాపార మెంటర్ల మార్గదర్శకత్వం.",
+        description: "ఇండస్ట్రీ నిపుణులు మరియు వ్యాపార మెంటర్ల మార్గదర్శకత్వం.",
       },
 
       {
         title: "శిక్షణ & సామర్థ్యాభివృద్ధి",
         icon: "🎓",
-        description:
-          "బిజినెస్ ప్లానింగ్ మరియు డిజిటల్ మార్కెటింగ్ శిక్షణ.",
+        description: "బిజినెస్ ప్లానింగ్ మరియు డిజిటల్ మార్కెటింగ్ శిక్షణ.",
       },
 
       {
         title: "మార్కెట్ అనుసంధానం",
         icon: "🛍️",
-        description:
-          "ఈ-కామర్స్ మరియు మార్కెట్ లింకేజీ సహాయం.",
+        description: "ఈ-కామర్స్ మరియు మార్కెట్ లింకేజీ సహాయం.",
       },
 
       {
         title: "ఆర్థిక సహాయం",
         icon: "💰",
-        description:
-          "ప్రభుత్వ పథకాలు మరియు రుణాలపై సహాయం.",
+        description: "ప్రభుత్వ పథకాలు మరియు రుణాలపై సహాయం.",
       },
 
       {
         title: "టెక్నాలజీ & ఇన్నోవేషన్",
         icon: "💡",
-        description:
-          "డిజిటల్ టూల్స్ మరియు సాంకేతిక సహాయం.",
+        description: "డిజిటల్ టూల్స్ మరియు సాంకేతిక సహాయం.",
       },
     ],
   },
@@ -337,6 +340,16 @@ const teluguContent = {
         points: ["బ్రాండింగ్", "టెక్నాలజీ", "వ్యాపార విస్తరణ"],
       },
     ],
+  },
+  apply: {
+    title: "దరఖాస్తు విధానం",
+    subtitle:
+      "ఇంక్యుబేటర్ ప్రోగ్రామ్ కోసం మీ వ్యాపారాన్ని నమోదు చేసుకోవడానికి క్రింది దశలను అనుసరించండి.",
+    videoLabel: "ట్యుటోరియల్ చూడండి",
+    qrTitle: "స్కాన్ చేసి దరఖాస్తు చేసుకోండి",
+    qrSubtitle:
+      "అప్లికేషన్ ఫారమ్‌ను నేరుగా తెరవడానికి మీ ఫోన్‌తో QR కోడ్‌ని స్కాన్ చేయండి.",
+    buttonText: "అప్లికేషన్ ఫారమ్ తెరవండి",
   },
 };
 
@@ -516,199 +529,281 @@ export default function SerpContent() {
         </section>
 
         {/* CREATIVE TIMELINE */}
-{/* NEW CREATIVE PROGRAM FLOW */}
-<section className="relative overflow-hidden py-10">
-  <div className="mb-16">
-    <h2 className="text-3xl md:text-4xl font-bold text-nord10 mb-5">
-      {content.phases.title}
-    </h2>
+        {/* NEW CREATIVE PROGRAM FLOW */}
+        <section className="relative overflow-hidden py-10">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-nord10 mb-5">
+              {content.phases.title}
+            </h2>
 
-    <p className="text-base md:text-lg text-gray-600 leading-8 max-w-4xl">
-      {content.phases.description}
-    </p>
-  </div>
-
-  {/* Desktop */}
-  <div className="hidden xl:flex flex-col gap-16 relative">
-    {content.phases.items.map((item, index) => {
-      const reverse = index % 2 !== 0;
-
-      return (
-        <div
-          key={index}
-          className={`relative flex items-center ${
-            reverse ? "justify-end" : "justify-start"
-          }`}
-        >
-          {/* Center Timeline */}
-          <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 flex flex-col items-center z-20">
-            {/* Connecting Line */}
-            {index !== content.phases.items.length - 1 && (
-              <div className="absolute top-20 h-[170px] w-[3px] bg-gradient-to-b from-gray-300 to-gray-200" />
-            )}
-
-            {/* Dot */}
-            <div
-              className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${item.color} shadow-2xl flex items-center justify-center text-white text-3xl border-[6px] border-white`}
-            >
-              {item.icon}
-            </div>
+            <p className="text-base md:text-lg text-gray-600 leading-8 max-w-4xl">
+              {content.phases.description}
+            </p>
           </div>
 
-          {/* Card */}
-          <div
-            className={`w-[42%] relative ${
-              reverse ? "mr-[8%]" : "ml-[8%]"
-            }`}
-          >
-            {/* Connector */}
-            <div
-              className={`absolute top-10 h-[3px] bg-gradient-to-r ${item.color} ${
-                reverse
-                  ? "right-[-90px] w-[90px]"
-                  : "left-[-90px] w-[90px]"
-              }`}
-            />
+          {/* Desktop */}
+          <div className="hidden xl:flex flex-col gap-16 relative">
+            {content.phases.items.map((item, index) => {
+              const reverse = index % 2 !== 0;
 
-            <div className="bg-white border border-gray-200 rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-              {/* Header */}
-              <div className="flex items-start justify-between mb-8">
-                <div>
-                  <p className="text-[11px] uppercase tracking-[0.35em] text-gray-400 font-semibold mb-3">
-                    Phase {item.phase}
-                  </p>
+              return (
+                <div
+                  key={index}
+                  className={`relative flex items-center ${
+                    reverse ? "justify-end" : "justify-start"
+                  }`}
+                >
+                  {/* Center Timeline */}
+                  <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 flex flex-col items-center z-20">
+                    {/* Connecting Line */}
+                    {index !== content.phases.items.length - 1 && (
+                      <div className="absolute top-20 h-[170px] w-[3px] bg-gradient-to-b from-gray-300 to-gray-200" />
+                    )}
 
-                  <h3 className="text-3xl font-bold text-gray-900 leading-tight max-w-sm">
-                    {item.title}
-                  </h3>
+                    {/* Dot */}
+                    <div
+                      className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${item.color} shadow-2xl flex items-center justify-center text-white text-3xl border-[6px] border-white`}
+                    >
+                      {item.icon}
+                    </div>
+                  </div>
+
+                  {/* Card */}
+                  <div
+                    className={`w-[42%] relative ${
+                      reverse ? "mr-[8%]" : "ml-[8%]"
+                    }`}
+                  >
+                    {/* Connector */}
+                    <div
+                      className={`absolute top-10 h-[3px] bg-gradient-to-r ${item.color} ${
+                        reverse
+                          ? "right-[-90px] w-[90px]"
+                          : "left-[-90px] w-[90px]"
+                      }`}
+                    />
+
+                    <div className="bg-white border border-gray-200 rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                      {/* Header */}
+                      <div className="flex items-start justify-between mb-8">
+                        <div>
+                          <p className="text-[11px] uppercase tracking-[0.35em] text-gray-400 font-semibold mb-3">
+                            Phase {item.phase}
+                          </p>
+
+                          <h3 className="text-3xl font-bold text-gray-900 leading-tight max-w-sm">
+                            {item.title}
+                          </h3>
+                        </div>
+
+                        <span className="text-6xl font-black text-gray-100 leading-none">
+                          {item.phase}
+                        </span>
+                      </div>
+
+                      {/* Content */}
+                      <div className="space-y-5">
+                        {item.points.map((point, idx) => (
+                          <div key={idx} className="flex items-start gap-4">
+                            <div
+                              className={`min-w-3 h-3 rounded-full bg-gradient-to-r ${item.color} mt-2`}
+                            />
+
+                            <p className="text-gray-600 leading-8 text-[15px]">
+                              {point}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Tablet */}
+          <div className="hidden md:flex xl:hidden flex-col gap-10 relative">
+            {/* Main Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-[3px] bg-gradient-to-b from-green-500 via-cyan-500 to-pink-500 rounded-full" />
+
+            {content.phases.items.map((item, index) => (
+              <div key={index} className="relative pl-24">
+                {/* Timeline Node */}
+                <div
+                  className={`absolute left-0 top-5 w-16 h-16 rounded-2xl bg-gradient-to-r ${item.color} flex items-center justify-center text-white text-2xl shadow-xl border-[5px] border-white`}
+                >
+                  {item.icon}
                 </div>
 
-                <span className="text-6xl font-black text-gray-100 leading-none">
-                  {item.phase}
+                {/* Card */}
+                <div className="bg-white border border-gray-200 rounded-[2rem] p-7 shadow-sm hover:shadow-xl transition-all">
+                  <div className="flex items-start justify-between mb-6">
+                    <div>
+                      <p className="text-[11px] uppercase tracking-[0.3em] text-gray-400 font-semibold mb-2">
+                        Phase {item.phase}
+                      </p>
+
+                      <h3 className="text-2xl font-bold text-gray-900">
+                        {item.title}
+                      </h3>
+                    </div>
+
+                    <span className="text-5xl font-black text-gray-100">
+                      {item.phase}
+                    </span>
+                  </div>
+
+                  <div className="space-y-4">
+                    {item.points.map((point, idx) => (
+                      <div key={idx} className="flex gap-4 items-start">
+                        <div
+                          className={`min-w-3 h-3 rounded-full bg-gradient-to-r ${item.color} mt-2`}
+                        />
+
+                        <p className="text-gray-600 leading-8 text-[15px]">
+                          {point}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile */}
+          <div className="md:hidden flex flex-col gap-8 relative">
+            {/* Vertical Line */}
+            <div className="absolute left-5 top-0 bottom-0 w-[3px] bg-gradient-to-b from-green-500 via-cyan-500 to-pink-500 rounded-full" />
+
+            {content.phases.items.map((item, index) => (
+              <div key={index} className="relative pl-16">
+                {/* Node */}
+                <div
+                  className={`absolute left-0 top-6 w-10 h-10 rounded-xl bg-gradient-to-r ${item.color} flex items-center justify-center text-white shadow-lg`}
+                >
+                  {item.icon}
+                </div>
+
+                {/* Card */}
+                <div className="bg-white border border-gray-200 rounded-[1.7rem] p-5 shadow-sm">
+                  <div className="flex items-start justify-between mb-5">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-semibold mb-2">
+                        Phase {item.phase}
+                      </p>
+
+                      <h3 className="text-xl font-bold text-gray-900 leading-snug">
+                        {item.title}
+                      </h3>
+                    </div>
+
+                    <span className="text-4xl font-black text-gray-100">
+                      {item.phase}
+                    </span>
+                  </div>
+
+                  <div className="space-y-3">
+                    {item.points.map((point, idx) => (
+                      <div key={idx} className="flex gap-3 items-start">
+                        <div
+                          className={`min-w-2.5 h-2.5 rounded-full bg-gradient-to-r ${item.color} mt-2`}
+                        />
+
+                        <p className="text-sm text-gray-600 leading-7">
+                          {point}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* APPLY SECTION */}
+        <section className="py-10">
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-nord10 mb-5">
+              {content.apply.title}
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 max-w-3xl">
+              {content.apply.subtitle}
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+            {/* Video Tutorial Card */}
+            <div className="lg:col-span-2 bg-gray-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative group">
+              <div className="absolute top-6 left-6 z-10">
+                <span className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-medium border border-white/20">
+                  {content.apply.videoLabel}
                 </span>
               </div>
 
-              {/* Content */}
-              <div className="space-y-5">
-                {item.points.map((point, idx) => (
-                  <div key={idx} className="flex items-start gap-4">
-                    <div
-                      className={`min-w-3 h-3 rounded-full bg-gradient-to-r ${item.color} mt-2`}
-                    />
+              <div className="aspect-video w-full h-full relative group bg-black">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  preload="metadata"
+                  playsInline
+                  // poster="/path-to-your-thumbnail.jpg" // Optional: adds a preview image
+                >
+                  <source src={vid} type="video/mp4" />
+                  <p className="text-white p-4">
+                    {language === "english"
+                      ? "Your browser does not support the video tag."
+                      : "మీ బ్రౌజర్ వీడియో ట్యాగ్‌కు మద్దతు ఇవ్వడం లేదు."}
+                  </p>
+                </video>
 
-                    <p className="text-gray-600 leading-8 text-[15px]">
-                      {point}
-                    </p>
-                  </div>
-                ))}
+                {/* Optional: Design overlay that disappears when playing starts */}
+                <div className="absolute inset-0 pointer-events-none border border-white/10 rounded-[2.5rem]" />
               </div>
             </div>
-          </div>
-        </div>
-      );
-    })}
-  </div>
 
-  {/* Tablet */}
-  <div className="hidden md:flex xl:hidden flex-col gap-10 relative">
-    {/* Main Line */}
-    <div className="absolute left-8 top-0 bottom-0 w-[3px] bg-gradient-to-b from-green-500 via-cyan-500 to-pink-500 rounded-full" />
+            {/* QR Code Card */}
+            <div className="bg-gradient-to-br from-nord10 to-blue-700 rounded-[2.5rem] p-8 text-white flex flex-col items-center justify-center text-center shadow-xl">
+              <div className="bg-white p-4 rounded-3xl mb-6 shadow-inner">
+                {/* Replace with your actual QR Code image path */}
+                <img
+                  src={qr.src}
+                  alt="Apply QR Code"
+                  className="w-40 h-40 md:w-48 md:h-48"
+                />
+              </div>
 
-    {content.phases.items.map((item, index) => (
-      <div key={index} className="relative pl-24">
-        {/* Timeline Node */}
-        <div
-          className={`absolute left-0 top-5 w-16 h-16 rounded-2xl bg-gradient-to-r ${item.color} flex items-center justify-center text-white text-2xl shadow-xl border-[5px] border-white`}
-        >
-          {item.icon}
-        </div>
-
-        {/* Card */}
-        <div className="bg-white border border-gray-200 rounded-[2rem] p-7 shadow-sm hover:shadow-xl transition-all">
-          <div className="flex items-start justify-between mb-6">
-            <div>
-              <p className="text-[11px] uppercase tracking-[0.3em] text-gray-400 font-semibold mb-2">
-                Phase {item.phase}
+              <h3 className="text-2xl font-bold mb-3">
+                {content.apply.qrTitle}
+              </h3>
+              <p className="text-blue-100 text-sm leading-6 mb-8 px-4">
+                {content.apply.qrSubtitle}
               </p>
 
-              <h3 className="text-2xl font-bold text-gray-900">
-                {item.title}
-              </h3>
+              <a
+                href="https://tbibphc.accubate.app/ext/form/23590/1/apply"
+                target="_blank"
+                className="w-full py-4 bg-white text-nord10 font-bold rounded-2xl hover:bg-gray-100 transition-colors shadow-lg flex items-center justify-center gap-2"
+              >
+                <span>{content.apply.buttonText}</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
             </div>
-
-            <span className="text-5xl font-black text-gray-100">
-              {item.phase}
-            </span>
           </div>
-
-          <div className="space-y-4">
-            {item.points.map((point, idx) => (
-              <div key={idx} className="flex gap-4 items-start">
-                <div
-                  className={`min-w-3 h-3 rounded-full bg-gradient-to-r ${item.color} mt-2`}
-                />
-
-                <p className="text-gray-600 leading-8 text-[15px]">
-                  {point}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-
-  {/* Mobile */}
-  <div className="md:hidden flex flex-col gap-8 relative">
-    {/* Vertical Line */}
-    <div className="absolute left-5 top-0 bottom-0 w-[3px] bg-gradient-to-b from-green-500 via-cyan-500 to-pink-500 rounded-full" />
-
-    {content.phases.items.map((item, index) => (
-      <div key={index} className="relative pl-16">
-        {/* Node */}
-        <div
-          className={`absolute left-0 top-6 w-10 h-10 rounded-xl bg-gradient-to-r ${item.color} flex items-center justify-center text-white shadow-lg`}
-        >
-          {item.icon}
-        </div>
-
-        {/* Card */}
-        <div className="bg-white border border-gray-200 rounded-[1.7rem] p-5 shadow-sm">
-          <div className="flex items-start justify-between mb-5">
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-semibold mb-2">
-                Phase {item.phase}
-              </p>
-
-              <h3 className="text-xl font-bold text-gray-900 leading-snug">
-                {item.title}
-              </h3>
-            </div>
-
-            <span className="text-4xl font-black text-gray-100">
-              {item.phase}
-            </span>
-          </div>
-
-          <div className="space-y-3">
-            {item.points.map((point, idx) => (
-              <div key={idx} className="flex gap-3 items-start">
-                <div
-                  className={`min-w-2.5 h-2.5 rounded-full bg-gradient-to-r ${item.color} mt-2`}
-                />
-
-                <p className="text-sm text-gray-600 leading-7">
-                  {point}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
+        </section>
       </div>
     </section>
   );
