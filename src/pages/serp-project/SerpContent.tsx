@@ -1,29 +1,82 @@
 "use client";
 
 import { useState } from "react";
+import serpImage from "public/homegallery/serp.png";
+import qr from "public/serp/qr.jpeg";
+import vid from "public/serp/output.mp4";
 
 const englishContent = {
   hero: {
-    title: "NRLM Incubator Program",
+    title: "Incubator program by Serp Telangana",
     subtitle:
-      "Empowering SHG Women Entrepreneurs through Innovation, Incubation & Sustainable Enterprise Development",
+      "Empowering Rural Women Entrepreneurs through Innovation, Incubation, Mentorship & Sustainable Enterprise Development",
   },
 
   about: {
-    title: "About the Scheme",
+    title: "About the Program",
+
     description:
-      "The NRLM Incubator Program is an initiative under the Deendayal Antyodaya Yojana – National Rural Livelihoods Mission (DAY-NRLM) aimed at promoting entrepreneurship among Self-Help Group (SHG) women. The program supports the transformation of SHG members into sustainable micro and small entrepreneurs through structured incubation, training, and mentoring support.",
+      "The Society for Elimination of Rural Poverty (SERP) Telangana Incubator Program is a flagship entrepreneurship initiative implemented under the National Rural Livelihoods Mission (NRLM) with support from the Ministry of Rural Development, Government of India. The program is implemented in collaboration with T-Hub, BITS Pilani Hyderabad – TBIS and WE Hub to strengthen rural entrepreneurship and women-led enterprises across Telangana.",
   },
 
   objectives: {
-    title: "Objectives",
+    title: "Program Objectives",
 
     items: [
-      "Promote women-led enterprises in rural areas",
-      "Strengthen SHG members into business entrepreneurs",
-      "Provide structured incubation and mentoring support",
-      "Improve livelihood and income generation",
-      "Facilitate market linkages and enterprise growth",
+      "Support innovative and scalable rural enterprises",
+      "Strengthen SHG-based businesses and micro enterprises",
+      "Enable market access, branding and digital transformation",
+      "Facilitate access to funding, schemes and investors",
+      "Create sustainable livelihoods and employment opportunities",
+      "Build entrepreneurial skills through training and mentorship",
+    ],
+  },
+
+  support: {
+    title: "Support Provided Under the Program",
+
+    items: [
+      {
+        title: "Business Incubation",
+        icon: "🚀",
+        description:
+          "Guidance to convert business ideas into sustainable enterprises through structured incubation support.",
+      },
+
+      {
+        title: "Mentorship & Expert Guidance",
+        icon: "👥",
+        description:
+          "Access to startup mentors, industry experts, consultants and successful entrepreneurs.",
+      },
+
+      {
+        title: "Capacity Building & Training",
+        icon: "🎓",
+        description:
+          "Training on business planning, financial management, branding, packaging and digital marketing.",
+      },
+
+      {
+        title: "Market Linkages",
+        icon: "🛍️",
+        description:
+          "Support for product promotion, e-commerce onboarding, networking and buyer-seller connections.",
+      },
+
+      {
+        title: "Funding & Financial Assistance",
+        icon: "💰",
+        description:
+          "Support in accessing government schemes, loans, grants and investor opportunities.",
+      },
+
+      {
+        title: "Technology & Innovation",
+        icon: "💡",
+        description:
+          "Guidance for adopting innovation, digital tools and technology for business growth.",
+      },
     ],
   },
 
@@ -31,114 +84,294 @@ const englishContent = {
     title: "Eligibility",
 
     items: [
-      "Women members of SHGs under NRLM",
-      "SHG members with existing or aspiring business ideas",
-      "Individuals or groups willing to start or scale enterprises",
-      "Priority for vulnerable and economically weaker sections",
+      "Rural women entrepreneurs",
+      "SHG members and SHG federations",
+      "Existing micro and small enterprises led by women SHGs",
+      "Businesses operated by SHG household members",
     ],
   },
 
-  support: {
-    title: "Support Provided",
+  sectors: {
+    title: "Eligible Enterprise Sectors",
 
     items: [
-      "Entrepreneurship Development Programs",
-      "Sector-specific skill training",
-      "Mentoring & handholding support",
-      "Business plan development assistance",
-      "Financial linkages and subsidy guidance",
-      "Market linkage & branding support",
-      "Monitoring and performance tracking",
+      "Food Processing",
+      "Handicrafts & Handlooms",
+      "Services",
+      "Manufacturing",
+      "Rural Innovation & Technology",
     ],
   },
 
-  duration: {
-    title: "Program Duration",
+  phases: {
+    title: "Program Flow & Phases",
 
     description:
-      "The incubation support duration typically ranges from 3 to 6 months including business training, sector-specific training, and continuous mentoring.",
+      "A structured entrepreneurial journey designed to take rural enterprises from awareness and onboarding to sustainable business growth and scale.",
+
+    items: [
+      {
+        phase: "01",
+        title: "Outreach & Mobilization",
+        icon: "📢",
+        color: "from-green-600 to-emerald-500",
+        points: [
+          "Awareness campaigns",
+          "Registrations",
+          "Entrepreneur identification",
+        ],
+      },
+
+      {
+        phase: "02",
+        title: "Screening & Selection",
+        icon: "📝",
+        color: "from-blue-600 to-cyan-500",
+        points: [
+          "Application evaluation",
+          "Business idea review",
+          "Potential assessment",
+        ],
+      },
+
+      {
+        phase: "03",
+        title: "Training & Capacity Building",
+        icon: "🎓",
+        color: "from-purple-600 to-fuchsia-500",
+        points: [
+          "Entrepreneurship training",
+          "Business workshops",
+          "Skill development",
+        ],
+      },
+
+      {
+        phase: "04",
+        title: "Incubation & Mentoring",
+        icon: "👥",
+        color: "from-orange-500 to-amber-500",
+        points: [
+          "Mentorship support",
+          "Business planning",
+          "Enterprise development",
+        ],
+      },
+
+      {
+        phase: "05",
+        title: "Market & Financial Linkages",
+        icon: "💰",
+        color: "from-cyan-600 to-sky-500",
+        points: [
+          "Investor connect",
+          "Market opportunities",
+          "Financial linkages",
+        ],
+      },
+
+      {
+        phase: "06",
+        title: "Growth & Scale-up",
+        icon: "📈",
+        color: "from-pink-600 to-rose-500",
+        points: ["Expansion support", "Branding", "Technology adoption"],
+      },
+    ],
+  },
+  apply: {
+    title: "How to Apply",
+    subtitle:
+      "Follow the steps below to register your enterprise for the incubator program.",
+    videoLabel: "Watch Tutorial",
+    qrTitle: "Scan to Apply",
+    qrSubtitle:
+      "Scan the QR code with your phone to open the application form directly.",
+    buttonText: "Open Application Form",
   },
 };
 
 const teluguContent = {
   hero: {
-    title: "NRLM ఇన్క్యుబేటర్ ప్రోగ్రామ్",
+    title: "తెలంగాణ SERP ఇంక్యుబేటర్ కార్యక్రమం",
+
     subtitle:
-      "గ్రామీణ మహిళా వ్యాపారవేత్తలకు శిక్షణ, మార్గదర్శకత్వం మరియు వ్యాపారాభివృద్ధి సహాయం",
+      "గ్రామీణ మహిళా పారిశ్రామికవేత్తలకు శిక్షణ, ఇంక్యుబేషన్, మెంటరింగ్ మరియు వ్యాపారాభివృద్ధి సహాయం",
   },
 
   about: {
-    title: "పథకం గురించి",
+    title: "కార్యక్రమం గురించి",
 
     description:
-      "NRLM ఇన్క్యుబేటర్ ప్రోగ్రామ్ భారత ప్రభుత్వ గ్రామీణ అభివృద్ధి మంత్రిత్వ శాఖ ఆధ్వర్యంలో అమలు చేయబడుతున్న కార్యక్రమం. ఈ ప్రోగ్రామ్ ద్వారా SHG మహిళలను స్థిరమైన సూక్ష్మ మరియు చిన్న వ్యాపారవేత్తలుగా తీర్చిదిద్దడం లక్ష్యం.",
+      "సొసైటీ ఫర్ ఎలిమినేషన్ ఆఫ్ రూరల్ పావర్టీ (SERP) తెలంగాణ ఇన్క్యుబేటర్ ప్రోగ్రామ్ భారత ప్రభుత్వ గ్రామీణాభివృద్ధి మంత్రిత్వ శాఖ ఆధ్వర్యంలోని NRLM కింద అమలు చేయబడుతున్న ప్రముఖ కార్యక్రమం.",
   },
 
   objectives: {
-    title: "ప్రధాన లక్ష్యాలు",
+    title: "కార్యక్రమ లక్ష్యాలు",
 
     items: [
-      "గ్రామీణ మహిళలలో వ్యాపారాన్ని ప్రోత్సహించడం",
+      "వినూత్న గ్రామీణ వ్యాపారాలకు ప్రోత్సాహం",
       "SHG ఆధారిత వ్యాపారాలను బలోపేతం చేయడం",
-      "శిక్షణ మరియు మార్గదర్శకత్వం అందించడం",
-      "ఆదాయం మరియు జీవనోపాధిని పెంచడం",
-      "మార్కెట్ అవకాశాలు కల్పించడం",
-    ],
-  },
-
-  eligibility: {
-    title: "అర్హత",
-
-    items: [
-      "NRLM కింద ఉన్న SHG మహిళా సభ్యులు",
-      "వ్యాపార ఆలోచనలు ఉన్న వారు",
-      "వ్యాపారాన్ని ప్రారంభించాలనుకునే వ్యక్తులు లేదా గ్రూపులు",
-      "ఆర్థికంగా బలహీన వర్గాలకు ప్రాధాన్యం",
+      "మార్కెట్ మరియు డిజిటల్ అవకాశాలు కల్పించడం",
+      "రుణాలు మరియు పెట్టుబడులపై సహాయం",
+      "గ్రామీణ ఉపాధి అవకాశాల సృష్టి",
+      "మెంటరింగ్ ద్వారా వ్యాపార నైపుణ్యాల అభివృద్ధి",
     ],
   },
 
   support: {
-    title: "అందించే సహాయం",
+    title: "కార్యక్రమం ద్వారా అందించే సహాయం",
 
     items: [
-      "వ్యాపార అభివృద్ధి శిక్షణ",
-      "రంగాల వారీ నైపుణ్య శిక్షణ",
-      "మెంటారింగ్ మరియు హ్యాండ్ హోల్డింగ్",
-      "బిజినెస్ ప్లాన్ సహాయం",
-      "బ్యాంకు రుణాలు మరియు ఆర్థిక సహాయం",
-      "మార్కెట్ మరియు బ్రాండింగ్ సహాయం",
-      "పర్యవేక్షణ మరియు పనితీరు ట్రాకింగ్",
+      {
+        title: "బిజినెస్ ఇన్క్యుబేషన్",
+        icon: "🚀",
+        description:
+          "వ్యాపార ఆలోచనలను స్థిరమైన వ్యాపారాలుగా మార్చేందుకు మార్గదర్శకత్వం.",
+      },
+
+      {
+        title: "మెంటరింగ్ & నిపుణుల సహాయం",
+        icon: "👥",
+        description: "ఇండస్ట్రీ నిపుణులు మరియు వ్యాపార మెంటర్ల మార్గదర్శకత్వం.",
+      },
+
+      {
+        title: "శిక్షణ & సామర్థ్యాభివృద్ధి",
+        icon: "🎓",
+        description: "బిజినెస్ ప్లానింగ్ మరియు డిజిటల్ మార్కెటింగ్ శిక్షణ.",
+      },
+
+      {
+        title: "మార్కెట్ అనుసంధానం",
+        icon: "🛍️",
+        description: "ఈ-కామర్స్ మరియు మార్కెట్ లింకేజీ సహాయం.",
+      },
+
+      {
+        title: "ఆర్థిక సహాయం",
+        icon: "💰",
+        description: "ప్రభుత్వ పథకాలు మరియు రుణాలపై సహాయం.",
+      },
+
+      {
+        title: "టెక్నాలజీ & ఇన్నోవేషన్",
+        icon: "💡",
+        description: "డిజిటల్ టూల్స్ మరియు సాంకేతిక సహాయం.",
+      },
     ],
   },
 
-  duration: {
-    title: "ప్రోగ్రామ్ వ్యవధి",
+  eligibility: {
+    title: "అర్హతలు",
+
+    items: [
+      "గ్రామీణ మహిళా పారిశ్రామికవేత్తలు",
+      "SHG సభ్యులు మరియు సంఘాలు",
+      "మహిళల ఆధ్వర్యంలోని సూక్ష్మ సంస్థలు",
+      "SHG కుటుంబ సభ్యులు నిర్వహించే వ్యాపారాలు",
+    ],
+  },
+
+  sectors: {
+    title: "అర్హత గల రంగాలు",
+
+    items: [
+      "ఫుడ్ ప్రాసెసింగ్",
+      "హస్తకళలు & హ్యాండ్‌లూమ్స్",
+      "సేవా రంగం",
+      "తయారీ రంగం",
+      "గ్రామీణ ఇన్నోవేషన్ & టెక్నాలజీ",
+    ],
+  },
+
+  phases: {
+    title: "ప్రోగ్రామ్ దశలు",
 
     description:
-      "ఈ ప్రోగ్రామ్ సాధారణంగా 3 నుండి 6 నెలల పాటు కొనసాగుతుంది. ఇందులో శిక్షణ, రంగాల వారీ అభ్యాసం మరియు నిరంతర మార్గదర్శకత్వం ఉంటుంది.",
+      "వ్యాపార అభివృద్ధి నుండి విస్తరణ వరకు దశలవారీ సహాయం అందించే ప్రత్యేక కార్యక్రమం.",
+
+    items: [
+      {
+        phase: "01",
+        title: "అవగాహన & నమోదు",
+        icon: "📢",
+        color: "from-green-600 to-emerald-500",
+        points: ["అవగాహన", "నమోదు", "వ్యాపార అభ్యర్థుల గుర్తింపు"],
+      },
+
+      {
+        phase: "02",
+        title: "ఎంపిక ప్రక్రియ",
+        icon: "📝",
+        color: "from-blue-600 to-cyan-500",
+        points: ["దరఖాస్తుల పరిశీలన", "వ్యాపార ఆలోచనల అంచనా", "ఎంపిక"],
+      },
+
+      {
+        phase: "03",
+        title: "శిక్షణ & అభివృద్ధి",
+        icon: "🎓",
+        color: "from-purple-600 to-fuchsia-500",
+        points: ["వ్యాపార శిక్షణ", "నైపుణ్యాభివృద్ధి", "వర్క్‌షాప్స్"],
+      },
+
+      {
+        phase: "04",
+        title: "ఇంక్యుబేషన్ & మెంటరింగ్",
+        icon: "👥",
+        color: "from-orange-500 to-amber-500",
+        points: ["మెంటరింగ్", "బిజినెస్ ప్లానింగ్", "వ్యాపార సహాయం"],
+      },
+
+      {
+        phase: "05",
+        title: "మార్కెట్ & ఫైనాన్స్",
+        icon: "💰",
+        color: "from-cyan-600 to-sky-500",
+        points: ["బ్యాంక్ లింకేజీలు", "మార్కెట్ అవకాశాలు", "పెట్టుబడిదారులు"],
+      },
+
+      {
+        phase: "06",
+        title: "విస్తరణ & అభివృద్ధి",
+        icon: "📈",
+        color: "from-pink-600 to-rose-500",
+        points: ["బ్రాండింగ్", "టెక్నాలజీ", "వ్యాపార విస్తరణ"],
+      },
+    ],
+  },
+  apply: {
+    title: "దరఖాస్తు విధానం",
+    subtitle:
+      "ఇంక్యుబేటర్ ప్రోగ్రామ్ కోసం మీ వ్యాపారాన్ని నమోదు చేసుకోవడానికి క్రింది దశలను అనుసరించండి.",
+    videoLabel: "ట్యుటోరియల్ చూడండి",
+    qrTitle: "స్కాన్ చేసి దరఖాస్తు చేసుకోండి",
+    qrSubtitle:
+      "అప్లికేషన్ ఫారమ్‌ను నేరుగా తెరవడానికి మీ ఫోన్‌తో QR కోడ్‌ని స్కాన్ చేయండి.",
+    buttonText: "అప్లికేషన్ ఫారమ్ తెరవండి",
   },
 };
 
 export default function SerpContent() {
-  const [language, setLanguage] = useState<"english" | "telugu">(
-    "english"
-  );
+  const [language, setLanguage] = useState<"english" | "telugu">("english");
 
-  const content =
-    language === "english"
-      ? englishContent
-      : teluguContent;
+  const content = language === "english" ? englishContent : teluguContent;
 
   return (
-    <section className="bg-white text-gray-800">
+    <section className="bg-white text-gray-800 overflow-hidden">
+      {/* HERO */}
+      <div
+        className="relative overflow-hidden text-white bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${serpImage.src})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
 
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-nord10 to-cyan-700 text-white">
-        <div className="max-w-7xl mx-auto px-6 py-24">
-
-          <div className="flex justify-end mb-8">
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full">
-
+        <div className="relative max-w-7xl mx-auto px-6 py-24">
+          <div className="flex justify-end mb-10 md:pt-12">
+            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
               <span
                 className={`text-sm ${
                   language === "english"
@@ -151,23 +384,15 @@ export default function SerpContent() {
 
               <button
                 onClick={() =>
-                  setLanguage(
-                    language === "english"
-                      ? "telugu"
-                      : "english"
-                  )
+                  setLanguage(language === "english" ? "telugu" : "english")
                 }
                 className={`w-14 h-7 rounded-full relative transition-all duration-300 ${
-                  language === "telugu"
-                    ? "bg-white"
-                    : "bg-white/40"
+                  language === "telugu" ? "bg-white" : "bg-white/40"
                 }`}
               >
                 <div
                   className={`absolute top-1 w-5 h-5 bg-nord10 rounded-full transition-transform duration-300 ${
-                    language === "telugu"
-                      ? "translate-x-8"
-                      : "translate-x-1"
+                    language === "telugu" ? "translate-x-8" : "translate-x-1"
                   }`}
                 />
               </button>
@@ -181,38 +406,39 @@ export default function SerpContent() {
               >
                 తెలుగు
               </span>
-
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold max-w-4xl leading-tight">
-            {content.hero.title}
-          </h1>
+          <div className="max-w-4xl">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              {content.hero.title}
+            </h1>
 
-          <p className="mt-6 text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed">
-            {content.hero.subtitle}
-          </p>
-
+            <p className="mt-6 text-lg md:text-xl text-white/90 leading-9">
+              {content.hero.subtitle}
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-6 py-16 space-y-16">
-
-        {/* About */}
+      {/* MAIN */}
+      <div className="max-w-7xl mx-auto px-6 py-20 space-y-24">
+        {/* ABOUT */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-nord10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-nord10">
             {content.about.title}
           </h2>
 
-          <p className="text-lg leading-8 text-gray-700">
-            {content.about.description}
-          </p>
+          <div className="bg-gray-50 border border-gray-200 rounded-[2rem] p-8 md:p-10">
+            <p className="text-base md:text-lg leading-9 text-gray-700">
+              {content.about.description}
+            </p>
+          </div>
         </section>
 
-        {/* Objectives */}
+        {/* OBJECTIVES */}
         <section>
-          <h2 className="text-3xl font-bold mb-8 text-nord10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-nord10">
             {content.objectives.title}
           </h2>
 
@@ -220,71 +446,364 @@ export default function SerpContent() {
             {content.objectives.items.map((item, index) => (
               <div
                 key={index}
-                className="p-5 rounded-2xl border border-gray-200 bg-gray-50 hover:shadow-lg transition"
+                className="p-6 rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-xl transition-all"
               >
-                <p className="font-medium leading-relaxed">
-                  {item}
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="min-w-10 h-10 rounded-full bg-nord10 text-white flex items-center justify-center font-semibold">
+                    {index + 1}
+                  </div>
+
+                  <p className="text-base md:text-lg leading-8 text-gray-700 font-medium">
+                    {item}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Eligibility */}
+        {/* SUPPORT */}
         <section>
-          <h2 className="text-3xl font-bold mb-8 text-nord10">
-            {content.eligibility.title}
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-5">
-            {content.eligibility.items.map((item, index) => (
-              <div
-                key={index}
-                className="border-l-4 border-nord10 bg-white shadow-sm rounded-xl p-5"
-              >
-                {item}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Support */}
-        <section>
-          <h2 className="text-3xl font-bold mb-8 text-nord10">
+          <h2 className="text-3xl md:text-4xl font-bold text-nord10 mb-12">
             {content.support.title}
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
             {content.support.items.map((item, index) => (
               <div
                 key={index}
-                className="p-6 rounded-2xl bg-gradient-to-br from-white to-gray-50 border shadow-sm hover:shadow-xl transition-all"
+                className="bg-white border border-gray-200 rounded-[2rem] p-7 shadow-sm hover:shadow-2xl transition-all"
               >
-                <div className="w-12 h-12 rounded-full bg-nord10/10 flex items-center justify-center mb-4">
-                  <span className="text-nord10 font-bold">
-                    {index + 1}
-                  </span>
-                </div>
+                <div className="text-4xl mb-5">{item.icon}</div>
 
-                <p className="font-medium text-gray-700 leading-relaxed">
-                  {item}
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-600 leading-8 text-base">
+                  {item.description}
                 </p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Duration */}
-        <section className="bg-nord10 text-white rounded-3xl p-10">
-          <h2 className="text-3xl font-bold mb-5">
-            {content.duration.title}
-          </h2>
+        {/* ELIGIBILITY */}
+        <section className="grid lg:grid-cols-2 gap-8">
+          <div className="bg-gray-50 border border-gray-200 rounded-[2rem] p-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-nord10">
+              {content.eligibility.title}
+            </h2>
 
-          <p className="text-lg leading-8 text-white/90">
-            {content.duration.description}
-          </p>
+            <div className="space-y-5">
+              {content.eligibility.items.map((item, index) => (
+                <div key={index} className="flex items-start gap-4">
+                  <div className="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-sm mt-1">
+                    ✓
+                  </div>
+
+                  <p className="text-gray-700 leading-8 text-base md:text-lg">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-nord10 text-white rounded-[2rem] p-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8">
+              {content.sectors.title}
+            </h2>
+
+            <div className="grid gap-4">
+              {content.sectors.items.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 border border-white/10 rounded-2xl px-5 py-4 backdrop-blur-sm"
+                >
+                  <p className="text-base md:text-lg">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
+        {/* CREATIVE TIMELINE */}
+        {/* NEW CREATIVE PROGRAM FLOW */}
+        <section className="relative overflow-hidden py-10">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-nord10 mb-5">
+              {content.phases.title}
+            </h2>
+
+            <p className="text-base md:text-lg text-gray-600 leading-8 max-w-4xl">
+              {content.phases.description}
+            </p>
+          </div>
+
+          {/* Desktop */}
+          <div className="hidden xl:flex flex-col gap-16 relative">
+            {content.phases.items.map((item, index) => {
+              const reverse = index % 2 !== 0;
+
+              return (
+                <div
+                  key={index}
+                  className={`relative flex items-center ${
+                    reverse ? "justify-end" : "justify-start"
+                  }`}
+                >
+                  {/* Center Timeline */}
+                  <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 flex flex-col items-center z-20">
+                    {/* Connecting Line */}
+                    {index !== content.phases.items.length - 1 && (
+                      <div className="absolute top-20 h-[170px] w-[3px] bg-gradient-to-b from-gray-300 to-gray-200" />
+                    )}
+
+                    {/* Dot */}
+                    <div
+                      className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${item.color} shadow-2xl flex items-center justify-center text-white text-3xl border-[6px] border-white`}
+                    >
+                      {item.icon}
+                    </div>
+                  </div>
+
+                  {/* Card */}
+                  <div
+                    className={`w-[42%] relative ${
+                      reverse ? "mr-[8%]" : "ml-[8%]"
+                    }`}
+                  >
+                    {/* Connector */}
+                    <div
+                      className={`absolute top-10 h-[3px] bg-gradient-to-r ${item.color} ${
+                        reverse
+                          ? "right-[-90px] w-[90px]"
+                          : "left-[-90px] w-[90px]"
+                      }`}
+                    />
+
+                    <div className="bg-white border border-gray-200 rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                      {/* Header */}
+                      <div className="flex items-start justify-between mb-8">
+                        <div>
+                          <p className="text-[11px] uppercase tracking-[0.35em] text-gray-400 font-semibold mb-3">
+                            Phase {item.phase}
+                          </p>
+
+                          <h3 className="text-3xl font-bold text-gray-900 leading-tight max-w-sm">
+                            {item.title}
+                          </h3>
+                        </div>
+
+                        <span className="text-6xl font-black text-gray-100 leading-none">
+                          {item.phase}
+                        </span>
+                      </div>
+
+                      {/* Content */}
+                      <div className="space-y-5">
+                        {item.points.map((point, idx) => (
+                          <div key={idx} className="flex items-start gap-4">
+                            <div
+                              className={`min-w-3 h-3 rounded-full bg-gradient-to-r ${item.color} mt-2`}
+                            />
+
+                            <p className="text-gray-600 leading-8 text-[15px]">
+                              {point}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Tablet */}
+          <div className="hidden md:flex xl:hidden flex-col gap-10 relative">
+            {/* Main Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-[3px] bg-gradient-to-b from-green-500 via-cyan-500 to-pink-500 rounded-full" />
+
+            {content.phases.items.map((item, index) => (
+              <div key={index} className="relative pl-24">
+                {/* Timeline Node */}
+                <div
+                  className={`absolute left-0 top-5 w-16 h-16 rounded-2xl bg-gradient-to-r ${item.color} flex items-center justify-center text-white text-2xl shadow-xl border-[5px] border-white`}
+                >
+                  {item.icon}
+                </div>
+
+                {/* Card */}
+                <div className="bg-white border border-gray-200 rounded-[2rem] p-7 shadow-sm hover:shadow-xl transition-all">
+                  <div className="flex items-start justify-between mb-6">
+                    <div>
+                      <p className="text-[11px] uppercase tracking-[0.3em] text-gray-400 font-semibold mb-2">
+                        Phase {item.phase}
+                      </p>
+
+                      <h3 className="text-2xl font-bold text-gray-900">
+                        {item.title}
+                      </h3>
+                    </div>
+
+                    <span className="text-5xl font-black text-gray-100">
+                      {item.phase}
+                    </span>
+                  </div>
+
+                  <div className="space-y-4">
+                    {item.points.map((point, idx) => (
+                      <div key={idx} className="flex gap-4 items-start">
+                        <div
+                          className={`min-w-3 h-3 rounded-full bg-gradient-to-r ${item.color} mt-2`}
+                        />
+
+                        <p className="text-gray-600 leading-8 text-[15px]">
+                          {point}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile */}
+          <div className="md:hidden flex flex-col gap-8 relative">
+            {/* Vertical Line */}
+            <div className="absolute left-5 top-0 bottom-0 w-[3px] bg-gradient-to-b from-green-500 via-cyan-500 to-pink-500 rounded-full" />
+
+            {content.phases.items.map((item, index) => (
+              <div key={index} className="relative pl-16">
+                {/* Node */}
+                <div
+                  className={`absolute left-0 top-6 w-10 h-10 rounded-xl bg-gradient-to-r ${item.color} flex items-center justify-center text-white shadow-lg`}
+                >
+                  {item.icon}
+                </div>
+
+                {/* Card */}
+                <div className="bg-white border border-gray-200 rounded-[1.7rem] p-5 shadow-sm">
+                  <div className="flex items-start justify-between mb-5">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-semibold mb-2">
+                        Phase {item.phase}
+                      </p>
+
+                      <h3 className="text-xl font-bold text-gray-900 leading-snug">
+                        {item.title}
+                      </h3>
+                    </div>
+
+                    <span className="text-4xl font-black text-gray-100">
+                      {item.phase}
+                    </span>
+                  </div>
+
+                  <div className="space-y-3">
+                    {item.points.map((point, idx) => (
+                      <div key={idx} className="flex gap-3 items-start">
+                        <div
+                          className={`min-w-2.5 h-2.5 rounded-full bg-gradient-to-r ${item.color} mt-2`}
+                        />
+
+                        <p className="text-sm text-gray-600 leading-7">
+                          {point}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* APPLY SECTION */}
+        <section className="py-10">
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-nord10 mb-5">
+              {content.apply.title}
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 max-w-3xl">
+              {content.apply.subtitle}
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+            {/* Video Tutorial Card */}
+            <div className="lg:col-span-2 bg-gray-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative group">
+              <div className="absolute top-6 left-6 z-10">
+                <span className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-medium border border-white/20">
+                  {content.apply.videoLabel}
+                </span>
+              </div>
+
+              <div className="aspect-video w-full h-full relative group bg-black">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  preload="metadata"
+                  playsInline
+                  // poster="/path-to-your-thumbnail.jpg" // Optional: adds a preview image
+                >
+                  <source src={vid} type="video/mp4" />
+                  <p className="text-white p-4">
+                    {language === "english"
+                      ? "Your browser does not support the video tag."
+                      : "మీ బ్రౌజర్ వీడియో ట్యాగ్‌కు మద్దతు ఇవ్వడం లేదు."}
+                  </p>
+                </video>
+
+                {/* Optional: Design overlay that disappears when playing starts */}
+                <div className="absolute inset-0 pointer-events-none border border-white/10 rounded-[2.5rem]" />
+              </div>
+            </div>
+
+            {/* QR Code Card */}
+            <div className="bg-gradient-to-br from-nord10 to-blue-700 rounded-[2.5rem] p-8 text-white flex flex-col items-center justify-center text-center shadow-xl">
+              <div className="bg-white p-4 rounded-3xl mb-6 shadow-inner">
+                {/* Replace with your actual QR Code image path */}
+                <img
+                  src={qr.src}
+                  alt="Apply QR Code"
+                  className="w-40 h-40 md:w-48 md:h-48"
+                />
+              </div>
+
+              <h3 className="text-2xl font-bold mb-3">
+                {content.apply.qrTitle}
+              </h3>
+              <p className="text-blue-100 text-sm leading-6 mb-8 px-4">
+                {content.apply.qrSubtitle}
+              </p>
+
+              <a
+                href="https://tbibphc.accubate.app/ext/form/23590/1/apply"
+                target="_blank"
+                className="w-full py-4 bg-white text-nord10 font-bold rounded-2xl hover:bg-gray-100 transition-colors shadow-lg flex items-center justify-center gap-2"
+              >
+                <span>{content.apply.buttonText}</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   );

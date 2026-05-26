@@ -13,6 +13,7 @@ const pictures = [
 const images = [
     "/homegallery/bits2.jpg", 
     "/homegallery/bits1.jpg",
+    "/homegallery/serp.png",
 ];
 
 export default function HomeGallery() {
