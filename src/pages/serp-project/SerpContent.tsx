@@ -3,7 +3,7 @@
 import { useState } from "react";
 import serpImage from "public/homegallery/serp.png";
 import qr from "public/serp/qr.jpeg";
-import vid from "public/serp/output.mp4";
+import vid from "public/serp/vid.mp4";
 
 const englishContent = {
   hero: {
