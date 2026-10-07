@@ -92,57 +92,75 @@ const cards = [
       <SecondaryAboutGallery pictures={pictures2} client:only="react" />
     </div>
   </section>
+
   <hr class="h-1 border-0 bg-nord10" />
+
   <section class="py-8 bg-nord2">
     <div class="flex flex-col items-center justify-center px-6 lg:px-[20vh]">
       <h1 class="text-center font-bold text-4xl text-nord6 mb-5">
         Thrust Areas
       </h1>
+
       <div class="my-8 mt-8">
         <ThrustAreasCarousel client:visible />
       </div>
     </div>
   </section>
+
   <hr class="h-1 border-0 bg-nord10" />
+
   <section class="w-full px-6 pb-10 bg-nord6">
     <div id="team" class="my-6 scroll-mt-20 w-full">
       <div class="w-full py-8">
+
         <!-- Board Section -->
         <h1 class="text-4xl text-center text-nord10 mb-8 font-bold">
           Governance
         </h1>
 
+        <!-- First row: 2 cards -->
         <section
           class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[680px] mx-auto"
         >
           <!-- <TeamCard
-          name="Prof. V. Ramgopal Rao"
-          image="/governingandoperations/vrrao.jpg"
-          description="Vice-Chancellor - Birla Institute of Technology & Science, Pilani and Chairman - TBIs"
-        /> -->
+            name="Prof. V. Ramgopal Rao"
+            image="/governingandoperations/vrrao.jpg"
+            description="Vice-Chancellor - Birla Institute of Technology & Science, Pilani and Chairman - TBIs"
+          /> -->
 
           <TeamCard
             name="Prof. D. Sriram"
             image="/governingandoperations/dsriram.png"
-            description="President TBI and Director - BITS Pilani, Hyderabad Campus"
+            description="President"
           />
 
           <TeamCard
             name="Prof. Vasan Arunachalam"
             image="/governing/vasan.webp"
-            description="General Secretary TBI and Dean Administration - BITS Pilani, Hyderabad Campus"
+            description="General Secretary"
           />
+        </section>
 
+        <!-- Second row: 3 cards -->
+        <section
+          class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1020px] mx-auto mt-6"
+        >
           <TeamCard
             name="Mr. Sachin Arya"
             image="/governingandoperations/SachinArya.png"
-            description="Vice President and Chief Executive Officer, TBIs - Birla Institute of Technology & Science, Pilani"
+            description="Vice President"
+          />
+
+          <TeamCard
+            name="CA Sunitha Suresh"
+            image="/governing/casunitha.png"
+            description="Treasurer"
           />
 
           <TeamCard
             name="Mr. Surbhit Johri"
             image="/governing/surbit.jpeg"
-            description="Joint Secretary and Senior Manager - TBI, BITS Pilani, Hyderabad Campus"
+            description="Joint Secretary "
           />
         </section>
 
@@ -157,26 +175,26 @@ const cards = [
             <TeamCard
               name="Mr. Surbhit Johri"
               image="/governing/surbit.jpeg"
-              description="Joint Secretary and Senior Manager - TBI, BITS Pilani, Hyderabad Campus"
+              description="Joint Secretary "
             />
           </div>
         </section>
 
         <!-- Second level -->
         <section
-          class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1020px] mx-auto"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[680px] mx-auto"
         >
           <TeamCard
             name="Mr. Mir Ali"
             image="/governingandoperations/mirali.jpeg"
-            description="Manager - TBI, BITS Pilani, Hyderabad Campus"
+            description="Manager"
           />
 
-          <TeamCard
+          <!-- <TeamCard
             name="Mr. Ram Murthy Panibathe"
             image="/governingandoperations/rammurthy.jpeg"
             description="Accountant"
-          />
+          /> -->
 
           <TeamCard
             name="Ms. Hemalatha Korvi"
