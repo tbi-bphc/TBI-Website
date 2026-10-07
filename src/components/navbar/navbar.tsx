@@ -74,7 +74,7 @@ function Navbar() {
               )}
             </div>
             <NavLink title="Activites" link="/events" />
-            <NavLink title="Stakeholders" link="/stakeholders" />
+            {/* <NavLink title="Stakeholders" link="/stakeholders" /> */}
             <NavLink title="Contact Us" link="/contact" />
             <div className="float-left">
               <NavImageLink image="/BITS_Pilani-Logo 4.png" link="/" size={{ height: 12, width: 12 }} />

@@ -25,23 +25,21 @@ const seep1pictures = [
   "/programs/seepguest.png",
   "/programs/seep1.jpg",
   "/programs/seepgrp.png",
-  
-]
+];
 
 const seep2pictures = [
   "/programs/seep2guest.JPG",
   "/programs/seep2winner.JPG",
   "/programs/seep2grp.JPG",
-]
-
-
+];
 ---
 
 <PageLayout>
-  <section class="flex items-center justify-center md:px-0">
-    <ProgrammesGallery client:visible/>
+  <section class="w-full flex items-center justify-center md:px-0">
+    <ProgrammesGallery client:visible />
   </section>
-  <main class="mt-8 md:flex md:flex-row gap-20 lg:px-[25vh] md:px-[10vh] px-2">
+
+  <main class="mt-8 w-full px-2">
     <!-- <section>
       <div class="ml-3">
         <h1>PROGRAMS</h1>
@@ -50,20 +48,20 @@ const seep2pictures = [
         </div>
       </div>
     </section> -->
-    
-    <section class="mt-6 md:mt-0">
-      <div id="incubation" class="mb-6 scroll-mt-20">
+
+    <section class="mt-6 md:mt-0 w-full">
+      <div id="incubation" class="mb-6 scroll-mt-20 w-full">
         <IncubateesCardGrid />
       </div>
-      
-      <div id="seep" class="my-6 scroll-mt-20">
+
+      <!-- <div id="seep" class="my-6 scroll-mt-20">
         <div class="">
           <ul class="">
             <li class="text-md text-nord10 font-bold mt-2">SEEP 2.0</li>
             <p class="mt-4 text-justify">
               The Second Edition of SEEP - Student Entrepreneurs Encouragement Program was successfully held in 2024 - providing
-              a platform for upcoming entrepreneurs to pitch their ideas and build them into reality. The program included an "Ignite 
-              Bootcamp" supported by the Wadhwani Foundation, and the Grand Finale itnessed a thrilling display of innovation as 
+              a platform for upcoming entrepreneurs to pitch their ideas and build them into reality. The program included an "Ignite
+              Bootcamp" supported by the Wadhwani Foundation, and the Grand Finale itnessed a thrilling display of innovation as
               finalists pitched for a spot in a six-month pre-incubation program with funding and mentorship.
             </p>
             <div>
@@ -71,15 +69,29 @@ const seep2pictures = [
             </div>
             <li class="text-md text-nord10 font-bold mt-2">SEEP 1.0</li>
             <p class="mt-4 text-justify">
-              Student Entrepreneurs Encouragement Program, hosted by TBI BITS Hyderabad, is an event dedicated to fostering 
-              student-led startups. It offers a platform for budding entrepreneurs to pitch their ideas, receive expert mentorship, 
-              and connect with potential investors. The program also includes workshops on business development, innovation, and 
+              Student Entrepreneurs Encouragement Program, hosted by TBI BITS Hyderabad, is an event dedicated to fostering
+              student-led startups. It offers a platform for budding entrepreneurs to pitch their ideas, receive expert mentorship,
+              and connect with potential investors. The program also includes workshops on business development, innovation, and
               fundraising, empowering students with the tools and support needed to turn their ideas into successful, funded ventures.
             </p>
             <div>
               <Commongrid pictures={seep1pictures}/>
             </div>
           </ul>
+        </div>
+      </div> -->
+
+      <div class="w-full flex justify-center mt-8">
+        <div class="w-full max-w-5xl aspect-video">
+          <iframe
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/wJ_o8nziXSE?si=KQnWqFMLQK9zr6Jl"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </section>

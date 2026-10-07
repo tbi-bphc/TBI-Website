@@ -46,6 +46,8 @@ function Stakeholders() {
                             {name: "CA Sunitha Suresh", image: "/governing/casunitha.png"},
                             {name: "Prof. Sankar Ganesh", image: "/governing/ProfPSankarGanesh.jpeg"},
                             {name: "Prof. Parikshit Sahatiya", image: "/governing/ProfParikshitSahatiya.png"},
+                            {name: "Mr. Surbit Johri", image: "/governing/surbit.jpeg"},
+                            {name: "Prof. Vasan Arunachalam", image: "/governing/vasan.webp"},
                         ]
     
     const entrepreneurshipCommittee = [ {name: "Prof. P Sankar Ganesh", image: "/ecommittee/ProfPSankarGanesh.jpeg"}, {name: "Prof. Parikshit Sahatiya", image: "/ecommittee/ProfParikshitSahatiya.png"},

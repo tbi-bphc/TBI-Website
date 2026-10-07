@@ -1,6 +1,6 @@
 ---
 import PageLayout from "@/layouts/PageLayout.astro";
-import {AboutGallery, SecondaryAboutGallery} from "./aboutgallery";
+import { AboutGallery, SecondaryAboutGallery } from "./aboutgallery";
 import Contentstable from "@/components/contents-table/contentstable.astro";
 import TeamCard from "@/components/cards/teamcard.astro";
 import Commongrid from "@/components/grid/commongrid.astro";
@@ -38,11 +38,9 @@ const pictures = [
   "/thrustareas/mems.png",
   "/thrustareas/spacetech.png",
   "/thrustareas/ecommerce.png",
-]
-
-const pictures2 = [
-  "/about.png",
 ];
+
+const pictures2 = ["/about.png"];
 
 const cards = [
   "/thrustareas/agritech.png",
@@ -52,42 +50,46 @@ const cards = [
   "/thrustareas/spacetech.png",
   "/thrustareas/ecommerce.png",
 ];
-
-
 ---
 
 <PageLayout>
   <section class="flex items-center justify-center md:px-0">
-    <AboutGallery client:visible/>
+    <AboutGallery client:visible />
   </section>
-  
+
   <!-- introduction to TBI -->
-  <section class="md:flex items-center justify-center gap-20 px-6 md:px-2 lg:px-[15vh] pb-10 bg-nord6 ">
-   
-      
+  <section
+    class="md:flex items-center justify-center gap-20 px-6 md:px-2 lg:px-[15vh] pb-10 bg-nord6"
+  >
     <div class="md:w-[50%] mt-12">
       <div class="mb-6">
         <h1 class="text-4xl mb-4 md:block hidden">
-          <SlidingText classes="text-nord10  font-bold" text="Technology Business Incubator" stage={1} type="typewriter" client:visible/>
+          <SlidingText
+            classes="text-nord10  font-bold"
+            text="Technology Business Incubator"
+            stage={1}
+            type="typewriter"
+            client:visible
+          />
         </h1>
       </div>
 
       <p class="text-nord2 text-justify">
-        Since 2012, BITS Pilani Hyderabad Campus Technology Business Incubator (TBI), 
-        has been propelling technology-driven startups to new heights. With a mission 
-        to encourage cutting-edge, knowledge-based entrepreneurship, TBIS provides a 
-        launchpad for transformative ideas that aim to take off and make a lasting 
-        impact in the real world. Originally established with support from the 
-        National Science and Technology Entrepreneurship Development Board (NSTEDB), 
-        Department of Science and Technology (DST), Government of India, TBIS continues 
-        to thrive under the institute’s intramural funding, supporting entrepreneurs 
-        on their journey from concept to lift-off.
-
+        Since 2012, BITS Pilani Hyderabad Campus Technology Business Incubator
+        (TBI), has been propelling technology-driven startups to new heights.
+        With a mission to encourage cutting-edge, knowledge-based
+        entrepreneurship, TBIS provides a launchpad for transformative ideas
+        that aim to take off and make a lasting impact in the real world.
+        Originally established with support from the National Science and
+        Technology Entrepreneurship Development Board (NSTEDB), Department of
+        Science and Technology (DST), Government of India, TBIS continues to
+        thrive under the institute’s intramural funding, supporting
+        entrepreneurs on their journey from concept to lift-off.
       </p>
     </div>
 
     <div class="mt-12">
-      <SecondaryAboutGallery pictures={pictures2} client:only="react"/>
+      <SecondaryAboutGallery pictures={pictures2} client:only="react" />
     </div>
   </section>
   <hr class="h-1 border-0 bg-nord10" />
@@ -97,49 +99,92 @@ const cards = [
         Thrust Areas
       </h1>
       <div class="my-8 mt-8">
-        <ThrustAreasCarousel client:visible/>
+        <ThrustAreasCarousel client:visible />
       </div>
     </div>
   </section>
   <hr class="h-1 border-0 bg-nord10" />
 
-  <section class="md:flex items-center justify-center gap-24 px-6 md:px-2 lg:px-[35vh] pb-10 bg-nord6">
-    <div id="team" class="my-6 scroll-mt-20">
+  <section
+    class="md:flex items-center justify-center gap-24 px-6 md:px-2 lg:px-[15vh] pb-10 bg-nord6"
+  >
+    <div id="team" class="my-6 scroll-mt-20 w-full">
       <div class="w-full py-8">
         <!-- Board Section -->
-        <h1 class="text-4xl text-center text-nord10 mb-8 font-bold">Governing and Operations</h1>
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          <TeamCard
-            name="Prof. V. Ramgopal Rao"
-            image="/governingandoperations/vrrao.jpg"
-            description="Vice-Chancellor - Birla Institute of Technology & Science, Pilani and Chairman - TBIs"
-          />
+        <!-- Board Section -->
+        <h1 class="text-4xl text-center text-nord10 mb-8 font-bold">
+          Governing and Operations
+        </h1>
+
+        <section class="grid grid-cols-4 gap-6 max-w-[1200px] mx-auto">
+          <!-- <TeamCard
+    name="Prof. V. Ramgopal Rao"
+    image="/governingandoperations/vrrao.jpg"
+    description="Vice-Chancellor - Birla Institute of Technology & Science, Pilani and Chairman - TBIs"
+  /> -->
+
           <TeamCard
             name="Prof. D. Sriram"
             image="/governingandoperations/dsriram.png"
             description="Director - BITS Pilani, Hyderabad Campus and President, Technology Business Incubator"
           />
-        </section>
-      
-        <!-- Team Section -->
-        <h1 class="text-4xl text-center text-nord10 my-10 font-bold">Team at TBI Office</h1>
-        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+
+          <TeamCard
+            name="Prof. Vasan Arunachalam"
+            image="/governing/vasan.webp"
+            description="Dean Administration - BITS Pilani, Hyderabad Campus and President, Technology Business Incubator"
+          />
+
           <TeamCard
             name="Mr. Sachin Arya"
             image="/governingandoperations/SachinArya.png"
             description="Chief Executive Officer, TBIs - Birla Institute of Technology & Science, Pilani"
           />
+
+          <TeamCard
+            name="Mr. Surbhit Joshi"
+            image="/governing/surbit.jpeg"
+            description="Joint Secretary and Senior Manager - Technology and Business Incubator, BITS Pilani, Hyderabad Campus"
+          />
+        </section>
+
+        <!-- Team Section -->
+        <h1 class="text-4xl text-center text-nord10 my-10 font-bold">
+          Team at TBI Office
+        </h1>
+
+        <!-- Top level -->
+        <section class="flex justify-center w-full mb-10">
+          <div class="w-full max-w-sm">
+            <TeamCard
+              name="Mr. Surbhit Joshi"
+              image="/governing/surbit.jpeg"
+              description="Joint Secretary and Senior Manager - Technology and Business Incubator, BITS Pilani, Hyderabad Campus"
+            />
+          </div>
+        </section>
+
+        <!-- Second level -->
+        <section class="grid grid-cols-3 gap-8 w-full max-w-5xl mx-auto">
           <TeamCard
             name="Mr. Mir Ali"
             image="/governingandoperations/mirali.jpeg"
-            description="Assistant Manager - Technology and Business Incubator, BITS Pilani, Hyderabad Campus"
+            description="Manager - Technology and Business Incubator, BITS Pilani, Hyderabad Campus"
+          />
+
+          <TeamCard
+            name="Mr. Ram Murthy Panibathe"
+            image="/governingandoperations/rammurthy.jpeg"
+            description="Accountant"
+          />
+
+          <TeamCard
+            name="Ms. Hemalatha Korvi"
+            image="/governingandoperations/hemalatha.jpeg"
+            description="Office Assistant"
           />
         </section>
       </div>
-      </section>
-    </div>
     </div>
   </section>
-
-  
 </PageLayout>
